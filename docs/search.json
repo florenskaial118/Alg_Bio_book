@@ -1,0 +1,792 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1_sem_algbio_book",
+    "section": "",
+    "text": "1 Алгоритмическая биология МФТИ ФБМФ",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Алгоритмическая биология МФТИ ФБМФ</span>"
+    ]
+  },
+  {
+    "objectID": "NGS.html",
+    "href": "NGS.html",
+    "title": "NGS",
+    "section": "",
+    "text": "Раздел, посвященный лекциям и семинарам по NGS",
+    "crumbs": [
+      "NGS"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_theory.html",
+    "href": "NGS_Phylogenetics_theory.html",
+    "title": "2  Филогенетика (теория)",
+    "section": "",
+    "text": "2.1 Разница между деревьями видов и деревьями генов\nТипичный пайплан состоит из нескольких шагов: 1) Подбор данных 2) Множественное выравнивание 3) Подбор параметров для построения дерева 4) Оценка дерева 5) Визуализация 6) Сравнение с другими деревьями\nЕсть два разных типа деревьев:\nВ чем они могут отличаться?\nГомологи имеют общее происхождение, есть 2 варианта: 1) Ортологи - разошлись из-за видообразования. Например альфа-гемоглобины друг с другом 2) Паралоги - в одном геноме 2 копии одного гена. В процессе эволюции их функции могут расходится (нео-функционализация). Например альфа- и бетта- гемоглобины друг с другом\nРазные варианты гомологии - в статье Orthologs, paralogs, and evolutionary genomics (Koonin 2005)",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Филогенетика (теория)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_theory.html#разница-между-деревьями-видов-и-деревьями-генов",
+    "href": "NGS_Phylogenetics_theory.html#разница-между-деревьями-видов-и-деревьями-генов",
+    "title": "2  Филогенетика (теория)",
+    "section": "",
+    "text": "Дерево видов\nДерево генов\n\n\n\nIncomplete lineage sorting - случайное наследование древних полиморфизмов при быстром видообразовании (например при фрагментации популяции). По итогу - неравномерное распределение аллелей по потомкам.\n\n\n\n\nПример\n\n\n\nIntrogression - Гибридизация двух разных видов и если гибрид плодовитый - часть генов от одного вида “просачивается” в другой\nДупликация генов\n\n\n\n\nДупликация с последующей потерей генов. Аналогично incomplete lineage sorting\nГоризональный преренос генов у бактерий, который портит картинку. Если нет уверенности, что это именно он повлиял, можно провести проверку: GC-состава в гене и вокруг него, по кодонам как-то",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Филогенетика (теория)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_theory.html#tangled-tree---сравнение-деревьев-между-собой-phylogeny-reconcilitation",
+    "href": "NGS_Phylogenetics_theory.html#tangled-tree---сравнение-деревьев-между-собой-phylogeny-reconcilitation",
+    "title": "2  Филогенетика (теория)",
+    "section": "2.2 Tangled tree - сравнение деревьев между собой (Phylogeny reconcilitation)",
+    "text": "2.2 Tangled tree - сравнение деревьев между собой (Phylogeny reconcilitation)\nНапример с помощью пакета R cophyloplot. Можно сравнить получившиеся деревья видов и генов, хозяин - симбионт и тд.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Филогенетика (теория)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_theory.html#модели-деревьев-больше-инфы-на-сайте",
+    "href": "NGS_Phylogenetics_theory.html#модели-деревьев-больше-инфы-на-сайте",
+    "title": "2  Филогенетика (теория)",
+    "section": "2.3 Модели деревьев (больше инфы на сайте)",
+    "text": "2.3 Модели деревьев (больше инфы на сайте)\n\n2.3.1 Substitution model Jukes-Cantor\nВсе нуклеотиды имеют одинаковую частоту и одинаковую вероятность замены\n\n\n2.3.2 Substitution model GTR\nРазные частоты нуклеотидов, разные скорости их замен (транзиций и трансверсий)\nНапример в ML частоты нуклеотидов мы узнаем из множественного выравнивания, а модели скоростей замен программа подбирает сама, чтобы логарифм функии правдоподобия был максимальным.\n\n\n\n\nKoonin, Eugene V. 2005. “Orthologs, Paralogs, and Evolutionary Genomics.” Annual Review of Genetics 39 (1): 309–38. https://doi.org/10.1146/annurev.genet.39.073003.114725.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Филогенетика (теория)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html",
+    "href": "NGS_Phylogenetics_practise.html",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "",
+    "text": "3.1 Введение\nПрактика по ноутбуку\nГен, кодирующий Цитохромоксидазу подкомплекс I (COI), широко используется как стандартный ген для ДНК-баркодирования у рыб: он, с одной стороны, сравнительно консервативен и, с другой, содержит достаточно вариаций между видами, что позволяет в большинстве случаев успешно идентифицировать таксоны.\nCOI применяется для обнаружения подмены рыб и признан удобным для мониторинга видов в пищевой промышленности.\nОднако, COI не всегда хорошо разделяет некоторые виды рыб, например, такое может произойти с тунцом (например, виды T. albacares - yellowfin tuna, T. thynnus - bluefin tuna и Thunnus obesus - bigeye tuna) (Viñas and Tudela 2009)\nОдна из возможных причин: гибридизация и последующая митохондриальная интрогрессия (ситуация, когда мтДНК одного вида переходит в другой вид через гибридизацию, и затем закрепляется в его популяции).\nВ рамках ноутбука можно научиться следующему:",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#введение",
+    "href": "NGS_Phylogenetics_practise.html#введение",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "",
+    "text": "Применения гена COI\n\n\n\n\n\nопределять возможное происхождение последовательности на основе топологии филогенетиечского дерева\nстроить базовое множественное выравнивание (MAFFT) и филогегетическое дерево (FastTree), используя командную строку\nвыгружать нуклеотидные последовательности из NCBI, подавая на вход список из GenBank айди\nгенерировать аннотационные файлы для визуализации дерева в ITOL\nосущеставлять базовые манипуляции с деревом в ITOL",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#install-dependencies",
+    "href": "NGS_Phylogenetics_practise.html#install-dependencies",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.2 Install dependencies",
+    "text": "3.2 Install dependencies\nBiopython, Scikit-bio, pandas, mafft, FastTree\n\nconda activate py3_study\npip install biopython==1.83 scikit-bio==0.6.1 pandas==2.2.2\nconda install bioconda::mafft\nmafft --version \nconda install bioconda::fasttree\nFastTree -help | head -n 2\n\nGblocks (trimAI) - находит консервативные блоки в выравнивании\n\nconda install bioconda::gblocks\n\n\nimport pandas as pd, io\n#from google.colab import files\nfrom Bio import AlignIO\nimport numpy as np\nfrom Bio.Seq import Seq\nfrom Bio import Entrez, SeqIO\nfrom Bio.Align import MultipleSeqAlignment\nimport shutil\nfrom Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor\nfrom Bio import Phylo\nimport subprocess, re",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#load-metadata",
+    "href": "NGS_Phylogenetics_practise.html#load-metadata",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.3 Load metadata",
+    "text": "3.3 Load metadata\n\ngit clone https://github.com/rybinaanya/fish_detective.git\n\n\nmeta = pd.read_csv('fish_detective/metadata.tsv', sep='\\t', index_col=0)\nmeta.head()\n\n  sample_id accession  ...     display_name restaurant_color\n0      S001  KU168615  ...         Albacore          #FFF1CB\n1      S002  KU168616  ...         Albacore          #FFF1CB\n2      S003  KU168617  ...  Tuna (Albacore)          #C2E2FA\n3      S004  KU168618  ...   Tuna (Bluefin)          #C2E2FA\n4      S005  KU168619  ...   Tuna (Bluefin)          #B7A3E3\n\n[5 rows x 9 columns]\n\n\nDistribution of claimed names\n\nmeta.claimed_name.value_counts()\n\nclaimed_name\nTuna                     31\nEel                      15\nSeabass*                 13\nYellowtail               12\nMackerel                  8\nTuna (Yellowfin)          6\nTuna*                     4\nSeabream                  3\nTuna (Albacore)           3\nTuna (Bluefin)            2\nSwordfish                 2\nSeabass                   2\nTuna (Spicy)              1\nTunaa                     1\nEel (grilled)             1\nEel (Freshwater)a         1\nEel*                      1\nEel (Freshwater)          1\nSeabassa                  1\nEela                      1\nKing Fish                 1\nKing Fish (Tasmanian)     1\nBarramundia               1\nBlack Cod                 1\nFlying Fish eggs          1\nSnapper                   1\nName: count, dtype: int64\n\n\nDistribution of restaurants\n\nmeta.restaurant.value_counts()\n\nrestaurant\nREFERENCE        67\nPimpyShrimpy     21\nRedPriceSushi    16\nSwagRoll         11\nName: count, dtype: int64",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#get-sequences-from-ncbi",
+    "href": "NGS_Phylogenetics_practise.html#get-sequences-from-ncbi",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.4 Get sequences from NCBI",
+    "text": "3.4 Get sequences from NCBI\n\n&gt; fish_detective/sequences.fasta\ntail -n +2 fish_detective/metadata.tsv | \\\nwhile IFS=$'\\t' read -r line; do\n    # Разбиваем строку на массив\n    IFS=$'\\t' read -ra cols &lt;&lt;&lt; \"$line\"\n\n    accession=${cols[2]}\n    [ -z \"$accession\" ] && continue # если значение пустое - пропусти\n\n    echo \"Скачиваю $accession ...\"\n    \n    efetch -db nucleotide -id \"$accession\" -format fasta &gt;&gt; fish_detective/sequences.fasta\n\n    echo '' &gt;&gt; fish_detective/sequences.fasta\ndone",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#multiple-sequqnce-alignment-mafft---итеративный-алгоритм",
+    "href": "NGS_Phylogenetics_practise.html#multiple-sequqnce-alignment-mafft---итеративный-алгоритм",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.5 Multiple sequqnce alignment MAFFT - итеративный алгоритм",
+    "text": "3.5 Multiple sequqnce alignment MAFFT - итеративный алгоритм\n\nmafft --auto --thread -1 fish_detective/sequences.fasta \\\n&gt; fish_detective/alignment.fasta 2&gt; mafft.log\n\n\n\nПросмотр выравнивания в Ugene\n\nВидно, что в начале и в конце много пропусков. Мы хотим их обрезать.\n\nBMGE -i fish_detective/alignment.fasta -t AA -m BLOSUM30  \\\n-of fish_detective/alignment.trim.fasta\n\n   Amino acid sequence alignment alignment.fasta\n   before : 115 sequences / 811 characters\n 0.00% \n 12.33% \n 24.66% \n 36.99% \n 49.32% \n 61.65% \n 73.98% \n 86.31% \n 98.64% \n\n                                                                                                    \n   after :  115 sequences / 456 characters\n                                          \n   after :  115 sequences / 456 characters",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#fasttree-ml-and-nj-methods",
+    "href": "NGS_Phylogenetics_practise.html#fasttree-ml-and-nj-methods",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.6 FastTree (~ML) and NJ-methods",
+    "text": "3.6 FastTree (~ML) and NJ-methods\n\nFastTree -gtr -nt -gamma -boot 1000 fish_detective/alignment.trim.fasta \\\n&gt; fish_detective/tree_fasttree.nwk\necho \"FastTree → tree_fasttree.nwk\"\n\nFastTree Version 2.2.0 Double precision\nAlignment: fish_detective/alignment.trim.fasta\nNucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000\nSearch: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1\nTopHits: 1.00*sqrtN close=default refresh=0.80\nML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories\nIgnored unknown character X (seen 22 times)\nInitial topology in 0.01 seconds\nRefining topology: 25 rounds ME-NNIs, 2 rounds ME-SPRs, 13 rounds ML-NNIs\n      0.10 seconds: ME NNI round 9 of 25, 1 of 75 splits\nTotal branch-length 3.183 after 0.19 sec\n      0.21 seconds: ML NNI round 1 of 13, 1 of 75 splits\nML-NNI round 1: LogLk = -5062.748 NNIs 24 max delta 2.87 Time 0.29\n      0.31 seconds: Optimizing GTR model, step 3 of 12\n      0.42 seconds: Optimizing GTR model, step 10 of 12\nGTR Frequencies: 0.2338 0.2806 0.1799 0.3056\nGTR rates(ac ag at cg ct gt) 1.8216 4.7233 1.9546 0.8528 4.5305 1.0000\nSwitched to using 20 rate categories (CAT approximation)\nRate categories were divided by 0.819 so that average rate = 1.0\nCAT-based log-likelihoods may not be comparable across runs\n      0.52 seconds: ML NNI round 2 of 13, 1 of 75 splits\nML-NNI round 2: LogLk = -4400.815 NNIs 21 max delta 0.35 Time 0.61\nML-NNI round 3: LogLk = -4400.651 NNIs 19 max delta 0.00 Time 0.69\nTurning off heuristics for final round of ML NNIs (converged)\n      0.68 seconds: ML NNI round 4 of 13, 1 of 75 splits\nML-NNI round 4: LogLk = -4400.536 NNIs 14 max delta 0.00 Time 0.79 (final)\n      0.78 seconds: ML Lengths 1 of 75 splits\nOptimize all lengths: LogLk = -4400.532 Time 0.81\n      0.94 seconds: Site likelihoods with rate category 1 of 20\nGamma(20) LogLk = -4622.464 alpha = 0.664 rescaling lengths by 1.211\nTotal time: 0.97 seconds Unique: 77/115 Bad splits: 0/74\nFastTree → tree_fasttree.nwk\n\n\nСначала мы получаем NJ-like tree (distnace matrix - is based on susbtitution model JC). А потом перебираем не все топологии, а либо отрубаем кусочек дерева и снова пристыковаваем и смотрим на правдоподбие / пошафлить перетасовать узлы в пределах клады и также чекнуть правдоподбие\n-gtr - использование модели эволюции GTR (General Time Reversible) для нуклеотидных последовательностей\n-gamma - учет различной скорости эволюции разных позиций с помощью гамма-распределения\n\nfrom Bio.Phylo.TreeConstruction import DistanceCalculator,DistanceTreeConstructor\nfrom Bio import Phylo\n\nNJ (p-distance = 1-identity)\n\naln = AlignIO.read(\"fish_detective/alignment.trim.fasta\",\"fasta\")\n\n# compute p-distance = 1-identity\ncalc = DistanceCalculator('identity')\n# create NJ tree nased on pairwise distance matrix\nconstructor = DistanceTreeConstructor(calc, 'nj')\ntree_nj = constructor.build_tree(aln)\n\n# write output to a file\n_ = Phylo.write(tree_nj, \"fish_detective/tree_nj.nwk\", \"newick\")",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_practise.html#itol-files",
+    "href": "NGS_Phylogenetics_practise.html#itol-files",
+    "title": "\n3  Филогенетика (практика)\n",
+    "section": "\n3.7 ITOL files",
+    "text": "3.7 ITOL files\nТеперь визуализируем дерево в ITOL\nЧтение Newick дерева и получение названий листьев\n\ntree_fasttree = Phylo.read('fish_detective/tree_fasttree.nwk', 'newick')\n\ntips_fasttree = [t.name for t in tree_fasttree.get_terminals()] \n\nprint(tips_fasttree[:5])\n\n['KU168646.1', 'KU168622.1', 'KU168632.1', 'KU168644.1', 'KU168624.1']\n\n\nСоздание словаря для преобразования ID в читаемые метки и создание файлов меток и цветов для iTOL в нужном формате\n\ntips2label=dict(zip(meta.accession, meta.display_name))\n\nwith open('fish_detective/labels.txt', 'w') as f:\n  _ = f.write('\\n'.join(['LABELS', 'SEPARATOR COMMA', 'DATA'])+'\\n')\n  for tip in tips_fasttree:\n    clean_tip = tip.split('.')[0]\n    _ = f.write(f\"{tip},{tips2label[clean_tip]}\\n\")\n\nacc2color = dict(zip(meta['accession'], meta['restaurant_color']))\n\nwith open('fish_detective/color_labels.txt', 'w') as f:\n    _ = f.write('TREE_COLORS\\nSEPARATOR COMMA\\nDATA\\n')\n    \n    for tip in tips_fasttree:\n        clean_tip = tip.split('.')[0]\n        color = acc2color.get(clean_tip, '#CCCCCC')\n        _ = f.write(f'{tip},label_background,{color}\\n')\n\nAnnotation file to color labels\n\nmapLoc2color = dict(zip(meta.restaurant, meta.restaurant_color))\ntips2color=dict(zip(meta.accession, meta.restaurant_color))\n\nwith open('fish_detective/colorstrip_groups.txt', 'w') as f:\n    _ = f.write('DATASET_COLORSTRIP\\n')\n    _ = f.write('SEPARATOR COMMA\\n')\n    _ = f.write('DATASET_LABEL,Sample groups\\n')\n    _ = f.write('COLOR,#000000\\n')  # рамка dataset-а (опц.)\n    _ = f.write('LEGEND_TITLE,Sample origin\\n')\n    _ = f.write('LEGEND_SHAPES,1,1,1,1\\n')  # форма значков (1=квадрат)\n    _ = f.write('LEGEND_COLORS,' + ','.join(mapLoc2color.values()) + '\\n')\n    _ = f.write('LEGEND_LABELS,' + ','.join(mapLoc2color.keys()) + '\\n')\n    _ = f.write('DATA\\n')\n    for tip in tips_fasttree:\n        clean_tip = tip.split('.')[0]\n        _ = f.write(f'{tip},{tips2color[clean_tip]}\\n')\n\nTo upload annotation files, go to Datasets, push Upload button\nTo make ITOL display bootstrap values, go to Advanced -&gt; Branch metadata display &gt; Bootstraps/metadata -&gt; select Display -&gt; select Text\nЧтобы укоренитрь дерево - наведите мышкой на нужную ветку -&gt; клик -&gt; Tree structure -&gt; Re-root tree here\n\n\nРезультат\n\n\n\n\n\nViñas, Jordi, and Sergi Tudela. 2009. “A Validated Methodology for Genetic Identification of Tuna Species (Genus Thunnus).” Edited by Manfred Kayser. PLoS ONE 4 (10): e7606. https://doi.org/10.1371/journal.pone.0007606.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Филогенетика (практика)</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html",
+    "href": "NGS_Phylogenetics_hw.html",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "",
+    "text": "4.1 Объекты исследования\nСравнительная филогеография кошачьих Индии: повторный анализ данных\nЦель работы: воспроизвести филогенетический анализ из статьи Mukherjee et al. (2010) “Ecology Driving Genetic Variation: A Comparative Phylogeography of Jungle Cat (Felis chaus) and Leopard Cat (Prionailurus bengalensis) in India” (Mukherjee et al. 2010)",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#объекты-исследования",
+    "href": "NGS_Phylogenetics_hw.html#объекты-исследования",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "",
+    "text": "Болотная рысь (Felis chaus), также известная как камышовый кот\n\n\n\n\nЛеопардовая кошка (Prionailurus bengalensis), предок популярной породы бенгальских кошек\n\n\n\n\n\n\n\nКошка-рыболов (Prionailurus viverrinus), использована в качестве внешней группы",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#подготовка-метаданных",
+    "href": "NGS_Phylogenetics_hw.html#подготовка-метаданных",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.2 Подготовка метаданных",
+    "text": "4.2 Подготовка метаданных\nМетаданные были получены из дополнительных материалов статьи с добавлением информации по внешней группе (Prionailurus viverrinus) из базы данных NCBI.\n\n4.2.1 Поиск последовательностей для внешней группы\n\n# Поиск и извлечение информации о последовательностях кошки-рыболова\n(echo -e \"AccessionVersion\\tGi\\tTitle\\tOrganism\\tTaxId\\tSlen\\tMolType\\tTopology\\tBiomol\\tCreateDate\"\nesearch -db nucleotide -query \"Prionailurus viverrinus and (cytb or NADH5) not predicted\" | \\\nefetch -format docsum | \\\nxtract -pattern DocumentSummary \\\n  -element AccessionVersion Gi \\\n  -element Title \\\n  -element Organism TaxId \\\n  -element Slen MolType Topology Biomol \\\n  -element CreateDate) | column -t -s $'\\t' | sort -k4\n\nДля анализа были выбраны: - JN811043.1 (611 п.н.) для гена NADH5 - JN811056.1 (800 п.н.) для гена цитохрома b\n\n4.2.2 Структура метаданных\n\n# Просмотр структуры файла метаданных\nhead Phylogenetics_hw/metadata.tsv | column -t -s $'\\t' \n\nID      Acc_NADH5  Acc_Cyt_b  Species     State                   Biogeographic_zone\nJCTVM3  GU561646    GU561701  Jungle cat  Trivandrum zoo, Kerala  Deccan South\nJCMyso  GU561647    GU561702  Jungle cat  Mysore zoo, Karnataka   Deccan South\nJCAP04  GU561648    GU561703  Jungle cat  Andhra Pradesh (AP)     Deccan South\nJCAP02  GU561649    GU561704  Jungle cat  AP                      Deccan South\nJCA001  GU561650    GU561705  Jungle cat  Kerala                  Western Ghats\nJCA008  GU561651    GU561706  Jungle cat  Kerala                  Western Ghats\nJCEKM3   GU561652   GU561707  Jungle cat  Kerala                  Western Ghats\nJCKEM1   GU561653   GU561708  Jungle cat  Kerala                  Western Ghats\nJC007C   GU561654   GU561709  Jungle cat  Kerala                  Western Ghats\n\n\n\n# Анализ состава выборки по видам\nimport pandas as pd\nmeta = pd.read_csv('Phylogenetics_hw/metadata.tsv', sep='\\t')\nprint(\"Распределение по видам:\")\n\nРаспределение по видам:\n\nprint(meta.Species.value_counts())\n\nSpecies\nJungle cat      55\nLeopard cat     40\nFishing cat      1\nName: count, dtype: int64\n\n\n\n# Географическое распределение образцов\nprint(\"\\nРаспределение по биогеографическим зонам:\")\n\n\nРаспределение по биогеографическим зонам:\n\nprint(meta.Biogeographic_zone.value_counts())\n\nBiogeographic_zone\nWestern Ghats           19\nHimalayas               19\nDeccan Central          11\nNorth East               9\nThar Desert              9\nNorth  East              9\nDeccan South             8\nSemi Arid                8\nLower Gangetic Plain     2\nUpper Gangetic Plain     1\n-                        1\nName: count, dtype: int64",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#загрузка-последовательностей-из-ncbi",
+    "href": "NGS_Phylogenetics_hw.html#загрузка-последовательностей-из-ncbi",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.3 Загрузка последовательностей из NCBI",
+    "text": "4.3 Загрузка последовательностей из NCBI\nПоследовательности двух генов были загружены отдельно для последующего объединенного анализа.\n\n# Загрузка последовательностей цитохрома b и NADH5\n&gt; Phylogenetics_hw/cytb_sequences.fasta\n&gt; Phylogenetics_hw/NADH5_sequences.fasta\n\ntail -n +2 metadata.tsv | \\\nwhile IFS=$'\\t' read -r line; do\n    IFS=$'\\t' read -ra cols &lt;&lt;&lt; \"$line\"\n    \n    NADH5_acc=${cols[1]}\n    cytb_acc=${cols[2]}\n    \n    [ -z \"$cytb_acc\" ] && continue\n    \n    echo \"Загрузка последовательностей: $NADH5_acc (NADH5) и $cytb_acc (cytb)\"\n    \n    efetch -db nucleotide -id \"$cytb_acc\" -format fasta &gt;&gt; Phylogenetics_hw/cytb_sequences.fasta\n    echo '' &gt;&gt; Phylogenetics_hw/cytb_sequences.fasta\n    \n    efetch -db nucleotide -id \"$NADH5_acc\" -format fasta &gt;&gt; Phylogenetics_hw/NADH5_sequences.fasta\n    echo '' &gt;&gt; Phylogenetics_hw/NADH5_sequences.fasta\ndone",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#множественное-выравнивание",
+    "href": "NGS_Phylogenetics_hw.html#множественное-выравнивание",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.4 Множественное выравнивание",
+    "text": "4.4 Множественное выравнивание\nДля каждого гена было выполнено независимое выравнивание с использованием MAFFT.\n\n# Множественное выравнивание последовательностей\nmafft --auto --thread -1 Phylogenetics_hw/cytb_sequences.fasta &gt; Phylogenetics_hw/cytb_sequences.align.fasta \nmafft --auto --thread -1 Phylogenetics_hw/NADH5_sequences.fasta &gt; Phylogenetics_hw/NADH5_sequences.align.fasta \n\n\n\n\n\nВизуализация выравнивания цитохрома b в Ugene\n\n\n\n\nВизуализация выравнивания NADH5 в Ugene\n\n\n\n\n4.4.1 Обрезка неинформативных участков\nДля удаления плохо выровненных концевых регионов использовалась программа BMGE.\n\n# Обрезка выравниваний\nBMGE -i Phylogenetics_hw/cytb_sequences.align.fasta -t AA -m BLOSUM30 -of Phylogenetics_hw/cytb_sequences.align.trim.fasta \nBMGE -i Phylogenetics_hw/NADH5_sequences.align.fasta -t AA -m BLOSUM30 -of Phylogenetics_hw/NADH5_sequences.align.trim.fasta \n\n   Amino acid sequence alignment cytb_sequences.align.fasta\n   before : 96 sequences / 922 characters\n 0.00% \n 10.85% \n 21.69% \n 32.54% \n 43.38% \n 54.23% \n 65.08% \n 75.92% \n 86.77% \n 97.61% \n\n                                                                                                    \n   after :  96 sequences / 141 characters\n                                          \n   after :  96 sequences / 141 characters\n   Amino acid sequence alignment NADH5_sequences.align.fasta\n   before : 96 sequences / 712 characters\n 0.00% \n 14.04% \n 28.09% \n 42.13% \n 56.18% \n 70.22% \n 84.27% \n 98.31% \n\n                                                                                                    \n   after :  96 sequences / 362 characters\n                                          \n   after :  96 sequences / 362 characters\n\n\nРезультат: получены выравнивания длиной, сопоставимой с оригинальным исследованием (303 п.н. для NADH5, 141 п.н. для cytb).",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#конкатенация-последовательностей",
+    "href": "NGS_Phylogenetics_hw.html#конкатенация-последовательностей",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.5 Конкатенация последовательностей",
+    "text": "4.5 Конкатенация последовательностей\nДля филогенетического анализа последовательности двух генов были объединены.\n\n# Объединение последовательностей двух генов\nmkdir -p Phylogenetics_hw/tree_files\n\n# Извлечение заголовков\ngrep \"^&gt;\" Phylogenetics_hw/cytb_sequences.align.trim.fasta | cut -d' ' -f1 &gt; Phylogenetics_hw/headers.txt\n\n# Извлечение и объединение последовательностей\ngrep -v \"^&gt;\" Phylogenetics_hw/cytb_sequences.align.trim.fasta &gt; Phylogenetics_hw/cytb_seqs.txt\ngrep -v \"^&gt;\" Phylogenetics_hw/NADH5_sequences.align.trim.fasta &gt; Phylogenetics_hw/nadh5_seqs.txt\npaste Phylogenetics_hw/cytb_seqs.txt nadh5_seqs.txt | tr -d '\\t' &gt; Phylogenetics_hw/sequences.txt\n\n# Создание финального файла\npaste -d '\\n' Phylogenetics_hw/headers.txt Phylogenetics_hw/sequences.txt &gt; Phylogenetics_hw/tree_files/concatenated_sequences.fasta\n\n# Очистка временных файлов\nrm Phylogenetics_hw/headers.txt Phylogenetics_hw/cytb_seqs.txt Phylogenetics_hw/nadh5_seqs.txt Phylogenetics_hw/sequences.txt",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#построение-филогенетического-дерева",
+    "href": "NGS_Phylogenetics_hw.html#построение-филогенетического-дерева",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.6 Построение филогенетического дерева",
+    "text": "4.6 Построение филогенетического дерева\nФилогенетический анализ выполнен с использованием IQ-TREE с оценкой поддержки узлов.\n\n# Построение дерева максимального правдоподобия\ncd Phylogenetics_hw/tree_files\niqtree -m TEST -s concatenated_sequences.fasta -bb 1000 -alrt 1000 -pre Cats_tree -redo \ncd -",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#визуализация-и-аннотация-дерева",
+    "href": "NGS_Phylogenetics_hw.html#визуализация-и-аннотация-дерева",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.7 Визуализация и аннотация дерева",
+    "text": "4.7 Визуализация и аннотация дерева\nДля визуализации дерева в iTOL были подготовлены файлы аннотаций.\n\nimport pandas as pd\nimport matplotlib.cm as cm\nimport matplotlib.colors as mcolors\nfrom Bio import Phylo\n\n# Загрузка данных\nmeta = pd.read_csv('Phylogenetics_hw/metadata.tsv', sep='\\t')\ntree = Phylo.read('Phylogenetics_hw/tree_files/Cats_tree.treefile', 'newick')\ntips = [t.name for t in tree.get_terminals()]\n\n# Назначение цветов по биогеографическим зонам\nstates = meta['Biogeographic_zone'].unique()\ncmap = cm.get_cmap('tab20')\nstate_to_color = dict(zip(states, [mcolors.rgb2hex(cmap(i)) for i in range(len(states))]))\nmeta['color'] = meta['Biogeographic_zone'].map(state_to_color)\n\n# Подготовка словарей для аннотаций\nmeta['specie_id'] = meta['Species'] + '_' + meta['ID'].astype(str)\nacc_clean = meta['Acc_Cyt_b'].str.split('.').str[0].str.strip()\n\ntip_to_label = dict(zip(acc_clean, meta['specie_id']))\ntip_to_color = dict(zip(acc_clean, meta['color']))\n\n# Файл читаемых меток\nwith open('Phylogenetics_hw/tree_files/labels.txt', 'w') as f:\n    f.write('LABELS\\nSEPARATOR COMMA\\nDATA\\n')\n    for tip in tips:\n        clean_tip = tip.split('.')[0]\n        f.write(f\"{tip},{tip_to_label.get(clean_tip, tip)}\\n\")\n\n# Файл цветов фона меток\nwith open('Phylogenetics_hw/tree_files/color_labels.txt', 'w') as f:\n    f.write('TREE_COLORS\\nSEPARATOR COMMA\\nDATA\\n')\n    for tip in tips:\n        clean_tip = tip.split('.')[0]\n        f.write(f\"{tip},label_background,{tip_to_color.get(clean_tip, '#CCCCCC')}\\n\")\n\n# Цветовая полоса по биогеографическим зонам\nunique_states = meta[['Biogeographic_zone', 'color']].drop_duplicates()\nwith open('Phylogenetics_hw/tree_files/colorstrip_groups.txt', 'w') as f:\n    f.write(f\"\"\"DATASET_COLORSTRIP\nSEPARATOR COMMA\nDATASET_LABEL,Biogeographic zones\nCOLOR,#000000\nLEGEND_TITLE,Biogeographic Zone\nLEGEND_SHAPES,{\",\".join([\"1\"]*len(unique_states))}\nLEGEND_COLORS,{\",\".join(unique_states[\"color\"])}\nLEGEND_LABELS,{\",\".join(unique_states[\"Biogeographic_zone\"])}\nDATA\n\"\"\")\n    for tip in tips:\n        clean_tip = tip.split('.')[0]\n        f.write(f\"{tip},{tip_to_color.get(clean_tip, '#CCCCCC')}\\n\")",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_Phylogenetics_hw.html#результаты",
+    "href": "NGS_Phylogenetics_hw.html#результаты",
+    "title": "\n4  Выполнение домашнего задания по филогенетике\n",
+    "section": "\n4.8 Результаты",
+    "text": "4.8 Результаты\n\n4.8.1 Визуализация филогенетического дерева\n\n\nОбщий вид филогенетического дерева\n\n\n4.8.2 Основные выводы\n\nВидовое разделение: Леопардовые кошки (Prionailurus bengalensis) образуют четко отделенный кластер от болотных рысей (Felis chaus), что подтверждает, что подтверждает их различия\nГеографический паттерн: Особи леопардовых кошек демонстрируют более выраженную географическую структуру по сравнению с болотными рысями, что может указывать на различия в истории популяций и расселении.\nСтатистическая поддержка: Высокие значения бутстреп-поддержки (&gt;75%) для большинства узлов свидетельствуют о надежности полученной топологии дерева.\n\n\nВыполнила: Флоренская Лидия\n\n\n\n\nMukherjee, Shomita, Anand Krishnan, Krishnapriya Tamma, Chandrima Home, Navya R, Sonia Joseph, Arundhati Das, and Uma Ramakrishnan. 2010. “Ecology Driving Genetic Variation: A Comparative Phylogeography of Jungle Cat (Felis Chaus) and Leopard Cat (Prionailurus Bengalensis) in India.” Edited by William J. Murphy. PLoS ONE 5 (10): e13724. https://doi.org/10.1371/journal.pone.0013724.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Выполнение домашнего задания по филогенетике</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html",
+    "href": "NGS_GWAS.html",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "",
+    "text": "5.1 Введение",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html#введение",
+    "href": "NGS_GWAS.html#введение",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "",
+    "text": "5.1.1 Исторический контекст\n\n1886 год — Грегор Мендель: Изучал наследование признаков у гороха. Предположил существование дискретных переносчиков наследственной информации — генов. Ввел ключевые понятия доминантного и рецессивного признака.\n1892 год — Гальтон и Пирсон: Заложили основы биометрии — изучения количественных, вариативно изменяющихся признаков.\n\n\n\n5.1.2 От генов к фенотипу\n\nГенетический код содержит наследственную информацию, определяющую фенотип — совокупность всех наблюдаемых признаков организма.\nИнформация организована в гены, расположенные на хромосомах.\n\n\n\n5.1.3 Сложные признаки (Complex Traits)\nЭто признаки, на которые влияет множество факторов: как генетических (полигенных), так и внешних (среда, образ жизни). К ним относятся, например, рост, вес, предрасположенность к распространенным заболеваниям.\nИз-за множества влияющих факторов такие признаки в популяции имеют непрерывное распределение (часто нормальное).\n\n\n\nПример распределения сложного количественного признака (например, роста) в популяции\n\n\nИменно сложные признаки представляют основной интерес для генетических ассоциативных исследований (GWAS).\n\n\n5.1.4 Основной объект изучения: SNP\nSNP (Single Nucleotide Polymorphism, снип) — однонуклеотидный полиморфизм, замена одного нуклеотида в определенной позиции генома. Изучаются чаще, чем крупные структурные варианты (делеции, инсерции, инверсии), так как встречаются значительно чаще.\nПоскольку мы — диплоидные организмы (получаем по одному набору хромосом от каждого родителя), каждый генетический вариант представлен двумя аллелями. Индивидуум может быть:\n\nГомозиготой (два одинаковых аллеля).\nГетерозиготой (два разных аллеля).\n\n\n\n5.1.5 Спектр генетических вариантов\nСуществует обратная зависимость между частотой встречаемости аллеля в популяции и силой его эффекта на фенотип.\n\n\n\nЗависимость влияния варианта на фенотип от его частоты в популяции\n\n\n\nРедкие варианты с сильным эффектом (левый верхний квадрант):\n\nВызывают моногенные (менделевские) заболевания.\nДля их поиска традиционно используется анализ сцепления (linkage analysis) внутри семей.\n\nРедкие варианты со слабым эффектом (левый нижний квадрант):\n\nИх вклад в сложный признак трудно определить. Для обнаружения требуются огромные выборки и методы GWAS.\n\nВарианты средней частоты и эффекта (центр):\n\nЧасто проявляют эффект только во взаимодействии с другими генами или средой (эпистаз, пенетрантность).\n\nЧастые варианты со слабым эффектом (правый нижний квадрант):\n\nЧастота &gt; 5%. Не являются высокопатогенными сами по себе, но их комбинации и взаимодействия вносят вклад в предрасположенность к распространенным заболеваниям.\n\nЧастные варианты с сильным эффектом (правый верхний квадрант):\n\nКлючевая цель GWAS. Это варианты, которые закрепились в популяции, но существенно влияют на риск развития сложных заболеваний (диабет, сердечно-сосудистые болезни, болезнь Альцгеймера и др.).",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html#gwas-genome-wide-association-study",
+    "href": "NGS_GWAS.html#gwas-genome-wide-association-study",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "5.2 GWAS (Genome-Wide Association Study)",
+    "text": "5.2 GWAS (Genome-Wide Association Study)\n\n5.2.1 Отличие от анализа сцепления\n\n\n\n\n\n\n\n\nПризнак\nАнализ сцепления (Linkage)\nGWAS (Ассоциация)\n\n\n\n\nПрименение\nМоногенные, редкие (часто орфанные) заболевания\nСложные, полигенные, распространенные признаки/болезни\n\n\nВыборка\nЧлены одной или нескольких семей\nБольшие, несвязанные популяционные выборки (случаи и контроли)\n\n\nРазрешение\nНизкое (определяется рекомбинациями в семье)\nВысокое (на уровне отдельных вариантов, SNP)\n\n\nГипотеза\nЧасто есть гипотеза о гене-кандидате или локусы известны\nГипотеза отсутствует — скрининг всего генома\n\n\nСтат. мощность\nНиже для сложных признаков\nВыше при больших выборках\n\n\n\n\n\n5.2.2 Преимущества и цели GWAS\n\nВысокая статистическая мощность (при больших выборках).\nВысокое разрешение — можно выделить конкретные геномные локусы.\nГипотеза-независимый подход — анализ всех вариантов на равных.\nЦель: Обнаружить статистически значимую связь между генотипом в конкретном локусе и признаком/заболеванием.\nДальнейший анализ: Интерпретация ассоциированных локусов позволяет выдвигать гипотезы о новых биологических путях и механизмах развития признака.\n\n\n\n5.2.3 Требования для проведения GWAS\n\nРеференсный геном и каталог генетических вариантов.\nДоступные технологии генотипирования (NGS, микрочипы).\nБольшие размеры выборок (тысячи и десятки тысяч индивидуумов) для достижения достаточной статистической мощности.\nКорректный дизайн исследования и продвинутые статистические методы.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html#основные-шаги-gwas",
+    "href": "NGS_GWAS.html#основные-шаги-gwas",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "5.3 Основные шаги GWAS",
+    "text": "5.3 Основные шаги GWAS\n\nПодготовительная фаза\n\nДизайн исследования: Определение цели, мощности выборки\nСбор выборки: Балансировка кейсов и контролей по полу, возрасту, происхождению\nФенотипирование: Точное измерение признаков (количественных или бинарных)\n\nPre-GWAS (Контроль качества данных)\n\nКонтроль качества образцов: Исключение низкокачественных, загрязненных, родственных\nКонтроль качества вариантов\nИмпутация: Восстановление недостающих данных через референсные панели\n\nGWAS (Статистический анализ)\n\nГенотипирование: WGS (полное) или микрочипы (таргетное)\nПоправки: На популяционную стратификацию (PCA)\nМодели: Линейная/логистическая регрессия с учетом ковариат\nКоррекция: Строгий порог значимости 5×10⁻⁸ из-за множественного тестирования\n\nPost-GWAS (Интерпретация результатов)\n\nВизуализация: Манхеттен-плот для выявления значимых локусов\nПолигенные шкалы: Расчет индивидуальных рисков PRS\nВалидация: Проверка на независимой когорте\nФункциональный анализ ассоциированных генов\nПостроение молекулярных путей и сетей\nФормулирование новых гипотез\n\n\n\n\n\nОбобщенная схема пайплайна GWAS: от сбора образцов до интерпретации результатов.\n\n\n\n5.3.1 Подготовительная фаза\n\n5.3.1.1 Группа пациентов\nПредпочтительны индивидуумы с ярко выраженным фенотипом, ранним началом заболевания или семейной историей.\n\n\n5.3.1.2 Контрольная группа\n\nДолжна максимально соответствовать группе случаев по полу, возрасту, этническому происхождению.\nНе должна иметь изучаемого признака/заболевания.\n\n\n\n5.3.1.3 Популяционная стратификация\nЭто систематическая разница в частотах аллелей между группами случаев и контролей, вызванная не ассоциацией с болезнью, а различиями в происхождении (ancestry).\n\n\n\nВизуализация популяционной стратификации (t-SNE). Точки (индивидуумы) группируются по генетическому происхождению\n\n\nРешение:\n\nНабирать когорты из генетически однородной популяции.\nИспользовать методы коррекции (например, включать главные компоненты PCA в качестве ковариат в статистическую модель).\n\n\n\n\n5.3.2 Методы генотипирования\n\n5.3.2.1 Полногеномное секвенирование (WGS)\n\nПолучение полной последовательности ДНК.\nДорого, но дает исчерпывающую информацию обо всех типах вариантов.\n\n\n\n5.3.2.2 Микрочипы для генотипирования (Microarray)\n\nАнализ предопределенного набора SNP (от 100 тыс. до 5 млн).\nЗначительно дешевле WGS.\nИспользует специальные зонды (олигонуклеотиды), прикрепленные к чипу, для детекции конкретных аллелей.\n\n\n\n\nУпрощенная схема генотипирования на микрочипе (Illumina)\n\n\n\n\n\n5.3.3 Tag-SNP и гаплотипы\nГены и участки ДНК часто наследуются блоками — гаплотипами. Tag-SNP — это один или несколько SNP, которые “помечают” такой гаплотип и позволяют отслеживать его в популяции, не секвенируя весь блок. Это основа для эффективного дизайна микрочипов.\n\n\n5.3.4 Импутация генотипов\n\nПроблема: Микрочип определяет лишь часть всех существующих SNP.\nРешение — Импутация: Используя эталонные панели гаплотипов (например, проекта “1000 геномов”) и известные закономерности сцепления, можно статистически предсказать (импутировать) генотипы в непротипированных позициях.\nРезультат: Из 500 тыс. реально отгенотипированных SNP можно получить информацию о 10-20 млн вариантов, что резко повышает мощность исследования.\n\n\n\n5.3.5 Контроль качества (Quality Control) в GWAS\nКорректный контроль качества данных — критически важный этап перед статистическим анализом. Он проводится на двух уровнях: образцы (индивидуумы) и варианты (SNP).\n\n5.3.5.1 Контроль качества образцов (Sample QC)\nОбразцы исключаются из анализа при обнаружении следующих проблем:\n\nНизкий процент генотипирования (call rate): Если для образца успешно определено менее 95-98% SNP, это указывает на проблемы с качеством ДНК (испорченный образец крови/слюны) или с процессом генотипирования.\nИзбыточная гетерозиготность: Неожиданно высокий уровень гетерозиготных генотипов по всему геному часто сигнализирует о загрязнении образца ДНК другого человека или о техническом артефакте.\nНесоответствие пола: Рассчитанный по генетическим маркерам пол (например, по гомозиготности в X-хромосоме) не совпадает с заявленным в аннотации.\nСкрытое родство и дубликаты: Наличие генетически близких индивидуумов (родственников) искажает статистику.\n\nРешение: Попарное сравнение генетической идентичности (Identity-by-Descent, IBD). Если пара образцов имеет высокую долю идентичных аллелей (как у родственников), один из них исключается.\nТакже удаляются полные дубликаты одного и того же человека.\n\nВыбросы по популяционной структуре: Индивидуумы, генетически сильно отличающиеся от основной массы выборки (выпадающие за пределы кластеров на графике PCA), могут исказить результаты из-за стратификации.\n\n\n\n5.3.5.2 Контроль качества вариантов (Variant QC)\nSNP исключаются из дальнейшего анализа по следующим критериям:\n\nНизкий процент генотипирования: SNP, для которого генотип не удалось определить у большой доли образцов (например, &gt;5%).\nОтклонение от известной частоты в популяции\n\n\n\n\n5.3.6 Статистический анализ ассоциаций\n\n5.3.6.1 Отношение шансов (Odds Ratio, OR)\nДля бинарных признаков (болезнь/здоровье) простой мерой связи является отношение шансов:\n\\[\n\\text{Odds Ratio (OR)} = \\frac{(\\text{Case}_{C} / \\text{Case}_{A})}{(\\text{Control}_{C} / \\text{Control}_{A})}\n\\] Где \\(C\\) и \\(A\\) — аллели варианта.\nОграничение: Простой OR не учитывает влияние ковариат (пол, возраст, генетическая структура популяции) и не предполагает конкретной генетической модели наследования (аддитивная, доминантная, рецессивная).\n\n\n5.3.6.2 Регрессионные модели\nДля учета ковариат и различных генетических моделей в GWAS применяются обобщенные линейные модели.\n\n5.3.6.2.1 Линейная регрессия (для количественных признаков)\nИспользуется для признаков в непрерывной шкале (рост, уровень глюкозы, ИМТ).\n\\[\ny = G\\beta_G + X\\beta_X + \\epsilon\n\\]\n\n\\(y\\) — наблюдаемый количественный фенотип.\n\\(G\\) — матрица генотипов (кодируется как 0, 1, 2 для аддитивной модели).\n\\(\\beta_G\\) — величина эффекта варианта на фенотип (основной результат GWAS).\n\\(X\\beta_X\\) — поправка на ковариаты (пол, возраст, главные компоненты PCA).\n\\(\\epsilon\\) — случайная ошибка.\n\n\n\n5.3.6.2.2 Логистическая регрессия (для бинарных признаков)\nИспользуется для признаков типа “есть/нет” (заболевание, наличие симптома).\n\\[\n\\log\\left(\\frac{p}{1-p}\\right) = G\\beta_G + X\\beta_X + \\epsilon\n\\] Где \\(p\\) — вероятность наличия заболевания.\n\n\n\nСравнение линейной и логистической регрессии для количественных и бинарных признаков.\n\n\nРезультат анализа (например, из программы PLINK): Таблица, где для каждого SNP указаны:\n\nХромосома, позиция, ID (rs-номер).\nРеференсный и альтернативный аллели.\nСтатистика эффекта (\\(\\beta\\) или OR) и ее стандартная ошибка.\nP-value — вероятность наблюдать такой эффект при условии, что истинной ассоциации нет (нулевая гипотеза).\n\n\n\n\n5.3.6.3 Коррекция на множественное тестирование\nВ GWAS мы тестируем гипотезу об ассоциации для миллионов SNP одновременно. При стандартном пороге значимости \\(p &lt; 0.05\\) мы получили бы десятки тысяч ложноположительных результатов.\nРешение — поправка Бонферрони: Уровень значимости делится на число независимых тестов.\n\\[\n\\alpha_{\\text{GWAS}} = \\frac{0.05}{\\text{Число независимых тестов}} \\approx \\frac{0.05}{1,000,000} = 5 \\times 10^{-8}\n\\]\nПочему ~1 млн тестов? Из-за явления сцепленного наследования (Linkage Disequilibrium, LD), многие SNP наследуются блоками и не являются статистически независимыми. Число “независимых” SNP в геноме человека оценивается именно в этом диапазоне.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html#визуализация-и-интерпретация-результатов",
+    "href": "NGS_GWAS.html#визуализация-и-интерпретация-результатов",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "5.4 Визуализация и интерпретация результатов",
+    "text": "5.4 Визуализация и интерпретация результатов\n\n5.4.1 Манхеттен-плот (Manhattan plot)\nКлассический способ визуализации результатов GWAS.\n\n\n\nМанхеттен-плот. Каждая точка — SNP, ось Y = -log₁₀(p-value). Горизонтальные линии — пороги значимости. Пики над порогом указывают на гены, ассоциированные с признаком.\n\n\n\nОсь X: Позиция SNP в геноме (по хромосомам).\nОсь Y: Статистическая значимость ассоциации, преобразованная как \\(-log_{10}(\\text{p-value})\\).\nПики над пороговой линией (\\(-\\log_{10}(5\\times10^{-8}) \\approx 7.3\\)) указывают на геномные регионы, достоверно ассоциированные с признаком.\nГруппы близко расположенных значимых SNP часто обусловлены LD.\n\n\n\n5.4.2 Сцепленное наследование (Linkage Disequilibrium, LD)\nЭто неслучайное совместное наследование аллелей разных SNP, расположенных близко на хромосоме.\n\n\n\nВизуализация сцепленного наследования (LD). Желтые блоки показывают участки генома, где аллели наследуются совместно.\n\n\nВажность: Ассоциированный SNP, обнаруженный GWAS, часто не является причинным (causal) вариантом, а лишь маркером, находящимся в LD с истинным функциональным вариантом.\n\n\n5.4.3 Полигенные шкалы риска (Polygenic Risk Scores, PRS)\nСуммарная статистика GWAS (оценки эффекта \\(\\beta\\) для каждого SNP) позволяет вычислить для любого человека его полигенную оценку — численную меру генетической предрасположенности к признаку.\n\\[\nPRS_i = \\sum_{j=1}^{M} (\\beta_j \\times G_{ij})\n\\]\n\n\\(PRS_i\\) — полигенная шкала риска для индивидуума \\(i\\).\n\\(\\beta_j\\) — оценка эффекта SNP \\(j\\) из GWAS.\n\\(G_{ij}\\) — генотип индивидуума \\(i\\) для SNP \\(j\\) (0, 1, 2).\n\\(M\\) — число SNP, включенных в расчет (часто тысячи).\n\n\n\n\nРаспределение полигенных шкал риска в популяции. Индивидуумы в правом хвосте распределения имеют высокую генетическую предрасположенность.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "NGS_GWAS.html#важные-оговорки-и-проблемы",
+    "href": "NGS_GWAS.html#важные-оговорки-и-проблемы",
+    "title": "5  Основы генетики сложных признаков и GWAS",
+    "section": "5.5 Важные оговорки и проблемы",
+    "text": "5.5 Важные оговорки и проблемы\n\n5.5.1 Ассоциация ≠ Причинность\nОбнаруженная статистическая ассоциация SNP с заболеванием не доказывает, что этот SNP является причиной болезни. Он может быть:\n\n“Пассажиром” — находиться в LD с истинным причинным вариантом.\nВлиять на болезнь через сложные опосредованные связи.\n\nДля установления причинно-следственных связей требуются дополнительные функциональные исследования и методы.\n\n\n5.5.2 Проблема “недостающей наследственности” (Missing Heritability)\nНа заре GWAS возник парадокс: суммарный эффект всех обнаруженных ассоциаций объяснял лишь небольшую долю наследуемости (heritability) сложных признаков, оцененной по семейным исследованиям.\nВозможные объяснения:\n\nОгромное число вариантов со сверхмалым эффектом, которые не достигают порога значимости в GWAS даже на очень больших выборках.\nРедкие варианты (MAF &lt; 1%), не улавливаемые стандартными GWAS-чипами.\nСтруктурные варианты и эпигенетические факторы, не учитываемые в SNP-ориентированных GWAS.\nСложные ген-геновые и ген-средовые взаимодействия.",
+    "crumbs": [
+      "NGS",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Основы генетики сложных признаков и GWAS</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных.html",
+    "href": "Базы_данных.html",
+    "title": "Базы данных",
+    "section": "",
+    "text": "Курс лекций и семинаров по биологическим базам данных от к.б.н. Анны Сергеевны Попенко",
+    "crumbs": [
+      "Базы данных"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html",
+    "href": "Базы_данных_филогенетика.html",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "",
+    "text": "6.1 Типы деревьев\nУкорененные/неукорененные (надо проверять, какое именно дерево строит программа - бывает, что она произвольно вставляет корень); ультраметрические/аддитивные",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#базовые-понятия",
+    "href": "Базы_данных_филогенетика.html#базовые-понятия",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n6.2 Базовые понятия",
+    "text": "6.2 Базовые понятия\n\nЛистья\nВнутренние узлы (это зачастую гипотетические предки)\nКорень (гипотетические прародитель всех)\nВетви\nКлады (группы листьев, объединенные внутренним узлом)",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#источники-данных-для-построения-деревьев",
+    "href": "Базы_данных_филогенетика.html#источники-данных-для-построения-деревьев",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n6.3 Источники данных для построения деревьев",
+    "text": "6.3 Источники данных для построения деревьев\n\nМножественное выравнивание\nМатрица расстояний\nДерево\n\n\n6.3.1 Множественное выравнивание\n\nПоследовательности должны быть родственными, ортологи\nОчистка (бывают вставки, которые стоит удалить)\n\n6.3.2 Эволюционнные модели: ДНК\n\nJukes-Cantor\n\n\nВсе замены равновероятны\nЧастоты нуклеотидов - тоже равные\nИспоользуется для коротких эволюционных расстояний (например подходит для вирусов)\n\n\nKimura\n\n\nРазличает транзиции и трансверсии\nТранзиции происходят чаще\n\n\n\nТранзиции и трансверсии\n\n\nHasegava-Kishino-Yano\n\n\nДля ML - филогенетики\nКак Кимура + учитываются неравные частоты нуклеотидов\n\n\nGeneral Time Reversible\n\n6.3.3 Эволюционнные модели: Белок\n\nPAM\nBLOSUM\nLG (стандарт в IQ-TREE, PhyLM, RAxML)\nСтроится на огромном наборе белковых MSA\n\n6.3.4 Матрица расстояний\nКаждый элемент - эволюционная дистанция между двумя объектами\n\nНеотрицательность\nСимметричность\n\n\\(d_{ii}\\) = 0\n\n\n6.3.4.1 Методы подсчета\n\np-distance (proportion distance) \\(d_{ij} = \\frac{число~ различий}{общая~ длина ~сравнения}\\)\n\nML - посчитать t, при котором вероятность реализованного исхода наибольшая …\n\n6.3.5 Построение дерева\n\n6.3.5.1 Neighbor-Joining (NJ)\nМетод ближайшего соседа\nВ начальной точке все последовательности равноудалены, алгоритм начинает с пары с минимальным расстоянием, к ней присоединяется следующая по минимальному расстоянию, строится неукорененное дерево (ведь мы начинаем с листьев)\nНе требует равных скоростей эволюции\nТопология дерево сильно зависит от того, откуда мы начнем его строить\n\n6.3.5.2 Maximum Parsimony\nНаиболее вероятным считается дерево, требующее минимального числа эволюционных изменений\nL(T) - длина дерева T = argmin(L(T))\nЕсть несколько алгоритмов подсчета длин деревьев, без полного перебора\nПредполагает одинаковую скорость эволюции\nСтроит неукорененное дерево\n\n6.3.5.3 UPGMA (Unweight Pair Group Method with Arithmetic Mean)\nОдинаковая скорость эволюции + есть корень -&gt; строит укорененное, ультраметрическое дерево\n\n6.3.5.4 Maximum Likelyhood\n\\(T^*,~ \\theta^* = arg~ max L(T,\\theta~|MSA )\\)\nНачальноу дерево -&gt; Оценить длину дерева -&gt; Есть улучшения? -&gt; и тд\n\n6.3.5.5 Сравнение всех методов\n\n\nAlt text",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#форматы-дереьев",
+    "href": "Базы_данных_филогенетика.html#форматы-дереьев",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n6.4 Форматы дереьев",
+    "text": "6.4 Форматы дереьев\n\nNewick (bootstrap - проверка дерева на устойчивость - если убрать лист - изменится ли топология клады) ((A:0.1,B:0.2)90:0.3,C:0.4)\nNexus Begin tree; Tree T1 = ((A,B),C); End;\n\nОснован на блоках кода - XML - based (PHYLOXML) - JSON-based (Nextstrain)",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#визуализация",
+    "href": "Базы_данных_филогенетика.html#визуализация",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n6.5 Визуализация",
+    "text": "6.5 Визуализация\n\niTOL\nDendroscope\nAuspice (для эпидемиологического анализа)\nMEGA (хороша для обучения)\nUGEN",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#устанваливаем-пакеты-bmge-iqtree-emboss-phylip",
+    "href": "Базы_данных_филогенетика.html#устанваливаем-пакеты-bmge-iqtree-emboss-phylip",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.1 Устанваливаем пакеты bmge, iqtree, emboss, phylip",
+    "text": "7.1 Устанваливаем пакеты bmge, iqtree, emboss, phylip\n\nconda activate py3_study\nconda install -c bioconda bmge -y\nconda install -c bioconda -c conda-forge iqtree emboss phylip -y",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#строим-множественное-выравнивание",
+    "href": "Базы_данных_филогенетика.html#строим-множественное-выравнивание",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.2 Строим множественное выравнивание",
+    "text": "7.2 Строим множественное выравнивание\n\nmuscle -align Структуры_данных/03.12.25/seqs.fasta -output Структуры_данных/03.12.25/seqs.aln.fasta\n\n\nmuscle 5.3.osx64 []  8.6Gb RAM, 4 cores\nBuilt Jul 30 2025 21:35:18\n(C) Copyright 2004-2021 Robert C. Edgar.\nhttps://drive5.com\n\n[align Структуры_данных/03.12.25/seqs.fasta]\nInput: 15 seqs, avg length 543, max 548, min 530\n\n00:00 2.3Mb     6.7% Derep 1 uniques, 0 dupes\n00:00 2.3Mb   100.0% Derep 15 uniques, 0 dupes\n00:00 2.4Mb  CPU has 4 cores, running 4 threads\n00:00 2.5Mb    0.95% Calc posteriors\n00:01 78Mb     18.1% Calc posteriors\n00:02 78Mb     48.6% Calc posteriors\n00:03 90Mb     72.4% Calc posteriors\n00:03 93Mb    100.0% Calc posteriors\n00:04 85Mb      7.1% UPGMA5         \n00:04 85Mb    100.0% UPGMA5\n00:04 85Mb     0.95% Consistency (1/2)\n00:04 81Mb    100.0% Consistency (1/2)\n00:04 81Mb     0.95% Consistency (2/2)\n00:04 77Mb    100.0% Consistency (2/2)\n00:04 44Mb      1.0% Refining         \n00:04 40Mb    100.0% Refining\n\n\nСмотрим в UGENE и видим, что качество не очень высокое\n ## Чистим выравнивание от “плохих” позиций\n\nBMGE -i Структуры_данных/03.12.25/seqs.aln.fasta -t AA -m BLOSUM30 -h 0.5 -of Структуры_данных/03.12.25/seqs.aln.trimmed.fasta\n\n   Amino acid sequence alignment seqs.aln.fasta\n   before : 15 sequences / 557 characters\n 0.00% \n 17.95% \n 35.91% \n 53.86% \n 71.81% \n 89.77% \n\n                                                                                                    \n   after :  15 sequences / 528 characters\n                                          \n   after :  15 sequences / 528 characters\n\n\nИ снова посмотрим в UGENE\n\n\nTrimmed alignment\n\nПрограмма аккуратно вырезала неудачные участки выравнивания",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#подсчет-расстояний-для-nj-и-upgma",
+    "href": "Базы_данных_филогенетика.html#подсчет-расстояний-для-nj-и-upgma",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.3 Подсчет расстояний для NJ и UPGMA",
+    "text": "7.3 Подсчет расстояний для NJ и UPGMA\n\n7.3.1 FASTA -&gt; PHYLIP + переименовываем\n\nseqret -sequence Структуры_данных/03.12.25/seqs.aln.trimmed.fasta -outseq Структуры_данных/03.12.25/seqs.phy -osformat2 phylip\n\nRead and write (return) sequences\n\n\n\nhead Структуры_данных/03.12.25/seqs.phy\n\n 15 528\nCH60_HELPYAKEIKFSDSA RNLLFEGVRQ LHDAVKVTMG PRGRNVLIQK SYGAPSITKD\nCH602_MYCTAKTIAYDEEA RRGLERGLNA LADAVKVTLG PKGRNVVLEK KWGAPTITND\nCH60_BACCRAKDIKFSEEA RRSMLRGVDT LANAVKVTLG PKGRNVVLEK KFGSPLITND\nCH60_STAACVKQLKFSEDA RQAMLRGVDQ LANAVKVTIG PKGRNVVLDK EFTAPLITND\nCH60_STRPSSKEIKFSSDA RSAMVRGVDI LADTVKVTLG PKGRNVVLEK SFGSPLITND\nCH60_LACLASKDIKFSSDA RTAMMRGIDI LADTVKTTLG PKGRNVVLEK SYGSPLITND\nCH60_BACSUAKEIKFSEEA RRAMLRGVDA LADAVKVTLG PKGRNVVLEK KFGSPLITND\nCH60_LISMCAKDIKFSEDA RRAMLRGVDQ LANAVKVTLG PKGRNVVLEK KFGSPLITND\nCH60_CHLTRAKNIKYNEEA RKKIQKGVKT LAEAVKVTLG PKGRHVVIDK SFGSPQVTKD\n\n\nPHYLIP-программы по умолчанию читают файл “infile”\n\ncp Структуры_данных/03.12.25/seqs.phy Структуры_данных/03.12.25/infile",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#запускаем-protdist-с-настройками-по-умолчанию",
+    "href": "Базы_данных_филогенетика.html#запускаем-protdist-с-настройками-по-умолчанию",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.4 Запускаем protdist с настройками по умолчанию",
+    "text": "7.4 Запускаем protdist с настройками по умолчанию\n\ncd Структуры_данных/03.12.25\nprotdist &lt;&lt; EOF\nY\n\ncd -\n\n[2J[H\n[2J[H\nProtein distance algorithm, version 3.697\n\nSettings for this run:\n  P  Use JTT, PMB, PAM, Kimura, categories model?  Jones-Taylor-Thornton matrix\n  G  Gamma distribution of rates among positions?  No\n  C           One category of substitution rates?  Yes\n  W                    Use weights for positions?  No\n  M                   Analyze multiple data sets?  No\n  I                  Input sequences interleaved?  Yes\n  0                 Terminal type (IBM PC, ANSI)?  ANSI\n  1            Print out the data at start of run  No\n  2          Print indications of progress of run  Yes\n\nAre these settings correct? (type Y or the letter for one to change)\n\nComputing distances:\n  CH60_HELPY   \n  CH602_MYCT   .\n  CH60_BACCR   ..\n  CH60_STAAC   ...\n  CH60_STRPS   ....\n  CH60_LACLA   .....\n  CH60_BACSU   ......\n  CH60_LISMC   .......\n  CH60_CHLTR   ........\n  CH60_HAEI8   .........\n  CH60_YERPE   ..........\n  CH60_PSEAE   ...........\n  CH60_KLEP3   ............\n  CH60_ECOLI   .............\n  CH601_VIBC   ..............\n\nOutput written to file \"outfile\"\n\nDone.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#сохраняем-матрицу-расстояний-в-отдельный-файл",
+    "href": "Базы_данных_филогенетика.html#сохраняем-матрицу-расстояний-в-отдельный-файл",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.5 Сохраняем матрицу расстояний в отдельный файл",
+    "text": "7.5 Сохраняем матрицу расстояний в отдельный файл\n\nmv Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.protdist",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#nj",
+    "href": "Базы_данных_филогенетика.html#nj",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.6 NJ",
+    "text": "7.6 NJ\nИсходные данные для neighbor должны называться infile\n\ncp Структуры_данных/03.12.25/seqs.protdist Структуры_данных/03.12.25/infile\n\n\ncd Структуры_данных/03.12.25\nneighbor &lt;&lt; EOF\nY\nEOF\ncd -\n\n[2J[H\n[2J[H\nNeighbor-Joining/UPGMA method version 3.697\n\nSettings for this run:\n  N       Neighbor-joining or UPGMA tree?  Neighbor-joining\n  O                        Outgroup root?  No, use as outgroup species  1\n  L         Lower-triangular data matrix?  No\n  R         Upper-triangular data matrix?  No\n  S                        Subreplicates?  No\n  J     Randomize input order of species?  No. Use input order\n  M           Analyze multiple data sets?  No\n  0   Terminal type (IBM PC, ANSI, none)?  ANSI\n  1    Print out the data at start of run  No\n  2  Print indications of progress of run  Yes\n  3                        Print out tree  Yes\n  4       Write out trees onto tree file?  Yes\n\n\n  Y to accept these or type the letter for one to change\n\nCycle  12: species 5 (   0.07431) joins species 6 (   0.10047)\nCycle  11: species 3 (   0.04841) joins species 7 (   0.06128)\nCycle  10: node 3 (   0.01101) joins species 8 (   0.06874)\nCycle   9: node 3 (   0.03094) joins species 4 (   0.17307)\nCycle   8: node 3 (   0.02608) joins node 5 (   0.07966)\nCycle   7: species 2 (   0.28475) joins node 3 (   0.08306)\nCycle   6: node 2 (   0.04067) joins species 9 (   0.27342)\nCycle   5: species 1 (   0.27015) joins node 2 (   0.00408)\nCycle   4: node 1 (   0.10595) joins species 12 (   0.10272)\nCycle   3: node 1 (   0.02055) joins species 15 (   0.19322)\nCycle   2: species 13 (   0.01787) joins species 14 (   0.01368)\nCycle   1: node 1 (   0.03829) joins species 10 (   0.06501)\nlast cycle:\n node 1  (   0.01907) joins species 11  (   0.04739) joins node 13  (   0.02377)\n\nOutput written on file \"outfile\"\n\nTree written on file \"outtree\"\n\nDone.\n\n/Users/lidaflorenskaya/Documents/АлгБио/1_sem/1_sem_algbio_book\n\n\n\nmv Структуры_данных/03.12.25/outtree Структуры_данных/03.12.25/seqs.NJ.tree\nmv Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.NJ.log\n\nДерево в Newick-формате:\n\nhead Структуры_данных/03.12.25/seqs.NJ.tree\n\n(((CH602_MYCT:0.28475,((((CH60_BACCR:0.04841,CH60_BACSU:0.06128):0.01101,\nCH60_LISMC:0.06874):0.03094,CH60_STAAC:0.17307):0.02608,\n(CH60_STRPS:0.07431,CH60_LACLA:0.10047):0.07966):0.08306):0.04067,\nCH60_CHLTR:0.27342):0.00408,(CH60_PSEAE:0.10272,(CH601_VIBC:0.19322,\n(CH60_HAEI8:0.06501,(CH60_YERPE:0.04739,(CH60_KLEP3:0.01787,\nCH60_ECOLI:0.01368):0.02377):0.01907):0.03829):0.02055):0.10595,CH60_HELPY:0.27015);\n\n\nФайл с простой визуализацией\n\nhead -50 Структуры_данных/03.12.25/seqs.NJ.log\n\n\n  15 Populations\n\nNeighbor-Joining/UPGMA method version 3.697\n\n\n Neighbor-joining method\n\n Negative branch lengths allowed\n\n       +----------------CH602_MYCT\n       ! \n       !          +--CH60_BACCR\n       !        +-2 \n    +--6      +-3 +--CH60_BACSU\n    !  !      ! ! \n    !  !    +-4 +---CH60_LISMC\n    !  !    ! ! \n    !  +----5 +----------CH60_STAAC\n  +-7       ! \n  ! !       !   +----CH60_STRPS\n  ! !       +---1 \n  ! !           +-----CH60_LACLA\n  ! ! \n  ! +----------------CH60_CHLTR\n  ! \n  !     +------CH60_PSEAE\n  8-----9 \n  !     !  +----------CH601_VIBC\n  !     +-10  \n  !        !  +---CH60_HAEI8\n  !        +-12  \n  !           !  +--CH60_YERPE\n  !           +-13  \n  !              !  +-CH60_KLEP3\n  !              +-11  \n  !                 +CH60_ECOLI\n  ! \n  +---------------CH60_HELPY\n\n\nremember: this is an unrooted tree!\n\nBetween        And            Length\n-------        ---            ------\n   8             7            0.00408\n   7             6            0.04067\n   6          CH602_MYCT      0.28475\n   6             5            0.08306\n\n\nremember: this is an unrooted tree!",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#upgma",
+    "href": "Базы_данных_филогенетика.html#upgma",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.7 UPGMA",
+    "text": "7.7 UPGMA\n\ncd Структуры_данных/03.12.25\nneighbor &lt;&lt; EOF\nN\nY\nEOF\ncd -\n\n[2J[H\n[2J[H\nNeighbor-Joining/UPGMA method version 3.697\n\nSettings for this run:\n  N       Neighbor-joining or UPGMA tree?  Neighbor-joining\n  O                        Outgroup root?  No, use as outgroup species  1\n  L         Lower-triangular data matrix?  No\n  R         Upper-triangular data matrix?  No\n  S                        Subreplicates?  No\n  J     Randomize input order of species?  No. Use input order\n  M           Analyze multiple data sets?  No\n  0   Terminal type (IBM PC, ANSI, none)?  ANSI\n  1    Print out the data at start of run  No\n  2  Print indications of progress of run  Yes\n  3                        Print out tree  Yes\n  4       Write out trees onto tree file?  Yes\n\n\n  Y to accept these or type the letter for one to change\n[2J[H\nNeighbor-Joining/UPGMA method version 3.697\n\nSettings for this run:\n  N       Neighbor-joining or UPGMA tree?  UPGMA\n  L         Lower-triangular data matrix?  No\n  R         Upper-triangular data matrix?  No\n  S                        Subreplicates?  No\n  J     Randomize input order of species?  No. Use input order\n  M           Analyze multiple data sets?  No\n  0   Terminal type (IBM PC, ANSI, none)?  ANSI\n  1    Print out the data at start of run  No\n  2  Print indications of progress of run  Yes\n  3                        Print out tree  Yes\n  4       Write out trees onto tree file?  Yes\n\n\n  Y to accept these or type the letter for one to change\n\nCycle  14: species 13 (   0.01578) joins species 14 (   0.01578)\nCycle  13: species 11 (   0.04347) joins node 13 (   0.02770)\nCycle  12: species 3 (   0.05484) joins species 7 (   0.05484)\nCycle  11: species 10 (   0.06301) joins node 11 (   0.01954)\nCycle  10: node 3 (   0.01245) joins species 8 (   0.06730)\nCycle   9: species 5 (   0.08739) joins species 6 (   0.08739)\nCycle   8: node 10 (   0.04638) joins species 12 (   0.10939)\nCycle   7: node 3 (   0.06915) joins species 4 (   0.13645)\nCycle   6: node 10 (   0.04185) joins species 15 (   0.15124)\nCycle   5: node 3 (   0.02019) joins node 5 (   0.06925)\nCycle   4: species 1 (   0.25482) joins node 10 (   0.10358)\nCycle   3: species 2 (   0.25603) joins node 3 (   0.09939)\nCycle   2: node 1 (   0.00586) joins species 9 (   0.26068)\nCycle   1: node 1 (   0.00595) joins node 2 (   0.01060)\n\nOutput written on file \"outfile\"\n\nTree written on file \"outtree\"\n\nDone.\n\n/Users/lidaflorenskaya/Documents/АлгБио/1_sem/1_sem_algbio_book\n\n\n\nmv Структуры_данных/03.12.25/outtree Структуры_данных/03.12.25/seqs.UPGMA.tree\nmv Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.UPGMA.log\n\n\nhead -50 Структуры_данных/03.12.25/seqs.UPGMA.log\n\n\n  15 Populations\n\nNeighbor-Joining/UPGMA method version 3.697\n\n\n UPGMA method\n\n Negative branch lengths allowed\n\n        +--------------CH60_HELPY\n        !  \n        !          +---CH60_HAEI8\n        !       +--4 \n     +-11       !  ! +--CH60_YERPE\n     !  !       !  +-2 \n     !  !     +-7    ! +CH60_KLEP3\n     !  !     ! !    +-1 \n     !  !     ! !      +CH60_ECOLI\n  +-13  +-----9 ! \n  !  !        ! +------CH60_PSEAE\n  !  !        ! \n  !  !        +--------CH601_VIBC\n  !  !  \n-14  +---------------CH60_CHLTR\n  !  \n  !  +--------------CH602_MYCT\n  !  !  \n  !  !             +--CH60_BACCR\n  !  !           +-3 \n  +-12       +---5 +--CH60_BACSU\n     !       !   ! \n     !     +-8   +---CH60_LISMC\n     !     ! ! \n     +----10 +-------CH60_STAAC\n           !  \n           !   +----CH60_STRPS\n           +---6 \n               +----CH60_LACLA\n\n\nFrom     To            Length          Height\n----     --            ------          ------\n  14       13          0.00595         0.00595\n  13       11          0.00586         0.01181\n  11     CH60_HELPY    0.25482         0.26663\n  11        9          0.10358         0.11538\n   9        7          0.04185         0.15724\n   7        4          0.04638         0.20362\n\n\nМожем сравнить деревья в Sublime Text\n\n\nComparison\n\n\nhead Структуры_данных/03.12.25/seqs.UPGMA.tree\n\n(((CH60_HELPY:0.25482,(((CH60_HAEI8:0.06301,(CH60_YERPE:0.04347,\n(CH60_KLEP3:0.01578,CH60_ECOLI:0.01578):0.02770):0.01954):0.04638,\nCH60_PSEAE:0.10939):0.04185,CH601_VIBC:0.15124):0.10358):0.00586,\nCH60_CHLTR:0.26068):0.00595,(CH602_MYCT:0.25603,((((CH60_BACCR:0.05484,\nCH60_BACSU:0.05484):0.01245,CH60_LISMC:0.06730):0.06915,\nCH60_STAAC:0.13645):0.02019,(CH60_STRPS:0.08739,CH60_LACLA:0.08739):0.06925):0.09939):0.01060);",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#ml",
+    "href": "Базы_данных_филогенетика.html#ml",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.8 ML",
+    "text": "7.8 ML\n\niqtree -s Структуры_данных/03.12.25/seqs.aln.trimmed.fasta --seqtype AA -m MFP -bb 1000 -nt AUTO\n\nNEWICK\n\nhead Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.treefile\n\n(CH60_HELPY:0.3898588752,(CH602_MYCTU:0.3912167735,(((CH60_BACCR:0.0803259504,CH60_BACSU:0.0493609255)68:0.0280073589,CH60_LISMC:0.0756762233)58:0.0341075748,(CH60_STAAC:0.2126168178,(CH60_STRPS:0.0734405241,CH60_LACLA:0.1349756976)100:0.1553805108)82:0.0348490400)100:0.1682327665)99:0.1208257866,(CH60_CHLTR:0.4156398474,(((CH60_HAEI8:0.0772703352,(CH60_YERPE:0.0525477043,(CH60_KLEP3:0.0269603591,CH60_ECOLI:0.0083411322)86:0.0344113677)83:0.0362044668)91:0.0439997970,CH601_VIBC3:0.2702593075)92:0.0538020845,CH60_PSEAE:0.1392840272)100:0.1665632925)41:0.0224134680);\n\n\nNEXUS\n\nhead -50 Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.splits.nex\n\n#nexus\n\nBEGIN Taxa;\nDIMENSIONS ntax=15;\nTAXLABELS\n[1] 'CH60_HELPY'\n[2] 'CH602_MYCTU'\n[3] 'CH60_BACCR'\n[4] 'CH60_STAAC'\n[5] 'CH60_STRPS'\n[6] 'CH60_LACLA'\n[7] 'CH60_BACSU'\n[8] 'CH60_LISMC'\n[9] 'CH60_CHLTR'\n[10] 'CH60_HAEI8'\n[11] 'CH60_YERPE'\n[12] 'CH60_PSEAE'\n[13] 'CH60_KLEP3'\n[14] 'CH60_ECOLI'\n[15] 'CH601_VIBC3'\n;\nEND; [Taxa]\n\nBEGIN Splits;\nDIMENSIONS ntax=15 nsplits=63;\nFORMAT labels=no weights=yes confidences=no intervals=no;\nMATRIX\n    100  2,\n    100  3,\n    100  7,\n    68   3 7,\n    100  8,\n    58   3 7 8,\n    100  4,\n    100  5,\n    100  6,\n    100  5 6,\n    82   4 5 6,\n    100  3 4 5 6 7 8,\n    99   2 3 4 5 6 7 8,\n    100  10,\n    100  11,\n    12   10 11,\n    100  13,\n    100  14,\n    86   13 14,\n    91   10 11 13 14,\n    100  15,\n    92   10 11 13 14 15,\n    100  12,\n\n\nЛучшее и консенсуснное дерево:\n\ntail -150 Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.iqtree\n\nMTVER+G4          -8099.182   16254.365 - 5.42e-294   16257.619 - 7.71e-294   16373.900 - 3.39e-293\nMTVER+I+G4        -8099.449   16256.898 - 1.53e-294   16260.392 - 1.93e-294   16380.701 - 1.13e-294\nHIVW+G4           -8123.422   16302.844 - 1.61e-304   16306.099 - 2.29e-304   16422.379 - 1.01e-303\nHIVW+I+G4         -8121.712   16301.425 - 3.27e-304   16304.919 - 4.13e-304   16425.228 - 2.43e-304\nMTMAM+G4          -8194.676   16445.351 -        0   16448.606 -        0   16564.886 -        0\nMTMAM+I+G4        -8195.056   16448.113 -        0   16451.607 -        0   16571.917 -        0\n\nAIC, w-AIC   : Akaike information criterion scores and weights.\nAICc, w-AICc : Corrected AIC scores and weights.\nBIC, w-BIC   : Bayesian information criterion scores and weights.\n\nPlus signs denote the 95% confidence sets.\nMinus signs denote significant exclusion.\n\nSUBSTITUTION PROCESS\n--------------------\n\nModel of substitution: LG+G4\n\nState frequencies: (model)\n\nModel of rate heterogeneity: Gamma with 4 categories\nGamma shape alpha: 0.7552\n\n Category  Relative_rate  Proportion\n  1         0.0860         0.2500\n  2         0.3884         0.2500\n  3         0.9437         0.2500\n  4         2.5819         0.2500\nRelative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.\n\nMAXIMUM LIKELIHOOD TREE\n-----------------------\n\nLog-likelihood of the tree: -7425.8244 (s.e. 223.0207)\nUnconstrained log-likelihood (without tree): -2897.0082\nNumber of free parameters (#branches + #model parameters): 28\nAkaike information criterion (AIC) score: 14907.6488\nCorrected Akaike information criterion (AICc) score: 14910.9033\nBayesian information criterion (BIC) score: 15027.1835\n\nTotal tree length (sum of branch lengths): 3.2966\nSum of internal branch lengths: 0.8988 (27.2646% of tree length)\n\nNOTE: Tree is UNROOTED although outgroup taxon 'CH60_HELPY' is drawn at root\nNumbers in parentheses are  ultrafast bootstrap support (%)\n\n+-------------------------------------CH60_HELPY\n|\n|          +-------------------------------------CH602_MYCTU\n+----------| (99)\n|          |                     +------CH60_BACCR\n|          |                  +--| (68)\n|          |                  |  +---CH60_BACSU\n|          |               +--| (58)\n|          |               |  +------CH60_LISMC\n|          +---------------| (100)\n|                          |  +-------------------CH60_STAAC\n|                          +--| (82)\n|                             |              +------CH60_STRPS\n|                             +--------------| (100)\n|                                            +------------CH60_LACLA\n|\n|  +---------------------------------------CH60_CHLTR\n+--| (41)\n   |                        +------CH60_HAEI8\n   |                    +---| (91)\n   |                    |   |  +----CH60_YERPE\n   |                    |   +--| (83)\n   |                    |      |  +--CH60_KLEP3\n   |                    |      +--| (86)\n   |                    |         +--CH60_ECOLI\n   |               +----| (92)\n   |               |    +-------------------------CH601_VIBC3\n   +---------------| (100)\n                   +------------CH60_PSEAE\n\nTree in newick format:\n\n(CH60_HELPY:0.3898588752,(CH602_MYCTU:0.3912167735,(((CH60_BACCR:0.0803259504,CH60_BACSU:0.0493609255)68:0.0280073589,CH60_LISMC:0.0756762233)58:0.0341075748,(CH60_STAAC:0.2126168178,(CH60_STRPS:0.0734405241,CH60_LACLA:0.1349756976)100:0.1553805108)82:0.0348490400)100:0.1682327665)99:0.1208257866,(CH60_CHLTR:0.4156398474,(((CH60_HAEI8:0.0772703352,(CH60_YERPE:0.0525477043,(CH60_KLEP3:0.0269603591,CH60_ECOLI:0.0083411322)86:0.0344113677)83:0.0362044668)91:0.0439997970,CH601_VIBC3:0.2702593075)92:0.0538020845,CH60_PSEAE:0.1392840272)100:0.1665632925)41:0.0224134680);\n\nCONSENSUS TREE\n--------------\n\nConsensus tree is constructed from 1000 bootstrap trees\nLog-likelihood of consensus tree: -7425.824432\nRobinson-Foulds distance between ML tree and consensus tree: 0\n\nBranches with support &gt;0.000000% are kept (extended consensus)\nBranch lengths are optimized by maximum likelihood on original alignment\nNumbers in parentheses are bootstrap supports (%)\n\n+-------------------------------------CH60_HELPY\n|\n|          +-------------------------------------CH602_MYCTU\n+----------| (99)\n|          |                     +------CH60_BACCR\n|          |                  +--| (68)\n|          |                  |  +---CH60_BACSU\n|          |               +--| (58)\n|          |               |  +------CH60_LISMC\n|          +---------------| (100)\n|                          |  +-------------------CH60_STAAC\n|                          +--| (82)\n|                             |              +------CH60_STRPS\n|                             +--------------| (100)\n|                                            +------------CH60_LACLA\n|\n|  +---------------------------------------CH60_CHLTR\n+--| (41)\n   |                        +------CH60_HAEI8\n   |                    +---| (91)\n   |                    |   |  +----CH60_YERPE\n   |                    |   +--| (83)\n   |                    |      |  +--CH60_KLEP3\n   |                    |      +--| (86)\n   |                    |         +--CH60_ECOLI\n   |               +----| (92)\n   |               |    +-------------------------CH601_VIBC3\n   +---------------| (100)\n                   +------------CH60_PSEAE\n\n\nConsensus tree in newick format: \n\n(CH60_HELPY:0.3900429813,(CH602_MYCTU:0.3913628883,(((CH60_BACCR:0.0803449626,CH60_BACSU:0.0493723422)68:0.0280140029,CH60_LISMC:0.0756906607)58:0.0341163749,(CH60_STAAC:0.2126878772,(CH60_STRPS:0.0734430703,CH60_LACLA:0.1350221404)100:0.1554341766)82:0.0348420396)100:0.1682942628)99:0.1208632629,(CH60_CHLTR:0.4158742269,(((CH60_HAEI8:0.0773304222,(CH60_YERPE:0.0525875244,(CH60_KLEP3:0.0269855533,CH60_ECOLI:0.0083337849)86:0.0344200356)83:0.0362120560)91:0.0440012661,CH601_VIBC3:0.2704394219)92:0.0537962760,CH60_PSEAE:0.1393833227)100:0.1666421487)41:0.0224015782);\n\nALISIM COMMAND\n--------------\nTo simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:\n\n--alisim simulated_MSA -t 03.12.25/seqs.aln.trimmed.fasta.treefile -m \"LG+G4{0.755158}\" --length 528\n\nTo mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:\n\niqtree -s 03.12.25/seqs.aln.trimmed.fasta --alisim mimicked_MSA\n\nTo simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:\n\niqtree -s 03.12.25/seqs.aln.trimmed.fasta --alisim mimicked_MSA --num-alignments 100\n\nFor more information on using AliSim, please visit: www.iqtree.org/doc/AliSim\n\nTIME STAMP\n----------\n\nDate and time: Wed Dec  3 11:09:13 2025\nTotal CPU time used: 56.419625 seconds (0h:0m:56s)\nTotal wall-clock time used: 63.62741709 seconds (0h:1m:3s)\n\n\nПоявились bootstrepы\nconda deactivate",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_филогенетика.html#визуализация-на-сайте-itools",
+    "href": "Базы_данных_филогенетика.html#визуализация-на-сайте-itools",
+    "title": "\n6  Филогенетические деревья\n",
+    "section": "\n7.9 Визуализация на сайте Itools",
+    "text": "7.9 Визуализация на сайте Itools\nМожем добавить метаданные - нужно создать новый датасет и вручную вставить данные из файла с метаданными, например\n0 - не патоген, 1 - патоген.\n\nhead Структуры_данных/03.12.25/path.txt\n\nCH60_ECOLI  0\nCH60_PSEAE  1\nCH601_VIBC  1\nCH60_YERPE  1\nCH60_KLEP3  1\nCH60_HAEI8  1\nCH60_CHLTR  1\nCH60_BACSU  0\nCH60_BACCR  1\nCH60_LISMC  1\n\n\n\n\nDataset in Itools\n\n\n\nResult",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Филогенетические деревья</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html",
+    "href": "Базы_данных_аннотация_геномов.html",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "",
+    "text": "7.1 Введение\nВсе ранее изученные компоненты курса (базы данных, алгоритмы, утилиты) являются составными частями единого комплексного процесса — аннотации геномов.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#аннотация-геномов",
+    "href": "Базы_данных_аннотация_геномов.html#аннотация-геномов",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.2 Аннотация геномов",
+    "text": "7.2 Аннотация геномов\nЭто систематическое описание всех элементов генома, включающее два основных уровня:\n\n\nСтруктурная аннотация — разметка элементов генома:\n\nКодирующие и некодирующие участки\nРегуляторные элементы (промоторы, сайты связывания транскрипционных факторов)\nВставки вирусов\nCRISPR-области\n\n\n\nФункциональная аннотация — определение биологической роли структурных элементов (преимущественно для кодирующих генов) путем сравнения с известными последовательностями в базах данных.\n\nТипичный пайплайн анализа генома:\n\n\n\n\n\nflowchart TD\n    A[\"**Сырые риды**&lt;br&gt;FASTQ файлы&lt;br&gt;Illumina/ONT/PacBio\"] --&gt; B\n    \n    subgraph B [**QC ридов**]\n        direction LR\n        B1[\"FastQC&lt;br&gt;MultiQC\"] --&gt; B2[\"Trimmomatic, Fastp&lt;br&gt;Cutadapt\"]\n        B2 --&gt; B3[\"Чистые риды\"]\n    end\n    \n    B --&gt; C\n    \n    subgraph C [**Сборка контигов**]\n        direction LR\n        C1[\"Ассемблеры&lt;br&gt;SPAdes, MEGAHIT, Flye\"] --&gt; C2[\"Контиги&lt;br&gt;FASTA файл\"]\n    end\n    \n    C --&gt; D\n    \n    subgraph D [**QC сборки**]\n        direction LR\n        D1[\"QUAST&lt;br&gt;IGV\"] --&gt; D2[\"Оценка N50, полноты,&lt;br&gt;загрязнения\"]\n    end\n    \n    \n    D --&gt; E\n    \n    subgraph E [**Аннотация**]\n        direction TB\n        subgraph E1[Компоненты аннотации]\n        direction LR\n        E0[\"**Структурная**&lt;br&gt;Prodigal, Augustus&lt;br&gt;HMMER&lt;br&gt;GeneMark\"] \n        \n        E2_Functional[\"**Функциональная**&lt;br&gt;BLAST, MMseqs2, KEGG, COG, GO\"]\n\n       E3_Specialized[\"**Специализированные БД**&lt;br&gt;VFDB,CARD&lt;br&gt;Abricate, RGI, PlasmidFinder\"]\n        \n\n        end\n\n        E0 --&gt; E4[\"**Комплексные пайплайны**&lt;br&gt;Prokka, Bakta, PGAP&lt;br&gt;MAKER, BRAKER\"]\n        E2_Functional --&gt; E4\n        E3_Specialized --&gt; E4\n    end\n    \n    E --&gt; F\n    \n    subgraph F [**Биологическая интерпретация**]\n        \n    end\n\n    style A fill:#ffcccc\n    style B fill:#cce5ff\n    style C fill:#d4edda\n    style D fill:#fff3cd\n    style E fill:#e2d3f3\n    style F fill:#f8d7da\n    \n\n    style E0 fill:#ffebcc\n    style E1 fill:#e6f7ff\n    style E2_Functional fill:#ffe6e6\n    style E3_Specialized fill:#f0e6ff\n    style E4 fill:#d4edda",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#структурная-аннотация-элементы-генома",
+    "href": "Базы_данных_аннотация_геномов.html#структурная-аннотация-элементы-генома",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.3 Структурная аннотация: элементы генома",
+    "text": "7.3 Структурная аннотация: элементы генома\n\n7.3.1 Прокариотический геном\nКомпактный, кольцевая ДНК, совмещение транскрипции и трансляции:\n\n\nCDS (Coding Sequences) — кодирующие последовательности, часто организованы в опероны.\n\nрРНК (рибосомальные РНК): 5S, 16S, 23S. Используются для таксономической классификации благодаря наличию консервативных и вариабельных участков.\n\nтРНК (транспортные РНК) — присутствие полного набора является критерием качества аннотации.\n\nРегуляторные элементы: промоторы, последовательность Шайна-Дальгарно.\n\nнкРНК (некодирующие РНК): малые регуляторные РНК, CRISPR-последовательности.\n\nПовторяющиеся элементы: транспозоны.\n\nЭлементы репликации: ориджины, DnaA-боксы.\n\nНетранслируемые регионы (UTR): 5’ и 3’ UTR.\n\n7.3.2 Эукариотический геном\nСложная организация, разделение транскрипции и трансляции:\n\n\nГены со сложной структурой: экзоны, интроны, альтернативный сплайсинг. Часто требует данных транскриптомики для точной разметки.\n\nUTR-регионы: 5’ и 3’ UTR.\n\nПсевдогены (редки у прокариот) — последовательности, похожие на гены, но утратившие функцию.\n\nРегуляторные элементы: энхансеры, сайленсеры, промоторы.\n\nнкРНК: большее разнообразие (miRNA, lncRNA, snoRNA, snRNA).\n\nЭлементы хроматиновой структуры: TAD-домены (топологически ассоциированные домены). Позволяет предсказывать упаковку ДНК.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#алгоритмы-структурной-аннотации",
+    "href": "Базы_данных_аннотация_геномов.html#алгоритмы-структурной-аннотации",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.4 Алгоритмы структурной аннотации",
+    "text": "7.4 Алгоритмы структурной аннотации\n\n7.4.1 1. Методы ab initio (предсказание на основе статистических свойств)\nИспользуют отличительные признаки генов: состав кодонов, GC-состав, частоты олигонуклеотидов. Основаны на скрытых марковских моделях (HMM).\n\n\nProdigal — для прокариот.\n\nAugustus — для эукариот (учитывает экзон-интронную структуру).\n\nGeneMark — универсальный инструмент.\n\n7.4.2 2. Гомологические (сравнительные) методы\nПоиск схожих последовательностей в базах данных для переноса аннотации.\n\n\nBLAST, MMseqs2 — поиск гомологов.\n\nHMMER — чувствительный поиск белковых доменов.\n\nExonerate — точное выравнивание известного гена на геном.\n\nПрименение: Гомологические методы часто используются после ab initio для функциональной аннотации, так как самостоятельно могут плохо отличать функциональные гены от псевдогенов.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#функциональная-аннотация",
+    "href": "Базы_данных_аннотация_геномов.html#функциональная-аннотация",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.5 Функциональная аннотация",
+    "text": "7.5 Функциональная аннотация\nОсновная идея: сравнение предсказанных генов/белков с известными последовательностями и их функциями.\nОсновные подходы:\n\n\nГомологический поиск (BLASTp, BLASTn, BLASTx). 2. Аннотация доменов (HMMER → базы доменов: Pfam, TIGRFAMs, CDD). 3. Интеграция аннотаций из специализированных баз данных (eggNOG, KEGG KO, InterPro, COG, GO, Reactome).",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#базы-данных-для-аннотации",
+    "href": "Базы_данных_аннотация_геномов.html#базы-данных-для-аннотации",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.6 Базы данных для аннотации",
+    "text": "7.6 Базы данных для аннотации\n\n\n\n\n\n\n\nКатегория баз данных\nПримеры\nНазначение\n\n\n\n\nУниверсальные (аннотированные последовательности)\nUniProtKB (Swiss-Prot, TrEMBL), GenBank, RefSeq (NCBI)\nХранение и поиск аннотированных генов и геномов\n\n\nБД ортологов / функциональных групп\nGO (Gene Ontology), eggNOG, OrthoDB (NCBI)\nГруппировка генов/белков по эволюционному родству или функции\n\n\nБД доменов и семейств белков\nPfam, TIGRFAMs, CDD, SMART, PANTHER\nАннотация консервативных мотивов и доменов\n\n\nБД метаболических путей и реакций\nKEGG, MetaCyc, Reactome\nСборка генов в функциональные сети и пути",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#специализированная-аннотация-для-бактерий",
+    "href": "Базы_данных_аннотация_геномов.html#специализированная-аннотация-для-бактерий",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.7 Специализированная аннотация (для бактерий)",
+    "text": "7.7 Специализированная аннотация (для бактерий)\nПри анализе клинически значимых изолятов часто требуется дополнительная информация:\n\n\nФакторы вирулентности: VFDB.\n*Гены устойчивости к антибиотикам: CARD.\n\nПлазмиды: PlasmidFinder.\n\nCRISPR-системы: CRISPRCasFinder.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#уровни-доказательности-аннотации-по-убыванию-надежности",
+    "href": "Базы_данных_аннотация_геномов.html#уровни-доказательности-аннотации-по-убыванию-надежности",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.8 Уровни доказательности аннотации (по убыванию надежности)",
+    "text": "7.8 Уровни доказательности аннотации (по убыванию надежности)\n\nЭкспериментальное подтверждение (например, записи в Swiss-Prot)\nНаличие высококонсервативного белкового домена.\nВысокий уровень гомологии с аннотированным ортологом.\nПрисутствие большинства генов известного метаболического пути (аннотация пути в целом надежнее, чем отдельного гена).",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#инструменты-комплексной-аннотации-геномов",
+    "href": "Базы_данных_аннотация_геномов.html#инструменты-комплексной-аннотации-геномов",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.9 Инструменты комплексной аннотации геномов",
+    "text": "7.9 Инструменты комплексной аннотации геномов\nПайплайны, принимающие на вход собранный геном (FASTA) и выдающие таблицу аннотаций.\n\n\n\n\n\n\n\n\n\n\nИнструмент\nТип генома\nОсновной метод\nСильные стороны\nОграничения\nПрименение\n\n\n\nProkka\nПрокариоты\nBLAST + HMMER + Prodigal\nБыстрый, простой, устойчивый\nПоверхностная функц. аннотация, устаревшие БД\nБыстрая черновая аннотация\n\n\nBakta\nПрокариоты\nОртология + HMM\nВысокая точность, современные БД, учёт ортологии\nБольшой размер полной БД\nИсследовательские проекты, клинические изоляты\n\n\nDFAST\nПрокариоты\nBLAST/HMMER + курируемые БД\nКачественные базы\nУзкая экосистема\nПищевая/клиническая микробиология\n\n\nPGAP (NCBI)\nПрокариоты\nПравила + RefSeq\nЭталон для публикаций, строгая номенклатура\nСложный запуск, долгое выполнение\nПубликации, депонирование в GenBank\n\n\nAugustus\nЭукариоты\nAb initio\nЛучший standalone предсказатель генов\nТребует training set, нет функц. аннотации\nВ составе комплексных пайплайнов\n\n\nGeneMark-ET/ES\nЭукариоты\n\nAb initio с самообучением\nАвтономность, базовый уровень\nТребует RNA-seq для лучшей точности\nПервичное предсказание генов\n\n\nMAKER\nЭукариоты\nИнтеграция всех типов данных\nСтандарт de facto, гибкий\nСложная настройка, ресурсоёмкий\nАннотация новых сложных геномов\n\n\nBRAKER2/3\nЭукариоты\nАвтоматическое обучение на RNA-seq\nАвтоматизация, высокое качество сплайсинга\nКачество зависит от RNA-seq\nАннотация без референсного генома\n\n\nFunannotate\nЭукариоты (грибы)\nИнтеграция (Augustus, PASA, InterPro)\nПолный комплекс (структ.+функц.)\nОграничен для больших геномов\nГеномика грибов\n\n\n\nПримечание: Bakta в настоящее время является одним из наиболее популярных инструментов для прокариот благодаря балансу точности и скорости. PGAP считается эталоном для публикаций.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#контроль-качества-аннотации",
+    "href": "Базы_данных_аннотация_геномов.html#контроль-качества-аннотации",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.10 Контроль качества аннотации",
+    "text": "7.10 Контроль качества аннотации\nКоличественные и качественные метрики:\n\n\nКоличество предсказанных генов: отклонение от ожидаемого для вида может указывать на проблемы со сборкой (разрывы, контаминация) или аннотацией.\n\nДоля гипотетических белков: для бактерий типично 20-40%. Высокий процент может означать слабую функциональную аннотацию или новый, нехарактерный геном.\n\nКорректность CDS: правильные старт/стоп кодоны, отсутствие сдвигов рамки и нереалистичных перекрытий.\n\nНаличие ключевых элементов: полный набор тРНК, ожидаемое число копий рРНК (для прокариот — часто несколько копий 16S рРНК).\n\nПодтверждение данными: для эукариот — поддержка границ интронов/экзонов данными RNA-seq.\n\nСогласованность: совпадение результатов разных методов аннотации (BLAST, HMMER, eggNOG).",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#типичные-ошибки-при-аннотации",
+    "href": "Базы_данных_аннотация_геномов.html#типичные-ошибки-при-аннотации",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.11 Типичные ошибки при аннотации",
+    "text": "7.11 Типичные ошибки при аннотации\nДля прокариот:\n\nРазделение одной ORF на два псевдогена.\nПринятие коротких псевдогенов за настоящие гены (исправляется порогом по длине).\nПропуск генов в областях с атипичным GC-составом (например, у термофилов).\nЛожная аннотация по вирулентности/резистентности из-за низкого покрытия плазмид.\n\nДля эукариот: 1. Неправильное определение границ интронов/экзонов (без данных RNA-seq). 2. Переаннотация — предсказание ложных изоформ. 3. Аннотация повторов как генов.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#инструменты-контроля-качества",
+    "href": "Базы_данных_аннотация_геномов.html#инструменты-контроля-качества",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n7.12 Инструменты контроля качества",
+    "text": "7.12 Инструменты контроля качества\n\n\nBUSCO — оценка полноты аннотации на основе универсальных ортологичных генов.\n\nQUAST — оценка качества сборки, влияющей на аннотацию.\n\nArtemis / IGV / JBrowse — визуальная проверка аннотаций и выравниваний (RNA-seq).\n\ntbl2asn / NCBI Validator — проверка формата и корректности перед загрузкой в GenBank.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#цель-работы",
+    "href": "Базы_данных_аннотация_геномов.html#цель-работы",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.1 Цель работы",
+    "text": "8.1 Цель работы\nОсвоение методов полной и специализированной функциональной аннотации бактериальных геномов с использованием инструментов Bakta и Abricate.\n\n\n\n\n\n\nWarningОграничения Abricate\n\n\n\n\nОпределяет только известные гены резистентности\nНе обнаруживает резистентность, вызванную точковыми мутациями\n\nДля комплексного анализа резистентности рекомендуется использовать RGI (Resistance Gene Identifier), который учитывает различные механизмы устойчивости.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#подготовка-рабочего-пространства",
+    "href": "Базы_данных_аннотация_геномов.html#подготовка-рабочего-пространства",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.2 Подготовка рабочего пространства",
+    "text": "8.2 Подготовка рабочего пространства\nСоздаем директории для данных, результатов и баз данных:\n\n# Основные директории\nmkdir -p Структуры_данных/10.12.25/genome_annot_prac\ncd Структуры_данных/10.12.25/genome_annot_prac\n\n# Организационная структура\nmkdir -p data results db\nmkdir -p db/{bakta,abricate}\nmkdir -p results/{bakta,abricate}\n\n# Возврат в исходную директорию\ncd -",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#установка-необходимых-инструментов",
+    "href": "Базы_данных_аннотация_геномов.html#установка-необходимых-инструментов",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.3 Установка необходимых инструментов",
+    "text": "8.3 Установка необходимых инструментов\nУстанавливаем пакеты через менеджер mamba:\n\nmamba install -y bakta abricate",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#подготовка-данных",
+    "href": "Базы_данных_аннотация_геномов.html#подготовка-данных",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.4 Подготовка данных",
+    "text": "8.4 Подготовка данных\n\n8.4.1 Загрузка тестового генома\n\ncd Структуры_данных/10.12.25/genome_annot_prac/data\n\n# Загрузка генома Staphylococcus aureus из NCBI\nwget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/425/GCF_000013425.1_ASM1342v1/GCF_000013425.1_ASM1342v1_genomic.fna.gz\ngunzip GCF_000013425.1_ASM1342v1_genomic.fna.gz\n\ncd -\n\n\n8.4.2 Загрузка баз данных\nДля Bakta:\n\ncd Структуры_данных/10.12.25/genome_annot_prac/db/bakta\nbakta_db download --output db-light --type light\ncd -\n\nДля Abricate:\n\ncd Структуры_данных/10.12.25/genome_annot_prac/db/abricate\n\n# Базы генов устойчивости и факторов вирулентности\nabricate-get_db --db card --force\nabricate-get_db --db vfdb --force\n\n# Создание индексов\nabricate --setupdb\n\ncd -",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#обзор-содержимого-баз-данных",
+    "href": "Базы_данных_аннотация_геномов.html#обзор-содержимого-баз-данных",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.5 Обзор содержимого баз данных",
+    "text": "8.5 Обзор содержимого баз данных\n\n8.5.1 База Bakta\n\nls Структуры_данных/10.12.25/genome_annot_prac/db/bakta/db-light/db-light\n\namrfinderplus-db\nantifam.h3f\nantifam.h3i\nantifam.h3m\nantifam.h3p\nbakta.db\nexpert-protein-sequences.dmnd\nncRNA-genes.i1f\nncRNA-genes.i1i\nncRNA-genes.i1m\nncRNA-genes.i1p\nncRNA-regions.i1f\nncRNA-regions.i1i\nncRNA-regions.i1m\nncRNA-regions.i1p\noric.fna\norit.fna\npfam.h3f\npfam.h3i\npfam.h3m\npfam.h3p\npscc.dmnd\nrfam-go.tsv\nrRNA.i1f\nrRNA.i1i\nrRNA.i1m\nrRNA.i1p\nsorf.dmnd\nversion.json\n\n\n\n8.5.2 Базы Abricate\n\nabricate --list | column -s $'\\t' -t\n\nDATABASE       SEQUENCES  DBTYPE  DATE\ncard           6052       nucl    2025-Dec-27\necoli_vf       2701       nucl    2025-Dec-27\nplasmidfinder  488        nucl    2025-Dec-27\necoh           597        nucl    2025-Dec-27\nncbi           8035       nucl    2025-Dec-27\nvictors        4545       nucl    2025-Dec-27\nresfinder      3206       nucl    2025-Dec-27\nbacmet2        746        prot    2025-Dec-27\nvfdb           4592       nucl    2025-Dec-27\nmegares        6635       nucl    2025-Dec-27\nargannot       2224       nucl    2025-Dec-27\n\n\nДоступные базы:\n\n\ncard — гены антибиотикорезистентности\n\nvfdb — факторы вирулентности\n\nplasmidfinder — плазмидные репликоны\n\nncbi — база NCBI и др.",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#полная-аннотация-генома-с-помощью-bakta",
+    "href": "Базы_данных_аннотация_геномов.html#полная-аннотация-генома-с-помощью-bakta",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.6 Полная аннотация генома с помощью Bakta",
+    "text": "8.6 Полная аннотация генома с помощью Bakta\n\n8.6.1 Подготовка и запуск\n\n# Очистка предыдущих результатов (если необходимо)\nrm -rf Структуры_данных/10.12.25/genome_annot_prac/results/bakta/test_genome/*\n\n# Определение переменных\nGENOME=Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\nBAKTA_DB=Структуры_данных/10.12.25/genome_annot_prac/db/bakta/db-light/db-light\nOUTPUT_DIR=Структуры_данных/10.12.25/genome_annot_prac/results/bakta/test_genome\n\n# Запуск аннотации\nbakta --db $BAKTA_DB \\\n      --output $OUTPUT_DIR \\\n      --prefix test_genome \\\n      $GENOME\n\n\n8.6.2 Форматы выходных файлов Bakta\nBakta предоставляет результаты аннотации в стандартных биоинформатических форматах:\n\n\n&lt;префикс&gt;.tsv: аннотации в удобочитаемом формате TSV\n\n&lt;префикс&gt;.gff3: аннотации и последовательности в формате GFF3\n\n&lt;префикс&gt;.gbff: аннотации и последовательности в формате GenBank (многофайловый)\n\n&lt;префикс&gt;.embl: аннотации и последовательности в формате EMBL\n\n&lt;префикс&gt;.fna: последовательности репликонов/контигов в формате FASTA\n\n&lt;префикс&gt;.ffn: нуклеотидные последовательности всех аннотированных элементов генома в формате FASTA\n\n&lt;префикс&gt;.faa: аминокислотные последовательности CDS/sORF в формате FASTA\n\n&lt;префикс&gt;.inference.tsv: Метрики выравнивания (score, e-value, покрытие, идентичность) для референтных последовательностей, использованных при аннотации, в формате TSV\n\n&lt;префикс&gt;.hypotheticals.tsv: дополнительная информация о гипотетических белках в TSV\n\n&lt;префикс&gt;.hypotheticals.faa: аминокислотные последовательности гипотетических белков в FASTA\n\n&lt;префикс&gt;.txt: сводная статистика в TXT\n\n&lt;префикс&gt;.png: круговая диаграмма аннотации генома в PNG\n\n&lt;префикс&gt;.svg: круговая диаграмма аннотации генома в SVG\n\n&lt;префикс&gt;.json: вся (внутренняя) информация об аннотациях и последовательностях в JSON\n\nОбщая статистика:\n\ncat Структуры_данных/10.12.25/genome_annot_prac/results/bakta/test_genome/test_genome.txt\n\nSequence(s):\nLength: 2821361\nCount: 1\nGC: 32.9\nN50: 2821361\nN90: 2821361\nN ratio: 0.0\ncoding density: 85.6\n\nAnnotation:\ntRNAs: 61\ntmRNAs: 1\nrRNAs: 16\nncRNAs: 85\nncRNA regions: 26\nCRISPR arrays: 0\nCDSs: 2631\npseudogenes: 0\nhypotheticals: 199\nsORFs: 4\ngaps: 1\noriCs: 1\noriVs: 0\noriTs: 0\n\nBakta:\nSoftware: v1.11.4\nDatabase: v6.0, light\nDOI: 10.1099/mgen.0.000685\nURL: github.com/oschwengers/bakta\n\n\nПолная аннотация:\n\nhead -10 Структуры_данных/10.12.25/genome_annot_prac/results/bakta/test_genome/test_genome.tsv |\\\ncolumn -s $'\\t' -t\n\n# Annotated with Bakta\n# Software: v1.11.4\n# Database: v6.0, light\n# DOI: 10.1099/mgen.0.000685\n# URL: github.com/oschwengers/bakta\n#Sequence Id                         Type  Start  Stop  Strand  Locus Tag              Gene                 Product                                         DbXrefs\ncontig_1                             cds   517    1878  +       PANCAC_00001           dnaA                 Chromosomal replication initiator protein DnaA  SO:0001217, UniRef:UniRef50_Q2G2H5\ncontig_1                             oriC  1890   2155  ?       origin of replication\ncontig_1                             cds   2156   3289  +       PANCAC_00002           Beta sliding clamp   SO:0001217, UniRef:UniRef50_Q9RCA1\ncontig_1                             cds   3679   3915  +       PANCAC_00003           RNA-binding protein  SO:0001217, UniRef:UniRef50_A0A028ZHC3\n\n\nВизуализация:",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Базы_данных_аннотация_геномов.html#специализированная-аннотация-с-помощью-abricate",
+    "href": "Базы_данных_аннотация_геномов.html#специализированная-аннотация-с-помощью-abricate",
+    "title": "\n7  Аннотация геномов\n",
+    "section": "\n8.7 Специализированная аннотация с помощью Abricate",
+    "text": "8.7 Специализированная аннотация с помощью Abricate\n\n8.7.1 Поиск генов устойчивости (CARD) и факторов вирулентности (VFDB)\n\nGENOME=Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\n\nabricate --db card $GENOME &gt; \\\nСтруктуры_данных/10.12.25/genome_annot_prac/results/abricate/test_genome.card.tab\n\nabricate --db vfdb $GENOME &gt; \\\nСтруктуры_данных/10.12.25/genome_annot_prac/results/abricate/test_genome.vfdb.tab\n\nUsing nucl database card:  6052 sequences -  2025-Dec-27\nProcessing: Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\nFound 13 genes in Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\nTip: you can use the --summary option to combine reports in a presence/absence matrix.\nDone.\nUsing nucl database vfdb:  4592 sequences -  2025-Dec-27\nProcessing: Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\nFound 84 genes in Структуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna\nTip: it's important to realise abricate uses DNA matching, not AA.\nDone.\n\n\n\n8.7.2 Результаты\n\n8.7.2.1 Факторы вирулентности:\n\nhead -10 Структуры_данных/10.12.25/genome_annot_prac/results/abricate/test_genome.vfdb.tab |\\\ncolumn -s $'\\t' -t\n\n#FILE                                                                                   SEQUENCE     START   END     STRAND  GENE   COVERAGE     COVERAGE_MAP     GAPS  %COVERAGE  %IDENTITY  DATABASE  ACCESSION                                                                                                                                                     PRODUCT                                                                                                                                                    RESISTANCE\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  31005   33323   +       adsA   1-2319/2319  ===============  0/0   100.00     96.72      vfdb      WP_000645781                                                                                                                                                  (adsA) Adenosine synthase A [AdsA (VF0422) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  73429   74979   -       spa    1-1479/1479  ========/======  3/72  100.00     93.62      vfdb      WP_000728751                                                                                                                                                  (spa) Immunoglobulin G binding protein A precursor [SpA (VF0017) - Exotoxin (VFC0235)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  119492  120160  +       capA   1-668/668    ========/======  1/1   100.00     99.55      vfdb      (capA) capsular polysaccharide type 5/8 biosynthesis protein CapA [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  120176  120862  +       cap8B  1-687/687    ===============  0/0   100.00     98.98      vfdb      WP_000037328                                                                                                                                                  (cap8B) type 8 capsular polysaccharide synthesis protein Cap8B [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  120865  121629  +       cap8C  1-765/765    ===============  0/0   100.00     99.61      vfdb      WP_000565297                                                                                                                                                  (cap8C) type 8 capsular polysaccharide synthesis protein Cap8C [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  121649  123472  +       cap8D  1-1824/1824  ===============  0/0   100.00     99.89      vfdb      WP_000940793                                                                                                                                                  (cap8D) type 8 capsular polysaccharide synthesis protein Cap8D [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  123462  124490  +       cap8E  1-1029/1029  ===============  0/0   100.00     99.03      vfdb      WP_000459062                                                                                                                                                  (cap8E) type 8 capsular polysaccharide synthesis protein Cap8E [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  124503  125612  +       cap8F  1-1110/1110  ===============  0/0   100.00     99.55      vfdb      WP_001028293                                                                                                                                                  (cap8F) type 8 capsular polysaccharide synthesis protein Cap8F [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  125616  126740  +       cap8G  1-1125/1125  ===============  0/0   100.00     99.64      vfdb      WP_000413169                                                                                                                                                  (cap8G) type 8 capsular polysaccharide synthesis protein Cap8G [Capsule (VF0003) - Immune modulation (VFC0258)] [Staphylococcus aureus subsp. aureus MW2]\n\n\n\n8.7.2.2 Гены антибиотикорезистентности:\n\ncat Структуры_данных/10.12.25/genome_annot_prac/results/abricate/test_genome.card.tab |\\\ncolumn -s $'\\t' -t\n\n#FILE                                                                                   SEQUENCE     START    END      STRAND  GENE                        COVERAGE     COVERAGE_MAP     GAPS  %COVERAGE  %IDENTITY  DATABASE  ACCESSION                    PRODUCT                                                                                                                                                                                                                                                                                                                                                                                                                                      RESISTANCE\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  62384    63772    +       norC                        1-1389/1389  ===============  0/0   100.00     96.98      card      CP005288.1:116946-118335     NorC is a multidrug efflux pump in Staphylococcus aureus that confers resistance to fluoroquinolones and other structurally unrelated antibiotics like tetracycline. It shares 61% similarity with NorB and is a structural homolog of Blt of Bacillus subtilis. Like NorA and NorB NorC is regulated by mgrA also known as NorR.                                                                                                            disinfecting_agents_and_antiseptics;fluoroquinolone\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  103075   104427   +       tet(38)                     1-1353/1353  ===============  0/0   100.00     99.85      card      AY825285.1:0-1353            Tet38 is a tetracycline efflux pump found in the Gram-positive Staphylococcus aureus. It is regulated by mgrA which also regulates NorB.                                                                                                                                                                                                                                                                                                     tetracycline\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  328838   329257   +       mepR                        1-420/420    ===============  0/0   100.00     99.29      card      BA000017.4:379931-380351     MepR is an upstream repressor of MepA in Staphylococcus aureus. It is part of the mepRAB operon.                                                                                                                                                                                                                                                                                                                                             glycylcycline;tetracycline\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  329364   330719   +       mepA                        1-1356/1356  ===============  0/0   100.00     100.00     card      AY661734.1:839-2195          MepA is an efflux protein regulated by MepR and part of the MepRAB cluster. Its presence in Staphylococcus aureus led to multidrug resistance while it has also been shown to decrease tigecycline susceptibility.                                                                                                                                                                                                                           glycylcycline;tetracycline\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  679331   679774   -       mgrA                        1-444/444    ===============  0/0   100.00     99.78      card      BA000018.3:735860-735416     MgrA also known as NorR is a regulator for norA norB and tet38. It is a positive regulator for norA expression but is a direct repressor for norB and an indirect repressor of tet38.                                                                                                                                                                                                                                                        cephalosporin;disinfecting_agents_and_antiseptics;fluoroquinolone;moenomycin;penicillin_beta-lactam;peptide;tetracycline\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  687425   688591   +       Staphylococcus_aureus_norA  1-1167/1167  ===============  0/0   100.00     99.91      card      D90119.1:477-1644            NorA gene cloned from Staphylococcus aureus conferred relatively high resistance to hydrophilic quinolones such as norfloxacin enoxacin ofloxacin and ciprofloxacin in S. aureus and Escherichia coli. Had low or no resistance at all to hydrophobic ones such as nalidixic acid oxolinic acid and sparfloxacin in S. aureus and Escherichia coli.                                                                                          fluoroquinolone\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  1360281  1361636  -       arlS                        1-1356/1356  ===============  0/0   100.00     100.00     card      CP000253.1:1361636-1360280   ArlS is a protein histidine kinase that phosphorylates ArlR a promoter for norA expression.                                                                                                                                                                                                                                                                                                                                                  disinfecting_agents_and_antiseptics;fluoroquinolone\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  1361633  1362292  -       arlR                        1-660/660    ===============  0/0   100.00     100.00     card      CP023390.1:1462248-1461588   ArlR is a response regulator that binds to the norA promoter to activate expression. ArlR must first be phosphorylated by ArlS.                                                                                                                                                                                                                                                                                                              disinfecting_agents_and_antiseptics;fluoroquinolone\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  2144446  2147103  +       kdpD                        1-2658/2658  ===============  0/0   100.00     98.98      card      FHDU01000010.1:56636-53978   kdpD is a component of the two-component regulatory system kdpDE. This system is involved in potassium transport and homeostasis and has been implicated in virulence factor regulation along with kdpE.                                                                                                                                                                                                                                     aminoglycoside\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  2246027  2247469  -       Staphylococcus_aureus_LmrS  1-1443/1443  ===============  0/0   100.00     100.00     card      CP000046.1:2236817-2235374   MFS transporters are secondary active transporters with single-polypeptide chains containing 400-600 amino acids that transport small solutes across the membrane by using electrochemical gradients. LmrS has 14 transmembrane helices and when expressed in E. coli is capable of extruding a variety of antibiotics inclinding linezolid trimethoprim florfenicol chlorampheniocol erythromycin streptomycin kanamycin and fusidic acid.  aminoglycoside;diaminopyrimidine;macrolide;oxazolidinone;phenicol\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  2247792  2248264  -       sepA                        1-473/474    ===============  0/0   99.79      84.14      card      NC_016941.1:2187613-2187139  sepA is a multidrug efflux pump that confers resistance to disinfecting agents and dyes.                                                                                                                                                                                                                                                                                                                                                     disinfecting_agents_and_antiseptics\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  2248363  2249706  -       sdrM                        1-1344/1344  ===============  0/0   100.00     99.41      card      BA000018.3:2241223-2239879   sdrM encodes an efflux pump that confers resistance to norfloxacin and ethidium bromide making this a multidrug resistance gene.                                                                                                                                                                                                                                                                                                             disinfecting_agents_and_antiseptics;fluoroquinolone\nСтруктуры_данных/10.12.25/genome_annot_prac/data/GCF_000013425.1_ASM1342v1_genomic.fna  NC_007795.1  2399531  2399950  +       Staphylococcus_aureus_FosB  1-420/420    ===============  0/0   100.00     100.00     card      AHLO01000073.1:63138-63558   The Bacillus subtilis fosB gene encodes a fosfomycin resistance protein.                                                                                                                                                                                                                                                                                                                                                                     phosphonic_acid",
+    "crumbs": [
+      "Базы данных",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Аннотация геномов</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html",
+    "href": "Алгоритмы_HW.html",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "",
+    "text": "8.1 Задача 1. Сделать реверс односвязного списка.\nВыполнение домашнего задания\nПример:\nВходные данные: 1, 2, 3, 4, 5.\nРезультат: 5, 4, 3, 2, 1\nclass Node():\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n        \nclass linked_list():\n    def __init__(self):\n        self.header = None\n\n    def append_node(self, data):\n        if self.header :\n            cur_node = self.header\n            while cur_node.next:\n                cur_node = cur_node.next\n            cur_node.next = Node(data)\n        else:\n            self.header = Node(data)\n    \n    def print_list(self):\n        curr = self.header\n        print('start', end=\" -&gt; \")\n        while curr:\n            print(curr.data, end=\" -&gt; \")\n            curr = curr.next\n        print('end')\n# затраты по памяти - константа O(1)\n# оценка сложности - O(n)\n    def reverse_list(self):\n        prev = None\n        curr = self.header\n        while curr and curr.next:\n            next = curr.next\n            curr.next = prev\n            prev = curr\n            curr = next\n        self.header = curr\n        self.header.next = prev\na = linked_list()\na.append_node(5)\na.append_node(55)\na.append_node(355)\na.print_list()\na.reverse_list()\na.print_list()\n\nstart -&gt; 5 -&gt; 55 -&gt; 355 -&gt; end\nstart -&gt; 355 -&gt; 55 -&gt; 5 -&gt; end",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html#задача-2.-сортировка-документов.",
+    "href": "Алгоритмы_HW.html#задача-2.-сортировка-документов.",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "8.2 Задача 2. Сортировка документов.",
+    "text": "8.2 Задача 2. Сортировка документов.\nПамять - O(d × n) - хранение признаков всех документов\nПервоначальная сортировка: O(d log d) Вычисление релевантностей: O(d × n)\nЗапрос типа 1 (получить топ-k): O(k) Запрос типа 2 (изменить признак): O(log d) - бинарный поиск, удаление из списка: O(d) - в худшем случае -&gt; O(d) в худшем случае\n\ndef binary_search_left(arr, x):\n    \"\"\"\n    Бинарный поиск для нахождения позиции вставки\n    \"\"\"\n    left, right = 0, len(arr)\n    while left &lt; right:\n        mid = (left + right) // 2\n        if arr[mid] &lt; x:\n            left = mid + 1\n        else:\n            right = mid\n    return left\n\ndef solve_ranking_problem(input_data):\n    \"\"\"\n    Решает задачу ранжирования с входными данными в виде строки\n    \"\"\"\n    lines = input_data.strip().split('\\n')\n    idx = 0\n    \n    # Чтение количества параметров\n    n = int(lines[idx]); idx += 1\n    \n    # Чтение параметров формулы\n    a = list(map(int, lines[idx].split())); idx += 1\n    \n    # Чтение количества объектов\n    d = int(lines[idx]); idx += 1\n    \n    # Структуры для хранения данных\n    docs = []  # список кортежей (-релевантность, id)\n    features = {}\n    relevances = {}\n    \n    # Чтение объектов\n    for doc_id in range(1, d + 1):\n        doc_features = list(map(int, lines[idx].split()))\n        idx += 1\n        \n        # Вычисление релевантности\n        relevance = sum(a[i] * doc_features[i] for i in range(n))\n        \n        features[doc_id] = doc_features\n        relevances[doc_id] = relevance\n        docs.append((-relevance, doc_id))\n    \n    # Сортируем документы по убыванию релевантности\n    docs.sort()\n    \n    # Чтение количества запросов\n    q = int(lines[idx]); idx += 1\n    \n    results = []\n    \n    # Обработка запросов\n    for _ in range(q):\n        query_parts = lines[idx].split()\n        idx += 1\n        \n        query_type = int(query_parts[0])\n        \n        if query_type == 1:\n            # Запрос на получение k самых релевантных\n            k = int(query_parts[1])\n            top_k = [str(doc_id) for _, doc_id in docs[:k]]\n            results.append(\" \".join(top_k))\n            \n        else:\n            # Запрос на изменение признака: 2 doc_id feature_index new_value\n            doc_id = int(query_parts[1])\n            feature_idx = int(query_parts[2]) - 1  # переводим в 0-based индекс\n            new_value = int(query_parts[3])\n            \n            # Удаляем старую версию документа из списка\n            old_relevance = relevances[doc_id]\n            target = (-old_relevance, doc_id)\n            \n            # Ищем позицию для удаления\n            pos = binary_search_left(docs, target)\n            if pos &lt; len(docs) and docs[pos] == target:\n                docs.pop(pos)\n            \n            # Обновляем признак\n            old_feature_value = features[doc_id][feature_idx]\n            features[doc_id][feature_idx] = new_value\n            \n            # Пересчитываем релевантность\n            delta = a[feature_idx] * (new_value - old_feature_value)\n            new_relevance = old_relevance + delta\n            relevances[doc_id] = new_relevance\n            \n            # Вставляем обновленный документ на правильную позицию\n            new_entry = (-new_relevance, doc_id)\n            insert_pos = binary_search_left(docs, new_entry)\n            docs.insert(insert_pos, new_entry)\n    \n    return results\n\n# Пример использования с тестовыми данными\nif __name__ == \"__main__\":\n    # Входные данные как строка\n    input_str = \"\"\"2\n1 100\n10\n1 2\n2 1\n3 1\n4 1\n5 1\n6 1\n7 1\n8 1\n9 1\n10 1\n4\n1 2\n1 10\n2 4 1 1000\n1 10\"\"\"\n    \n    # Решаем задачу\n    output = solve_ranking_problem(input_str)\n    \n    # Выводим результаты\n    for line in output:\n        print(line)\n\n1 10\n1 10 9 8 7 6 5 4 3 2\n4 1 10 9 8 7 6 5 3 2",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html#задача-3.-реализовать-балансировку-красно-черного-дерева.",
+    "href": "Алгоритмы_HW.html#задача-3.-реализовать-балансировку-красно-черного-дерева.",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "8.3 Задача 3. Реализовать балансировку красно-черного дерева.",
+    "text": "8.3 Задача 3. Реализовать балансировку красно-черного дерева.\nБинарное дерево поиска является красно-черным деревом, если оно удовлетворяет следующим красно-черным свойствам. 1. Каждый узел является красным или черным. 2. Корень дерева является черным. 3. Каждый лист дерева (NIL) является черным. 4. Если узел - красный, то оба его дочерних узла - черные. 5. Для каждого узла все пути от него до листьев, являющихся потомками данного узла, содержат одно и то же количество черных узлов.\nРазбор балансировки с habr\n  \n\nclass Node():\n    def __init__(self, data):\n        self.data = data\n        self.right = None\n        self.left = None\n        self.parent = None\n        self.color = \"RED\"\n\nclass Tree():\n    def __init__(self):\n        self.root = None\n    \n    def insert(self, data):\n        print(f\"\\nВставляем {data}\")\n        \n        new_node = Node(data)\n        if not self.root:\n            self.root = new_node\n            self.root.color = \"BLACK\"\n            print(\"После вставки:\")\n            self.print()\n            return\n        \n        current, parent = self.root, None\n        while current:\n            parent = current\n            if data &lt; current.data:\n                current = current.left\n            else:\n                current = current.right\n        \n        new_node.parent = parent\n        if data &lt; parent.data:\n            parent.left = new_node\n        else:\n            parent.right = new_node\n        \n        print(\"После вставки до балансировки:\")\n        self.print()\n        \n        self.balance_insert(new_node)\n        \n        print(\"После балансировки:\")\n        self.print()\n    \n    def balance_insert(self, node):\n        while node != self.root and node.parent.color == \"RED\":\n            parent, grandparent = node.parent, node.parent.parent\n            \n            if parent == grandparent.left:\n                uncle = grandparent.right\n                if uncle and uncle.color == \"RED\":\n                    print(\"Case 1: дядя красный\")\n                    self.case_1(parent, uncle, grandparent)\n                    node = grandparent\n                else:\n                    if node == parent.right:\n                        print(\"Case 2: узел справа\")\n                        node = parent\n                        self.small_rotation(node, 0)\n                    print(\"Case 3: большой поворот\")\n                    self.case_3(parent, grandparent)\n                    break\n            else:\n                uncle = grandparent.left\n                if uncle and uncle.color == \"RED\":\n                    print(\"Case 1: дядя красный\")\n                    self.case_1(parent, uncle, grandparent)\n                    node = grandparent\n                else:\n                    if node == parent.left:\n                        print(\"Case 2: узел слева\")\n                        node = parent\n                        self.small_rotation(node, 1)\n                    print(\"Case 3: большой поворот\")\n                    self.case_3(parent, grandparent)\n                    break\n        \n        self.root.color = \"BLACK\"\n    \n    def case_1(self, parent, uncle, grandparent):\n        parent.color = uncle.color = \"BLACK\"\n        if grandparent != self.root:\n            grandparent.color = \"RED\"\n    \n    def case_3(self, parent, grandparent):\n        parent.color = \"BLACK\"\n        grandparent.color = \"RED\"\n        if parent == grandparent.left:\n            self.big_rotation(grandparent, 1)\n        else:\n            self.big_rotation(grandparent, 0)\n\n    def small_rotation(self, node, direction):\n        if direction == 1:\n            print(f\"Малый правый поворот вокруг {node.data}\")\n            new_root = node.left\n            node.left = new_root.right\n            if new_root.right: \n                new_root.right.parent = node\n            new_root.right = node\n        else:\n            print(f\"Малый левый поворот вокруг {node.data}\")\n            new_root = node.right\n            node.right = new_root.left\n            if new_root.left: \n                new_root.left.parent = node\n            new_root.left = node\n        \n        new_root.parent = node.parent\n        node.parent = new_root\n        \n        if not new_root.parent:\n            self.root = new_root\n        elif new_root.parent.left == node:\n            new_root.parent.left = new_root\n        else:\n            new_root.parent.right = new_root\n        \n        return new_root\n\n    def big_rotation(self, node, direction):\n        if direction == 1:\n            print(f\"Большой правый поворот вокруг {node.data}\")\n            # Левый-правый: сначала левый поворот для левого ребенка, потом правый для узла\n            if node.left and node.left.right:\n                self.small_rotation(node.left, 0)\n            return self.small_rotation(node, 1)\n        else:\n            print(f\"Большой левый поворот вокруг {node.data}\")\n            # Правый-левый: сначала правый поворот для правого ребенка, потом левый для узла\n            if node.right and node.right.left:\n                self.small_rotation(node.right, 1)\n            return self.small_rotation(node, 0)\n\n    def print(self):\n        if not self.root:\n            print(\"Пусто\")\n            return\n        self.print_(self.root)\n        print()\n\n    def print_(self, node):\n        if node:\n            color = \"R\" if node.color == \"RED\" else \"B\"\n            print(f\"{node.data}({color})\", end=\" \")\n            if node.left:\n                self.print_(node.left)\n            if node.right:\n                self.print_(node.right)\n\n# Тест\nif __name__ == \"__main__\":\n    tree = Tree()\n    for val in [10, 20, 30, 5, 3, 7]:\n        tree.insert(val)\n\n\nВставляем 10\nПосле вставки:\n10(B) \n\nВставляем 20\nПосле вставки до балансировки:\n10(B) 20(R) \nПосле балансировки:\n10(B) 20(R) \n\nВставляем 30\nПосле вставки до балансировки:\n10(B) 20(R) 30(R) \nCase 3: большой поворот\nБольшой левый поворот вокруг 10\nМалый левый поворот вокруг 10\nПосле балансировки:\n20(B) 10(R) 30(R) \n\nВставляем 5\nПосле вставки до балансировки:\n20(B) 10(R) 5(R) 30(R) \nCase 1: дядя красный\nПосле балансировки:\n20(B) 10(B) 5(R) 30(B) \n\nВставляем 3\nПосле вставки до балансировки:\n20(B) 10(B) 5(R) 3(R) 30(B) \nCase 3: большой поворот\nБольшой правый поворот вокруг 10\nМалый правый поворот вокруг 10\nПосле балансировки:\n20(B) 5(B) 3(R) 10(R) 30(B) \n\nВставляем 7\nПосле вставки до балансировки:\n20(B) 5(B) 3(R) 10(R) 7(R) 30(B) \nCase 1: дядя красный\nПосле балансировки:\n20(B) 5(R) 3(B) 10(B) 7(R) 30(B)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html#задача-4.-найти-максимальную-прибыль.",
+    "href": "Алгоритмы_HW.html#задача-4.-найти-максимальную-прибыль.",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "8.4 Задача 4. Найти максимальную прибыль.",
+    "text": "8.4 Задача 4. Найти максимальную прибыль.\nУ вас есть данные о ценах акций за n дней в виде массива prices. Вы можете совершить не более k сделок (покупка + продажа = 1 сделка).\nНайдите максимальную прибыль, которую можно получить, соблюдая правила: - Нельзя совершать несколько сделок одновременно (нельзя купить и продать в один и тот же день) - Нельзя покупать, если уже есть купленные акции - Можно совершать любое количество сделок, но не более k\nПример:\nprices = [3, 2, 6, 5, 0, 3], k = 2\nМаксимальная прибыль: 7\nОбъяснение:\nПокупка в день 2 (цена 2), продажа в день 3 (цена 6) → прибыль 4\nПокупка в день 5 (цена 0), продажа в день 6 (цена 3) → прибыль 3\nИтого: 4 + 3 = 7\n\nprices, k = [3, 2, 6, 5, 0, 3], 2\n\n\nimport matplotlib.pyplot as plt\nplt.bar(range(1,len(prices)+1),prices)\n\n\n\n\n\n\n\n\n\ndef dynamic_max(prices, k):\n    n = len(prices)\n    df = [[0] * n for _ in range(k+1)]\n    for transaction in range(1, k + 1):\n        max_balance = -prices[0] #максимальный баланс после покупки акции\n        for day in range(1, n):\n            # продавать ли? берем максимум из прибыли вчера и цены сегодня+баланс после покупки\n            df[transaction][day] = max(df[transaction][day - 1], prices[day] + max_balance)\n            # покупать ли? берем текущегго максимума и  прибыли от прошлых сделок - цена сегодня\n            max_balance = max(max_balance, df[transaction - 1][day] - prices[day])\n    for transaction in df:\n        print(transaction)\n    return df[k][n - 1]\n\n\nprint(prices)\ndynamic_max(prices,k)\n\n[3, 2, 6, 5, 0, 3, 0]\n[0, 0, 0, 0, 0, 0, 0]\n[0, 0, 4, 4, 4, 4, 4]\n[0, 0, 4, 4, 4, 7, 7]\n\n\n7",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html#задача-5.-в-какой-день-было-больше-всего-посетителей",
+    "href": "Алгоритмы_HW.html#задача-5.-в-какой-день-было-больше-всего-посетителей",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "8.5 Задача 5. В какой день было больше всего посетителей?",
+    "text": "8.5 Задача 5. В какой день было больше всего посетителей?\nДана информация о времени заезда и отъезда посетителей отеля. Необходимо определить, в какой день посетителей в отеле единомоментно находилось больше всего.\nПример входных данных (один элемент данного листа – кортеж, содержащий дату заезда и отъезда одного посетителя): [(“2024-09-15”, “2024-09-15”), (“2024-09-14”, “2024-09-21”)]\n\n#память О(n), сложность O(nlog(n)) из-за сортировки\nL = [(\"2024-09-15\", \"2024-09-15\"), (\"2024-09-14\", \"2024-09-21\")]\ndef max_booking(L):\n    events = []\n    for (inn, out) in L:\n        events.append((inn, 1))   # прибытие\n        events.append((out, -1))\n\n    max_occupancy = 0\n    current_occupancy = 0\n    max_day = None\n    \n    events = sorted(events, key=lambda x: x[0])\n    # Обрабатываем события в хронологическом порядке\n    for day, event_type in events:\n        current_occupancy += event_type\n\n        # Обновляем максимум если нашли новый\n        if current_occupancy &gt; max_occupancy:\n            max_occupancy = current_occupancy\n            max_day = day\n    \n    return max_day, max_occupancy\n\nmax_booking(L)\n\n('2024-09-15', 2)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Алгоритмы_HW.html#задача-6.-реализовать-алгоритм-беллмана-форда-для-произвольного-графа.",
+    "href": "Алгоритмы_HW.html#задача-6.-реализовать-алгоритм-беллмана-форда-для-произвольного-графа.",
+    "title": "8  Алгоритмы и струкутры данных",
+    "section": "8.6 Задача 6. Реализовать алгоритм Беллмана-Форда для произвольного графа.",
+    "text": "8.6 Задача 6. Реализовать алгоритм Беллмана-Форда для произвольного графа.\nАлгоритм Беллмана-Форда (Bellman-Ford algorithm) позволяет решить зада- чу о кратчайшем пути из одной вершины в общем случае, когда вес каждого из ребер может быть отрицательным.\nБез потери общности можно предположить, что если ведется поиск кратчайших путей, они не содержат циклов.\nДля заданного взвешенного ориентированного графа G = (V,E) с истоком s и весовой функцией w : Е → R алгоритм Белл- мана-Форда возвращает логическое значение, указывающее на то, содержится ли в графе цикл с отрицательным весом, достижимый из истока . Если такой цикл существует, в алгоритме указывается, что решения не существует. Если же таких циклов нет, алгоритм выдает кратчайшие пути и их вес.\nПоскольку в любой ациклический путь в графе G = (V, E) входит не более |V| различных вершин, в нем также содержится не более |V| - 1 ребер. Таким образом, можно ограничиться рассмотрением кратчайших путей, состоящих не более чем из |V| - 1 ребер.\nАлгоритм Беллмана-Форда (Bellman-Ford algorithm) позволяет решить зада- чу о кратчайшем пути из одной вершины в общем случае, когда вес каждого из ребер может быть отрицательным.\nАлгоритм Беллмана-Форда завершает свою работу в течение времени О (V E), поскольку инициализация в строке 1 занимает время O(V), на каждый из |V| - 1 проходов по ребрам требуется время О (Е), а на выполнение цикла for ниже - время О (Е).\n\n\n\ngraph\n\n\n\nimport math\n\ndef Bellman_Ford(graph, edges, source):\n    distances = [math.inf] * len(graph)\n    distances[source] = 0\n    \n    operations = 0\n    \n    # Основной цикл релаксации\n    for _ in range(len(graph) - 1):\n        updated = False\n        for u, v, weight in edges:\n            operations += 1 \n            if distances[u] != math.inf and distances[u] + weight &lt; distances[v]:\n                distances[v] = distances[u] + weight\n                updated = True\n        \n        if not updated:\n            break\n    \n    # Проверка на отрицательные циклы\n    for u, v, weight in edges:\n        operations += 1\n        if distances[u] != math.inf and distances[u] + weight &lt; distances[v]:\n            return None, operations\n    \n    return distances, operations\n\n\nimport random\n# Граф\ngraph = [[0]*5 for _ in range(5)]\ngraph[0][1] = 6\ngraph[0][2] = 7\ngraph[1][2] = 8\ngraph[1][3] = 5\ngraph[1][4] = -4\ngraph[2][3] = -3\ngraph[2][4] = 9\ngraph[3][1] = -2\ngraph[4][0] = 2\ngraph[4][3] = 7\n\n# Базовые ребра\nbase_edges = []\nfor i in range(len(graph)):\n    for j in range(len(graph[i])):\n        if graph[i][j] != 0:\n            base_edges.append((i, j, graph[i][j]))\n\nfor i in range(5):\n    if i == 0:\n        edges = base_edges.copy()  # исходный порядок\n        name = \"Исходный порядок\"\n    else:\n        edges = base_edges.copy()\n        random.shuffle(edges)  # случайный порядок\n        name = f\"Случайный порядок {i}\"\n    \n    result, operations = Bellman_Ford(graph, edges, 0)\n    print(f\"{name}: {operations} операций\")\n    print(f\"Результат: {result}\\n\")\n\n\nИсходный порядок: 40 операций\nРезультат: [0, 2, 7, 4, -2]\n\nСлучайный порядок 1: 50 операций\nРезультат: [0, 2, 7, 4, -2]\n\nСлучайный порядок 2: 40 операций\nРезультат: [0, 2, 7, 4, -2]\n\nСлучайный порядок 3: 50 операций\nРезультат: [0, 2, 7, 4, -2]\n\nСлучайный порядок 4: 50 операций\nРезультат: [0, 2, 7, 4, -2]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Алгоритмы и струкутры данных</span>"
+    ]
+  },
+  {
+    "objectID": "Интерпретация.html",
+    "href": "Интерпретация.html",
+    "title": "9  Анализ клинических данных",
+    "section": "",
+    "text": "9.1 Постановка задачи\nНа основе клинического описания и данных полного геномного секвенирования (WGS) предположить генетическую причину состояния пробанда(ов), уточнить/пересмотреть диагноз и подготовить короткую презентацию из нескольких слайдов с ходом рассуждений и описанием выявленного(ых) варианта(ов).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Анализ клинических данных</span>"
+    ]
+  },
+  {
+    "objectID": "Интерпретация.html#план-работы",
+    "href": "Интерпретация.html#план-работы",
+    "title": "9  Анализ клинических данных",
+    "section": "9.2 План работы",
+    "text": "9.2 План работы\n\n9.2.1 Анализ фенотипа пробанда\n\nВыделение ключевых клинических признаков (неврологические, соматические, особенности роста и развития, семейный/репродуктивный анамнез).\n\n\n\n9.2.2 Формулировка гипотез о генетической природе заболевания\n\nСоздание рабочих гипотез: возможный тип наследования, круг генов-кандидатов / синдромов.\nОбоснование выбора спектра диагнозов/генов на основе фенотипа и семейного анамнеза.\n\n\n\n9.2.3 Анализ данных WGS для уточнения диагноза\n\nАнализ VCF-файлов семьи.\nВыбор варианта(ов), потенциально объясняющих фенотип пробанда.\nУказание гена, типа варианта, модели наследования, предполагаемого механизма (LoF, missense, splice и т.д.).\nСопоставление найденного варианта с литературными и базами данных (OMIM, ClinVar и др.).\n\n\n\n9.2.4 Формулировка итогового заключения\nВ нем не стоит рекомендовать человеку процедуры или обследования - это делает врач, с которым вы вместе ведете пациента.\n\n\n9.2.5 Подготовка презентации\n\nСлайд 1: Краткое описание клинического случая (пробанд, основные симптомы, семейный/репродуктивный анамнез).\nСлайд 2: Диагностические гипотезы и ход рассуждений (обоснование выбора гена/синдрома, тип наследования).\nСлайд 3: Найденный вариант(ы): ген, тип, zygosity, модель наследования, аргументы «за» его причинную роль.\nСлайд 4 (опционально): Итоговое заключение, уточнённый диагноз, генетические риски для семьи, открытые вопросы.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Анализ клинических данных</span>"
+    ]
+  },
+  {
+    "objectID": "Интерпретация.html#диагностические-гипотезы-на-основе-фенотипа",
+    "href": "Интерпретация.html#диагностические-гипотезы-на-основе-фенотипа",
+    "title": "9  Анализ клинических данных",
+    "section": "9.3 Диагностические гипотезы (на основе фенотипа)",
+    "text": "9.3 Диагностические гипотезы (на основе фенотипа)\nРассматриваются следующие возможные типы наследования:\n\nDe novo доминантная мутация — вероятна при здоровых родителях и сибсах. Потребует подтверждения по Сэнгеру.\nАутосомно-рецессивное наследование — оба родителя являются здоровыми носителями\nX-сцепленное рецессивное наследование — мать как возможная носительница, пробанд мужского пола.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Анализ клинических данных</span>"
+    ]
+  },
+  {
+    "objectID": "Интерпретация.html#стратегия-анализа-данных-wgs-и-реализация-на-python",
+    "href": "Интерпретация.html#стратегия-анализа-данных-wgs-и-реализация-на-python",
+    "title": "9  Анализ клинических данных",
+    "section": "9.4 Стратегия анализа данных WGS и реализация на Python",
+    "text": "9.4 Стратегия анализа данных WGS и реализация на Python\n\n9.4.1 Инициализация и загрузка данных\n\nimport pandas as pd\nimport numpy as np\n\n# Загружаем данные WGS из VCF-файла, сконвертированного в табличный формат\ndf = pd.read_csv('/home/florenskayalk/64family.txt', sep='\\t', usecols=[\n    '#[1]CHROM', '[2]POS', '[3]ID', '[8]SYMBOL', '[15]Consequence',\n    '[21]AF_joint', '[29]CLNSIG', '[31]CLNDN', '[35]CADD_PHRED',\n    '[43]000028002000:GT', '[46]000028003810:GT', '[49]000028001980:GT', '[52]000028001990:GT'\n])\nprint(f\"Всего вариантов: {len(df)}\")\n\n\n\n9.4.2 Подготовка данных CADD и AF\n\ndef parse(cadd_str):\n    try:\n        if pd.isna(cadd_str):\n            return None\n        return float(str(cadd_str).replace(',', '.').strip())\n    except:\n        return None\n\ndf['CADD_num'] = df['[35]CADD_PHRED'].apply(parse)\ndf['[21]AF_joint'] = df['[21]AF_joint'].apply(parse)\n\n\n\n9.4.3 Первичный отбор вариантов\n\nИсключение референсных генотипов у пробанда.\nФильтрация по частоте в популяции (AF &lt; 1%).\nОтбор функционально значимых вариантов (исключение синонимичных и интронных) нельзя исключать интронные варианты!\n\n\n# Только варианты у пробанда (не референсные)\nproband_gt = df['[43]000028002000:GT']\ndf = df[~proband_gt.isin(['0/0', './.', '0|0', '.|.'])]\n\n# Исключаем частые популяционные варианты (порог можно менять)\ndf = df[pd.to_numeric(df['[21]AF_joint'], errors='coerce').fillna(0) &lt; 0.01]\n\n\nprint(f\"Вариантов после базовой фильтрации: {len(df)}\")\n\n\n\n9.4.4 Поиск de novo мутаций\n\nПриоритетный анализ.\nКритерии: вариант присутствует у пробанда, отсутствует у обоих родителей и здоровго сибса.\n\n\ndef is_de_novo(row):\n    proband = row['[43]000028002000:GT']\n    mother = row['[49]000028001980:GT']\n    father = row['[52]000028001990:GT']\n    sibs = row['[46]000028003810:GT']\n    # У пробанда есть вариант, у родителей оба аллеля референсные\n    if proband not in ['0/0', './.', '0|0', '.|.']:\n        if mother in ['0/0', '0|0'] and father in ['0/0', '0|0'] and sibs in ['0/0', '0|0']:\n            return 'YES'\n    return 'NO'\n\ndf['de_novo'] = df.apply(is_de_novo, axis=1)\ndf_de_novo = df[df['de_novo'] == 'YES'].copy()\nprint(f\"Кандидатов de novo: {len(df_de_novo)}\")\n\n\n\n9.4.5 Анализ X-сцепленных вариантов\n\nПоиск гемизиготных вариантов у пробанда (мужского пола).\nПроверка статуса носительства у матери (гетерозигота).\n\n\ndf_x = df[df['#[1]CHROM'] == 'chrX'].copy()\nif not df_x.empty:\n    print(f\"\\nВариантов на X-хромосоме: {len(df_x)}\")\n    # Ищем гемизиготные у пробанда и гетерозиготные у матери\n    x_linked_candidates = df_x[\n        (df_x['[43]000028002000:GT'].isin(['1', '1/1', '1|1'])) &  # Гемизигота у мальчика\n        (df_x['[49]000028001980:GT'].isin(['0/1', '0|1', '1/0', '1|0']))  # Гетерозигота у матери\n    ]\n    print(f\"Кандидатов X-сцепленных (у пробанда гемизигота, у матери носительство): {len(x_linked_candidates)}\")\n\n\n\n9.4.6 Выявление аутосомно-рецессивных вариантов\n\nПоиск компаунд-гетерозигот или гомозигот.\nКритерии: наличие ≥2 нереференсных вариантов в одном гене с CADD &gt; 20.\n\n\n# Сначала найдем все гены, где у пробанда &gt;=2 нереференсных варианта\nmask_multiple_in_gene = df.duplicated(subset='[8]SYMBOL', keep=False)\ndf_multiple = df[mask_multiple_in_gene].copy()\n\nif not df_multiple.empty:\n    # Для каждого гена смотрим генотипы в семье\n    recessive_candidates = []\n    for gene, gene_df in df_multiple.groupby('[8]SYMBOL'):\n        # У пробанда в этом гене два разных патогенных варианта?\n        # Простая эвристика: есть хотя бы два варианта с CADD &gt; 20\n        hi_vars = gene_df[gene_df['CADD_num'] &gt; 20]\n        if len(hi_vars) &gt;= 2:\n            recessive_candidates.append(gene)\n    \n    print(f\"\\nГены-кандидаты для рецессивного наследования (&gt;=2 варианта с CADD&gt;20): {recessive_candidates}\")\n\n\n\n9.4.7 Прицельный поиск по генам-кандидатам\n\nРучная проверка ключевых генов, связанных с клиническим фенотипом (например, гены RASопатий, ихтиоза, неврологических нарушений).\n\n\n# Составим список генов, связанных с фенотипом\ncandidate_genes = ['NF1', 'BRAF', 'KRAS', 'HRAS', 'NRAS', 'MAP2K1', 'MAP2K2',  # RASопатии\n                   'FLG', 'KRT1', 'KRT10', 'ALOX12B', 'ALOXE3', 'TGM1',  # Ихтиоз\n                   'MECP2', 'CDKL5', 'SYNGAP1', 'SCN1A', 'SCN2A',  # Неврологические\n                   'PTEN'  # Схожие черты\n                  ]\n\nprint(f\"\\n--- Поиск по известным генам-кандидатам ({len(candidate_genes)} генов) ---\")\ndf_candidate = df[df['[8]SYMBOL'].isin(candidate_genes)].copy()\nif not df_candidate.empty:\n    print(\"Найдены варианты в генах-кандидатах\")\nelse:\n    print(\"В известных генах-кандидатах вариантов не найдено.\")",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Анализ клинических данных</span>"
+    ]
+  }
+]

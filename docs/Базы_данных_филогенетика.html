@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Флоренская Лидия">
+<title>6&nbsp; Филогенетические деревья – 1_sem_algbio_book</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Базы_данных_аннотация_геномов.html" rel="next">
+<link href="./Базы_данных.html" rel="prev">
+<link href="./cover.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e4f1d1c6b4d97f0c9afaf9397f450115.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-83f067dfbc6c672dbc81fa7234c65a4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-e4f1d1c6b4d97f0c9afaf9397f450115.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Базы_данных.html">Базы данных</a></li><li class="breadcrumb-item"><a href="./Базы_данных_филогенетика.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Филогенетические деревья</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">1_sem_algbio_book</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/florenskaial118/Alg_Bio_1_sem.git" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Алгоритмическая биология МФТИ ФБМФ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./NGS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NGS</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NGS_Phylogenetics_theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Филогенетика (теория)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NGS_Phylogenetics_practise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Филогенетика (практика)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NGS_Phylogenetics_hw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Выполнение домашнего задания по филогенетике</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./NGS_GWAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Основы генетики сложных признаков и GWAS</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./Базы_данных.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Базы данных</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Базы_данных_филогенетика.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Филогенетические деревья</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Базы_данных_аннотация_геномов.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Аннотация геномов</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Алгоритмы_HW.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Алгоритмы и струкутры данных</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Интерпретация.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Анализ клинических данных</span></span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2" id="toc-типы-деревьев" class="nav-link active" data-scroll-target="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2"><span class="header-section-number">6.1</span> Типы деревьев</a></li>
+  <li><a href="#%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F" id="toc-базовые-понятия" class="nav-link" data-scroll-target="#%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F"><span class="header-section-number">6.2</span> Базовые понятия</a></li>
+  <li>
+<a href="#%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2" id="toc-источники-данных-для-построения-деревьев" class="nav-link" data-scroll-target="#%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2"><span class="header-section-number">6.3</span> Источники данных для построения деревьев</a>
+  <ul class="collapse">
+<li><a href="#%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" id="toc-множественное-выравнивание" class="nav-link" data-scroll-target="#%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"><span class="header-section-number">6.3.1</span> Множественное выравнивание</a></li>
+  <li><a href="#%D1%8D%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B4%D0%BD%D0%BA" id="toc-эволюционнные-модели-днк" class="nav-link" data-scroll-target="#%D1%8D%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B4%D0%BD%D0%BA"><span class="header-section-number">6.3.2</span> Эволюционнные модели: ДНК</a></li>
+  <li><a href="#%D1%8D%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BA" id="toc-эволюционнные-модели-белок" class="nav-link" data-scroll-target="#%D1%8D%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BA"><span class="header-section-number">6.3.3</span> Эволюционнные модели: Белок</a></li>
+  <li><a href="#%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9" id="toc-матрица-расстояний" class="nav-link" data-scroll-target="#%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9"><span class="header-section-number">6.3.4</span> Матрица расстояний</a></li>
+  <li><a href="#%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" id="toc-построение-дерева" class="nav-link" data-scroll-target="#%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0"><span class="header-section-number">6.3.5</span> Построение дерева</a></li>
+  </ul>
+</li>
+  <li><a href="#%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D1%8B-%D0%B4%D0%B5%D1%80%D0%B5%D1%8C%D0%B5%D0%B2" id="toc-форматы-дереьев" class="nav-link" data-scroll-target="#%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D1%8B-%D0%B4%D0%B5%D1%80%D0%B5%D1%8C%D0%B5%D0%B2"><span class="header-section-number">6.4</span> Форматы дереьев</a></li>
+  <li><a href="#%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" id="toc-визуализация" class="nav-link" data-scroll-target="#%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F"><span class="header-section-number">6.5</span> Визуализация</a></li>
+  <li>
+<a href="#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F" id="toc-практика-филогенетические-деревья" class="nav-link" data-scroll-target="#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F"><span class="header-section-number">7</span> Практика филогенетические деревья</a>
+  <ul class="collapse">
+<li><a href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%B2%D0%B0%D0%BB%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D1%8B-bmge-iqtree-emboss-phylip" id="toc-устанваливаем-пакеты-bmge-iqtree-emboss-phylip" class="nav-link" data-scroll-target="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%B2%D0%B0%D0%BB%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D1%8B-bmge-iqtree-emboss-phylip"><span class="header-section-number">7.1</span> Устанваливаем пакеты bmge, iqtree, emboss, phylip</a></li>
+  <li><a href="#%D1%81%D1%82%D1%80%D0%BE%D0%B8%D0%BC-%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" id="toc-строим-множественное-выравнивание" class="nav-link" data-scroll-target="#%D1%81%D1%82%D1%80%D0%BE%D0%B8%D0%BC-%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"><span class="header-section-number">7.2</span> Строим множественное выравнивание</a></li>
+  <li>
+<a href="#%D0%BF%D0%BE%D0%B4%D1%81%D1%87%D0%B5%D1%82-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9-%D0%B4%D0%BB%D1%8F-nj-%D0%B8-upgma" id="toc-подсчет-расстояний-для-nj-и-upgma" class="nav-link" data-scroll-target="#%D0%BF%D0%BE%D0%B4%D1%81%D1%87%D0%B5%D1%82-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9-%D0%B4%D0%BB%D1%8F-nj-%D0%B8-upgma"><span class="header-section-number">7.3</span> Подсчет расстояний для NJ и UPGMA</a>
+  <ul class="collapse">
+<li><a href="#fasta---phylip-%D0%BF%D0%B5%D1%80%D0%B5%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D1%8B%D0%B2%D0%B0%D0%B5%D0%BC" id="toc-fasta---phylip-переименовываем" class="nav-link" data-scroll-target="#fasta---phylip-%D0%BF%D0%B5%D1%80%D0%B5%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D1%8B%D0%B2%D0%B0%D0%B5%D0%BC"><span class="header-section-number">7.3.1</span> FASTA -&gt; PHYLIP + переименовываем</a></li>
+  </ul>
+</li>
+  <li><a href="#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-protdist-%D1%81-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%D0%BC%D0%B8-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E" id="toc-запускаем-protdist-с-настройками-по-умолчанию" class="nav-link" data-scroll-target="#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-protdist-%D1%81-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%D0%BC%D0%B8-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E"><span class="header-section-number">7.4</span> Запускаем protdist с настройками по умолчанию</a></li>
+  <li><a href="#%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D1%8F%D0%B5%D0%BC-%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%83-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9-%D0%B2-%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%84%D0%B0%D0%B9%D0%BB" id="toc-сохраняем-матрицу-расстояний-в-отдельный-файл" class="nav-link" data-scroll-target="#%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D1%8F%D0%B5%D0%BC-%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%83-%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B9-%D0%B2-%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%84%D0%B0%D0%B9%D0%BB"><span class="header-section-number">7.5</span> Сохраняем матрицу расстояний в отдельный файл</a></li>
+  <li><a href="#nj" id="toc-nj" class="nav-link" data-scroll-target="#nj"><span class="header-section-number">7.6</span> NJ</a></li>
+  <li><a href="#upgma" id="toc-upgma" class="nav-link" data-scroll-target="#upgma"><span class="header-section-number">7.7</span> UPGMA</a></li>
+  <li><a href="#ml" id="toc-ml" class="nav-link" data-scroll-target="#ml"><span class="header-section-number">7.8</span> ML</a></li>
+  <li><a href="#%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82%D0%B5-itools" id="toc-визуализация-на-сайте-itools" class="nav-link" data-scroll-target="#%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82%D0%B5-itools"><span class="header-section-number">7.9</span> Визуализация на сайте Itools</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Базы_данных.html">Базы данных</a></li><li class="breadcrumb-item"><a href="./Базы_данных_филогенетика.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Филогенетические деревья</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Филогенетические деревья</span>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Анна Сергеевна Попенко, к.б.н. </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="типы-деревьев" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="типы-деревьев">
+<span class="header-section-number">6.1</span> Типы деревьев</h2>
+<p>Укорененные/неукорененные (надо проверять, какое именно дерево строит программа - бывает, что она произвольно вставляет корень); ультраметрические/аддитивные</p>
+</section><section id="базовые-понятия" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="базовые-понятия">
+<span class="header-section-number">6.2</span> Базовые понятия</h2>
+<ul>
+<li>Листья</li>
+<li>Внутренние узлы (это зачастую гипотетические предки)</li>
+<li>Корень (гипотетические прародитель всех)</li>
+<li>Ветви</li>
+<li>Клады (группы листьев, объединенные внутренним узлом)</li>
+</ul></section><section id="источники-данных-для-построения-деревьев" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="источники-данных-для-построения-деревьев">
+<span class="header-section-number">6.3</span> Источники данных для построения деревьев</h2>
+<ol type="1">
+<li>Множественное выравнивание</li>
+<li>Матрица расстояний</li>
+<li>Дерево</li>
+</ol>
+<section id="множественное-выравнивание" class="level3" data-number="6.3.1"><h3 data-number="6.3.1" class="anchored" data-anchor-id="множественное-выравнивание">
+<span class="header-section-number">6.3.1</span> Множественное выравнивание</h3>
+<ul>
+<li>Последовательности должны быть родственными, ортологи</li>
+<li>Очистка (бывают вставки, которые стоит удалить)</li>
+</ul></section><section id="эволюционнные-модели-днк" class="level3" data-number="6.3.2"><h3 data-number="6.3.2" class="anchored" data-anchor-id="эволюционнные-модели-днк">
+<span class="header-section-number">6.3.2</span> Эволюционнные модели: ДНК</h3>
+<ol type="1">
+<li>Jukes-Cantor</li>
+</ol>
+<ul>
+<li>Все замены равновероятны</li>
+<li>Частоты нуклеотидов - тоже равные</li>
+<li>Испоользуется для коротких эволюционных расстояний (например подходит для вирусов)</li>
+</ul>
+<ol start="2" type="1">
+<li>Kimura</li>
+</ol>
+<ul>
+<li>Различает транзиции и трансверсии</li>
+<li>Транзиции происходят чаще</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/Транзции_и_трансверсии.png" class="img-fluid figure-img" width="225"></p>
+<figcaption>Транзиции и трансверсии</figcaption></figure>
+</div>
+<ol start="3" type="1">
+<li>Hasegava-Kishino-Yano</li>
+</ol>
+<ul>
+<li>Для ML - филогенетики</li>
+<li>Как Кимура + учитываются неравные частоты нуклеотидов</li>
+</ul>
+<ol start="4" type="1">
+<li>General Time Reversible</li>
+</ol></section><section id="эволюционнные-модели-белок" class="level3" data-number="6.3.3"><h3 data-number="6.3.3" class="anchored" data-anchor-id="эволюционнные-модели-белок">
+<span class="header-section-number">6.3.3</span> Эволюционнные модели: Белок</h3>
+<ol type="1">
+<li>PAM</li>
+<li>BLOSUM</li>
+<li>LG (стандарт в IQ-TREE, PhyLM, RAxML)</li>
+<li>Строится на огромном наборе белковых MSA</li>
+</ol></section><section id="матрица-расстояний" class="level3" data-number="6.3.4"><h3 data-number="6.3.4" class="anchored" data-anchor-id="матрица-расстояний">
+<span class="header-section-number">6.3.4</span> Матрица расстояний</h3>
+<p>Каждый элемент - эволюционная дистанция между двумя объектами</p>
+<ul>
+<li>Неотрицательность</li>
+<li>Симметричность</li>
+<li>
+<span class="math inline">\(d_{ii}\)</span> = 0</li>
+</ul>
+<section id="методы-подсчета" class="level4" data-number="6.3.4.1"><h4 data-number="6.3.4.1" class="anchored" data-anchor-id="методы-подсчета">
+<span class="header-section-number">6.3.4.1</span> Методы подсчета</h4>
+<ol type="1">
+<li>p-distance (proportion distance) <span class="math inline">\(d_{ij} = \frac{число~ различий}{общая~ длина ~сравнения}\)</span>
+</li>
+<li>ML - посчитать t, при котором вероятность реализованного исхода наибольшая …</li>
+</ol></section></section><section id="построение-дерева" class="level3" data-number="6.3.5"><h3 data-number="6.3.5" class="anchored" data-anchor-id="построение-дерева">
+<span class="header-section-number">6.3.5</span> Построение дерева</h3>
+<section id="neighbor-joining-nj" class="level4" data-number="6.3.5.1"><h4 data-number="6.3.5.1" class="anchored" data-anchor-id="neighbor-joining-nj">
+<span class="header-section-number">6.3.5.1</span> Neighbor-Joining (NJ)</h4>
+<p>Метод ближайшего соседа</p>
+<p>В начальной точке все последовательности равноудалены, алгоритм начинает с пары с минимальным расстоянием, к ней присоединяется следующая по минимальному расстоянию, строится неукорененное дерево (ведь мы начинаем с листьев)</p>
+<p>Не требует равных скоростей эволюции</p>
+<p><mark>Топология дерево сильно зависит от того, откуда мы начнем его строить</mark></p>
+</section><section id="maximum-parsimony" class="level4" data-number="6.3.5.2"><h4 data-number="6.3.5.2" class="anchored" data-anchor-id="maximum-parsimony">
+<span class="header-section-number">6.3.5.2</span> Maximum Parsimony</h4>
+<p>Наиболее вероятным считается дерево, требующее минимального числа эволюционных изменений</p>
+<p>L(T) - длина дерева T = argmin(L(T))</p>
+<p>Есть несколько алгоритмов подсчета длин деревьев, без полного перебора</p>
+<p>Предполагает одинаковую скорость эволюции</p>
+<p>Строит неукорененное дерево</p>
+</section><section id="upgma-unweight-pair-group-method-with-arithmetic-mean" class="level4" data-number="6.3.5.3"><h4 data-number="6.3.5.3" class="anchored" data-anchor-id="upgma-unweight-pair-group-method-with-arithmetic-mean">
+<span class="header-section-number">6.3.5.3</span> UPGMA (Unweight Pair Group Method with Arithmetic Mean)</h4>
+<p>Одинаковая скорость эволюции + есть корень -&gt; строит укорененное, ультраметрическое дерево</p>
+</section><section id="maximum-likelyhood" class="level4" data-number="6.3.5.4"><h4 data-number="6.3.5.4" class="anchored" data-anchor-id="maximum-likelyhood">
+<span class="header-section-number">6.3.5.4</span> Maximum Likelyhood</h4>
+<p><span class="math inline">\(T^*,~ \theta^* = arg~ max L(T,\theta~|MSA )\)</span></p>
+<p>Начальноу дерево -&gt; Оценить длину дерева -&gt; Есть улучшения? -&gt; и тд</p>
+</section><section id="сравнение-всех-методов" class="level4" data-number="6.3.5.5"><h4 data-number="6.3.5.5" class="anchored" data-anchor-id="сравнение-всех-методов">
+<span class="header-section-number">6.3.5.5</span> Сравнение всех методов</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/Сравнение методов построения деревьев.png" class="img-fluid figure-img"></p>
+<figcaption>Alt text</figcaption></figure>
+</div>
+</section></section></section><section id="форматы-дереьев" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="форматы-дереьев">
+<span class="header-section-number">6.4</span> Форматы дереьев</h2>
+<ul>
+<li>Newick (bootstrap - проверка дерева на устойчивость - если убрать лист - изменится ли топология клады) ((A:0.1,B:0.2)90:0.3,C:0.4)</li>
+<li>Nexus Begin tree; Tree T1 = ((A,B),C); End;</li>
+</ul>
+<p>Основан на блоках кода - XML - based (PHYLOXML) - JSON-based (Nextstrain)</p>
+</section><section id="визуализация" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="визуализация">
+<span class="header-section-number">6.5</span> Визуализация</h2>
+<ul>
+<li>iTOL</li>
+<li>Dendroscope</li>
+<li>Auspice (для эпидемиологического анализа)</li>
+<li>MEGA (хороша для обучения)</li>
+<li>UGEN</li>
+</ul></section><section id="практика-филогенетические-деревья" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Практика филогенетические деревья</h1>
+<section id="устанваливаем-пакеты-bmge-iqtree-emboss-phylip" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="устанваливаем-пакеты-bmge-iqtree-emboss-phylip">
+<span class="header-section-number">7.1</span> Устанваливаем пакеты bmge, iqtree, emboss, phylip</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate py3_study</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> bioconda bmge <span class="at">-y</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> bioconda <span class="at">-c</span> conda-forge iqtree emboss phylip <span class="at">-y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="строим-множественное-выравнивание" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="строим-множественное-выравнивание">
+<span class="header-section-number">7.2</span> Строим множественное выравнивание</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">muscle</span> <span class="at">-align</span> Структуры_данных/03.12.25/seqs.fasta <span class="at">-output</span> Структуры_данных/03.12.25/seqs.aln.fasta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+muscle 5.3.osx64 []  8.6Gb RAM, 4 cores
+Built Jul 30 2025 21:35:18
+(C) Copyright 2004-2021 Robert C. Edgar.
+https://drive5.com
+
+[align Структуры_данных/03.12.25/seqs.fasta]
+Input: 15 seqs, avg length 543, max 548, min 530
+
+00:00 2.3Mb     6.7% Derep 1 uniques, 0 dupes
+00:00 2.3Mb   100.0% Derep 15 uniques, 0 dupes
+00:00 2.4Mb  CPU has 4 cores, running 4 threads
+00:00 2.5Mb    0.95% Calc posteriors
+00:01 78Mb     18.1% Calc posteriors
+00:02 78Mb     48.6% Calc posteriors
+00:03 90Mb     72.4% Calc posteriors
+00:03 93Mb    100.0% Calc posteriors
+00:04 85Mb      7.1% UPGMA5         
+00:04 85Mb    100.0% UPGMA5
+00:04 85Mb     0.95% Consistency (1/2)
+00:04 81Mb    100.0% Consistency (1/2)
+00:04 81Mb     0.95% Consistency (2/2)
+00:04 77Mb    100.0% Consistency (2/2)
+00:04 44Mb      1.0% Refining         
+00:04 40Mb    100.0% Refining</code></pre>
+</div>
+</div>
+<p>Смотрим в UGENE и видим, что качество не очень высокое</p>
+<p><img src="Структуры_данных/03.12.25/UGENE for aligned.png" class="img-fluid" alt="UGENE for aligned"> ## Чистим выравнивание от “плохих” позиций</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">BMGE</span> <span class="at">-i</span> Структуры_данных/03.12.25/seqs.aln.fasta <span class="at">-t</span> AA <span class="at">-m</span> BLOSUM30 <span class="at">-h</span> 0.5 <span class="at">-of</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Amino acid sequence alignment seqs.aln.fasta
+   before : 15 sequences / 557 characters
+ 0.00% 
+ 17.95% 
+ 35.91% 
+ 53.86% 
+ 71.81% 
+ 89.77% 
+
+                                                                                                    
+   after :  15 sequences / 528 characters
+                                          
+   after :  15 sequences / 528 characters</code></pre>
+</div>
+</div>
+<p>И снова посмотрим в UGENE</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/UGENE for trimmed alignes.png" class="img-fluid figure-img"></p>
+<figcaption>Trimmed alignment</figcaption></figure>
+</div>
+<p>Программа аккуратно вырезала неудачные участки выравнивания</p>
+</section><section id="подсчет-расстояний-для-nj-и-upgma" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="подсчет-расстояний-для-nj-и-upgma">
+<span class="header-section-number">7.3</span> Подсчет расстояний для NJ и UPGMA</h2>
+<section id="fasta---phylip-переименовываем" class="level3" data-number="7.3.1"><h3 data-number="7.3.1" class="anchored" data-anchor-id="fasta---phylip-переименовываем">
+<span class="header-section-number">7.3.1</span> FASTA -&gt; PHYLIP + переименовываем</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">seqret</span> <span class="at">-sequence</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta <span class="at">-outseq</span> Структуры_данных/03.12.25/seqs.phy <span class="at">-osformat2</span> phylip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Read and write (return) sequences</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> Структуры_данных/03.12.25/seqs.phy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> 15 528
+CH60_HELPYAKEIKFSDSA RNLLFEGVRQ LHDAVKVTMG PRGRNVLIQK SYGAPSITKD
+CH602_MYCTAKTIAYDEEA RRGLERGLNA LADAVKVTLG PKGRNVVLEK KWGAPTITND
+CH60_BACCRAKDIKFSEEA RRSMLRGVDT LANAVKVTLG PKGRNVVLEK KFGSPLITND
+CH60_STAACVKQLKFSEDA RQAMLRGVDQ LANAVKVTIG PKGRNVVLDK EFTAPLITND
+CH60_STRPSSKEIKFSSDA RSAMVRGVDI LADTVKVTLG PKGRNVVLEK SFGSPLITND
+CH60_LACLASKDIKFSSDA RTAMMRGIDI LADTVKTTLG PKGRNVVLEK SYGSPLITND
+CH60_BACSUAKEIKFSEEA RRAMLRGVDA LADAVKVTLG PKGRNVVLEK KFGSPLITND
+CH60_LISMCAKDIKFSEDA RRAMLRGVDQ LANAVKVTLG PKGRNVVLEK KFGSPLITND
+CH60_CHLTRAKNIKYNEEA RKKIQKGVKT LAEAVKVTLG PKGRHVVIDK SFGSPQVTKD</code></pre>
+</div>
+</div>
+<p>PHYLIP-программы по умолчанию читают файл “infile”</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> Структуры_данных/03.12.25/seqs.phy Структуры_данных/03.12.25/infile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section></section><section id="запускаем-protdist-с-настройками-по-умолчанию" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="запускаем-protdist-с-настройками-по-умолчанию">
+<span class="header-section-number">7.4</span> Запускаем protdist с настройками по умолчанию</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Структуры_данных/03.12.25</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">protdist</span> <span class="op">&lt;&lt; EOF</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="st">Y</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="st">cd -</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[2J[H
+[2J[H
+Protein distance algorithm, version 3.697
+
+Settings for this run:
+  P  Use JTT, PMB, PAM, Kimura, categories model?  Jones-Taylor-Thornton matrix
+  G  Gamma distribution of rates among positions?  No
+  C           One category of substitution rates?  Yes
+  W                    Use weights for positions?  No
+  M                   Analyze multiple data sets?  No
+  I                  Input sequences interleaved?  Yes
+  0                 Terminal type (IBM PC, ANSI)?  ANSI
+  1            Print out the data at start of run  No
+  2          Print indications of progress of run  Yes
+
+Are these settings correct? (type Y or the letter for one to change)
+
+Computing distances:
+  CH60_HELPY   
+  CH602_MYCT   .
+  CH60_BACCR   ..
+  CH60_STAAC   ...
+  CH60_STRPS   ....
+  CH60_LACLA   .....
+  CH60_BACSU   ......
+  CH60_LISMC   .......
+  CH60_CHLTR   ........
+  CH60_HAEI8   .........
+  CH60_YERPE   ..........
+  CH60_PSEAE   ...........
+  CH60_KLEP3   ............
+  CH60_ECOLI   .............
+  CH601_VIBC   ..............
+
+Output written to file "outfile"
+
+Done.</code></pre>
+</div>
+</div>
+</section><section id="сохраняем-матрицу-расстояний-в-отдельный-файл" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="сохраняем-матрицу-расстояний-в-отдельный-файл">
+<span class="header-section-number">7.5</span> Сохраняем матрицу расстояний в отдельный файл</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.protdist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="nj" class="level2" data-number="7.6"><h2 data-number="7.6" class="anchored" data-anchor-id="nj">
+<span class="header-section-number">7.6</span> NJ</h2>
+<p>Исходные данные для neighbor должны называться infile</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> Структуры_данных/03.12.25/seqs.protdist Структуры_данных/03.12.25/infile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Структуры_данных/03.12.25</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">neighbor</span> <span class="op">&lt;&lt; EOF</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="st">Y</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[2J[H
+[2J[H
+Neighbor-Joining/UPGMA method version 3.697
+
+Settings for this run:
+  N       Neighbor-joining or UPGMA tree?  Neighbor-joining
+  O                        Outgroup root?  No, use as outgroup species  1
+  L         Lower-triangular data matrix?  No
+  R         Upper-triangular data matrix?  No
+  S                        Subreplicates?  No
+  J     Randomize input order of species?  No. Use input order
+  M           Analyze multiple data sets?  No
+  0   Terminal type (IBM PC, ANSI, none)?  ANSI
+  1    Print out the data at start of run  No
+  2  Print indications of progress of run  Yes
+  3                        Print out tree  Yes
+  4       Write out trees onto tree file?  Yes
+
+
+  Y to accept these or type the letter for one to change
+
+Cycle  12: species 5 (   0.07431) joins species 6 (   0.10047)
+Cycle  11: species 3 (   0.04841) joins species 7 (   0.06128)
+Cycle  10: node 3 (   0.01101) joins species 8 (   0.06874)
+Cycle   9: node 3 (   0.03094) joins species 4 (   0.17307)
+Cycle   8: node 3 (   0.02608) joins node 5 (   0.07966)
+Cycle   7: species 2 (   0.28475) joins node 3 (   0.08306)
+Cycle   6: node 2 (   0.04067) joins species 9 (   0.27342)
+Cycle   5: species 1 (   0.27015) joins node 2 (   0.00408)
+Cycle   4: node 1 (   0.10595) joins species 12 (   0.10272)
+Cycle   3: node 1 (   0.02055) joins species 15 (   0.19322)
+Cycle   2: species 13 (   0.01787) joins species 14 (   0.01368)
+Cycle   1: node 1 (   0.03829) joins species 10 (   0.06501)
+last cycle:
+ node 1  (   0.01907) joins species 11  (   0.04739) joins node 13  (   0.02377)
+
+Output written on file "outfile"
+
+Tree written on file "outtree"
+
+Done.
+
+/Users/lidaflorenskaya/Documents/АлгБио/1_sem/1_sem_algbio_book</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Структуры_данных/03.12.25/outtree Структуры_данных/03.12.25/seqs.NJ.tree</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.NJ.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Дерево в Newick-формате:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> Структуры_данных/03.12.25/seqs.NJ.tree</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(((CH602_MYCT:0.28475,((((CH60_BACCR:0.04841,CH60_BACSU:0.06128):0.01101,
+CH60_LISMC:0.06874):0.03094,CH60_STAAC:0.17307):0.02608,
+(CH60_STRPS:0.07431,CH60_LACLA:0.10047):0.07966):0.08306):0.04067,
+CH60_CHLTR:0.27342):0.00408,(CH60_PSEAE:0.10272,(CH601_VIBC:0.19322,
+(CH60_HAEI8:0.06501,(CH60_YERPE:0.04739,(CH60_KLEP3:0.01787,
+CH60_ECOLI:0.01368):0.02377):0.01907):0.03829):0.02055):0.10595,CH60_HELPY:0.27015);</code></pre>
+</div>
+</div>
+<p>Файл с простой визуализацией</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-50</span> Структуры_данных/03.12.25/seqs.NJ.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  15 Populations
+
+Neighbor-Joining/UPGMA method version 3.697
+
+
+ Neighbor-joining method
+
+ Negative branch lengths allowed
+
+       +----------------CH602_MYCT
+       ! 
+       !          +--CH60_BACCR
+       !        +-2 
+    +--6      +-3 +--CH60_BACSU
+    !  !      ! ! 
+    !  !    +-4 +---CH60_LISMC
+    !  !    ! ! 
+    !  +----5 +----------CH60_STAAC
+  +-7       ! 
+  ! !       !   +----CH60_STRPS
+  ! !       +---1 
+  ! !           +-----CH60_LACLA
+  ! ! 
+  ! +----------------CH60_CHLTR
+  ! 
+  !     +------CH60_PSEAE
+  8-----9 
+  !     !  +----------CH601_VIBC
+  !     +-10  
+  !        !  +---CH60_HAEI8
+  !        +-12  
+  !           !  +--CH60_YERPE
+  !           +-13  
+  !              !  +-CH60_KLEP3
+  !              +-11  
+  !                 +CH60_ECOLI
+  ! 
+  +---------------CH60_HELPY
+
+
+remember: this is an unrooted tree!
+
+Between        And            Length
+-------        ---            ------
+   8             7            0.00408
+   7             6            0.04067
+   6          CH602_MYCT      0.28475
+   6             5            0.08306</code></pre>
+</div>
+</div>
+<p><mark>remember: this is an unrooted tree!</mark></p>
+</section><section id="upgma" class="level2" data-number="7.7"><h2 data-number="7.7" class="anchored" data-anchor-id="upgma">
+<span class="header-section-number">7.7</span> UPGMA</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Структуры_данных/03.12.25</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">neighbor</span> <span class="op">&lt;&lt; EOF</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="st">N</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="st">Y</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[2J[H
+[2J[H
+Neighbor-Joining/UPGMA method version 3.697
+
+Settings for this run:
+  N       Neighbor-joining or UPGMA tree?  Neighbor-joining
+  O                        Outgroup root?  No, use as outgroup species  1
+  L         Lower-triangular data matrix?  No
+  R         Upper-triangular data matrix?  No
+  S                        Subreplicates?  No
+  J     Randomize input order of species?  No. Use input order
+  M           Analyze multiple data sets?  No
+  0   Terminal type (IBM PC, ANSI, none)?  ANSI
+  1    Print out the data at start of run  No
+  2  Print indications of progress of run  Yes
+  3                        Print out tree  Yes
+  4       Write out trees onto tree file?  Yes
+
+
+  Y to accept these or type the letter for one to change
+[2J[H
+Neighbor-Joining/UPGMA method version 3.697
+
+Settings for this run:
+  N       Neighbor-joining or UPGMA tree?  UPGMA
+  L         Lower-triangular data matrix?  No
+  R         Upper-triangular data matrix?  No
+  S                        Subreplicates?  No
+  J     Randomize input order of species?  No. Use input order
+  M           Analyze multiple data sets?  No
+  0   Terminal type (IBM PC, ANSI, none)?  ANSI
+  1    Print out the data at start of run  No
+  2  Print indications of progress of run  Yes
+  3                        Print out tree  Yes
+  4       Write out trees onto tree file?  Yes
+
+
+  Y to accept these or type the letter for one to change
+
+Cycle  14: species 13 (   0.01578) joins species 14 (   0.01578)
+Cycle  13: species 11 (   0.04347) joins node 13 (   0.02770)
+Cycle  12: species 3 (   0.05484) joins species 7 (   0.05484)
+Cycle  11: species 10 (   0.06301) joins node 11 (   0.01954)
+Cycle  10: node 3 (   0.01245) joins species 8 (   0.06730)
+Cycle   9: species 5 (   0.08739) joins species 6 (   0.08739)
+Cycle   8: node 10 (   0.04638) joins species 12 (   0.10939)
+Cycle   7: node 3 (   0.06915) joins species 4 (   0.13645)
+Cycle   6: node 10 (   0.04185) joins species 15 (   0.15124)
+Cycle   5: node 3 (   0.02019) joins node 5 (   0.06925)
+Cycle   4: species 1 (   0.25482) joins node 10 (   0.10358)
+Cycle   3: species 2 (   0.25603) joins node 3 (   0.09939)
+Cycle   2: node 1 (   0.00586) joins species 9 (   0.26068)
+Cycle   1: node 1 (   0.00595) joins node 2 (   0.01060)
+
+Output written on file "outfile"
+
+Tree written on file "outtree"
+
+Done.
+
+/Users/lidaflorenskaya/Documents/АлгБио/1_sem/1_sem_algbio_book</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Структуры_данных/03.12.25/outtree Структуры_данных/03.12.25/seqs.UPGMA.tree</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> Структуры_данных/03.12.25/outfile Структуры_данных/03.12.25/seqs.UPGMA.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-50</span> Структуры_данных/03.12.25/seqs.UPGMA.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  15 Populations
+
+Neighbor-Joining/UPGMA method version 3.697
+
+
+ UPGMA method
+
+ Negative branch lengths allowed
+
+        +--------------CH60_HELPY
+        !  
+        !          +---CH60_HAEI8
+        !       +--4 
+     +-11       !  ! +--CH60_YERPE
+     !  !       !  +-2 
+     !  !     +-7    ! +CH60_KLEP3
+     !  !     ! !    +-1 
+     !  !     ! !      +CH60_ECOLI
+  +-13  +-----9 ! 
+  !  !        ! +------CH60_PSEAE
+  !  !        ! 
+  !  !        +--------CH601_VIBC
+  !  !  
+-14  +---------------CH60_CHLTR
+  !  
+  !  +--------------CH602_MYCT
+  !  !  
+  !  !             +--CH60_BACCR
+  !  !           +-3 
+  +-12       +---5 +--CH60_BACSU
+     !       !   ! 
+     !     +-8   +---CH60_LISMC
+     !     ! ! 
+     +----10 +-------CH60_STAAC
+           !  
+           !   +----CH60_STRPS
+           +---6 
+               +----CH60_LACLA
+
+
+From     To            Length          Height
+----     --            ------          ------
+  14       13          0.00595         0.00595
+  13       11          0.00586         0.01181
+  11     CH60_HELPY    0.25482         0.26663
+  11        9          0.10358         0.11538
+   9        7          0.04185         0.15724
+   7        4          0.04638         0.20362</code></pre>
+</div>
+</div>
+<p>Можем сравнить деревья в Sublime Text</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/Comparison of UGENE and NJ trees.png" class="img-fluid figure-img" width="399"></p>
+<figcaption>Comparison</figcaption></figure>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> Структуры_данных/03.12.25/seqs.UPGMA.tree</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(((CH60_HELPY:0.25482,(((CH60_HAEI8:0.06301,(CH60_YERPE:0.04347,
+(CH60_KLEP3:0.01578,CH60_ECOLI:0.01578):0.02770):0.01954):0.04638,
+CH60_PSEAE:0.10939):0.04185,CH601_VIBC:0.15124):0.10358):0.00586,
+CH60_CHLTR:0.26068):0.00595,(CH602_MYCT:0.25603,((((CH60_BACCR:0.05484,
+CH60_BACSU:0.05484):0.01245,CH60_LISMC:0.06730):0.06915,
+CH60_STAAC:0.13645):0.02019,(CH60_STRPS:0.08739,CH60_LACLA:0.08739):0.06925):0.09939):0.01060);</code></pre>
+</div>
+</div>
+</section><section id="ml" class="level2" data-number="7.8"><h2 data-number="7.8" class="anchored" data-anchor-id="ml">
+<span class="header-section-number">7.8</span> ML</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iqtree</span> <span class="at">-s</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta <span class="at">--seqtype</span> AA <span class="at">-m</span> MFP <span class="at">-bb</span> 1000 <span class="at">-nt</span> AUTO</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>NEWICK</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.treefile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(CH60_HELPY:0.3898588752,(CH602_MYCTU:0.3912167735,(((CH60_BACCR:0.0803259504,CH60_BACSU:0.0493609255)68:0.0280073589,CH60_LISMC:0.0756762233)58:0.0341075748,(CH60_STAAC:0.2126168178,(CH60_STRPS:0.0734405241,CH60_LACLA:0.1349756976)100:0.1553805108)82:0.0348490400)100:0.1682327665)99:0.1208257866,(CH60_CHLTR:0.4156398474,(((CH60_HAEI8:0.0772703352,(CH60_YERPE:0.0525477043,(CH60_KLEP3:0.0269603591,CH60_ECOLI:0.0083411322)86:0.0344113677)83:0.0362044668)91:0.0439997970,CH601_VIBC3:0.2702593075)92:0.0538020845,CH60_PSEAE:0.1392840272)100:0.1665632925)41:0.0224134680);</code></pre>
+</div>
+</div>
+<p>NEXUS</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-50</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.splits.nex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=15;
+TAXLABELS
+[1] 'CH60_HELPY'
+[2] 'CH602_MYCTU'
+[3] 'CH60_BACCR'
+[4] 'CH60_STAAC'
+[5] 'CH60_STRPS'
+[6] 'CH60_LACLA'
+[7] 'CH60_BACSU'
+[8] 'CH60_LISMC'
+[9] 'CH60_CHLTR'
+[10] 'CH60_HAEI8'
+[11] 'CH60_YERPE'
+[12] 'CH60_PSEAE'
+[13] 'CH60_KLEP3'
+[14] 'CH60_ECOLI'
+[15] 'CH601_VIBC3'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=15 nsplits=63;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+    100  2,
+    100  3,
+    100  7,
+    68   3 7,
+    100  8,
+    58   3 7 8,
+    100  4,
+    100  5,
+    100  6,
+    100  5 6,
+    82   4 5 6,
+    100  3 4 5 6 7 8,
+    99   2 3 4 5 6 7 8,
+    100  10,
+    100  11,
+    12   10 11,
+    100  13,
+    100  14,
+    86   13 14,
+    91   10 11 13 14,
+    100  15,
+    92   10 11 13 14 15,
+    100  12,</code></pre>
+</div>
+</div>
+<p>Лучшее и консенсуснное дерево:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-150</span> Структуры_данных/03.12.25/seqs.aln.trimmed.fasta.iqtree</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MTVER+G4          -8099.182   16254.365 - 5.42e-294   16257.619 - 7.71e-294   16373.900 - 3.39e-293
+MTVER+I+G4        -8099.449   16256.898 - 1.53e-294   16260.392 - 1.93e-294   16380.701 - 1.13e-294
+HIVW+G4           -8123.422   16302.844 - 1.61e-304   16306.099 - 2.29e-304   16422.379 - 1.01e-303
+HIVW+I+G4         -8121.712   16301.425 - 3.27e-304   16304.919 - 4.13e-304   16425.228 - 2.43e-304
+MTMAM+G4          -8194.676   16445.351 -        0   16448.606 -        0   16564.886 -        0
+MTMAM+I+G4        -8195.056   16448.113 -        0   16451.607 -        0   16571.917 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.7552
+
+ Category  Relative_rate  Proportion
+  1         0.0860         0.2500
+  2         0.3884         0.2500
+  3         0.9437         0.2500
+  4         2.5819         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -7425.8244 (s.e. 223.0207)
+Unconstrained log-likelihood (without tree): -2897.0082
+Number of free parameters (#branches + #model parameters): 28
+Akaike information criterion (AIC) score: 14907.6488
+Corrected Akaike information criterion (AICc) score: 14910.9033
+Bayesian information criterion (BIC) score: 15027.1835
+
+Total tree length (sum of branch lengths): 3.2966
+Sum of internal branch lengths: 0.8988 (27.2646% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'CH60_HELPY' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-------------------------------------CH60_HELPY
+|
+|          +-------------------------------------CH602_MYCTU
++----------| (99)
+|          |                     +------CH60_BACCR
+|          |                  +--| (68)
+|          |                  |  +---CH60_BACSU
+|          |               +--| (58)
+|          |               |  +------CH60_LISMC
+|          +---------------| (100)
+|                          |  +-------------------CH60_STAAC
+|                          +--| (82)
+|                             |              +------CH60_STRPS
+|                             +--------------| (100)
+|                                            +------------CH60_LACLA
+|
+|  +---------------------------------------CH60_CHLTR
++--| (41)
+   |                        +------CH60_HAEI8
+   |                    +---| (91)
+   |                    |   |  +----CH60_YERPE
+   |                    |   +--| (83)
+   |                    |      |  +--CH60_KLEP3
+   |                    |      +--| (86)
+   |                    |         +--CH60_ECOLI
+   |               +----| (92)
+   |               |    +-------------------------CH601_VIBC3
+   +---------------| (100)
+                   +------------CH60_PSEAE
+
+Tree in newick format:
+
+(CH60_HELPY:0.3898588752,(CH602_MYCTU:0.3912167735,(((CH60_BACCR:0.0803259504,CH60_BACSU:0.0493609255)68:0.0280073589,CH60_LISMC:0.0756762233)58:0.0341075748,(CH60_STAAC:0.2126168178,(CH60_STRPS:0.0734405241,CH60_LACLA:0.1349756976)100:0.1553805108)82:0.0348490400)100:0.1682327665)99:0.1208257866,(CH60_CHLTR:0.4156398474,(((CH60_HAEI8:0.0772703352,(CH60_YERPE:0.0525477043,(CH60_KLEP3:0.0269603591,CH60_ECOLI:0.0083411322)86:0.0344113677)83:0.0362044668)91:0.0439997970,CH601_VIBC3:0.2702593075)92:0.0538020845,CH60_PSEAE:0.1392840272)100:0.1665632925)41:0.0224134680);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -7425.824432
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support &gt;0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------------------------CH60_HELPY
+|
+|          +-------------------------------------CH602_MYCTU
++----------| (99)
+|          |                     +------CH60_BACCR
+|          |                  +--| (68)
+|          |                  |  +---CH60_BACSU
+|          |               +--| (58)
+|          |               |  +------CH60_LISMC
+|          +---------------| (100)
+|                          |  +-------------------CH60_STAAC
+|                          +--| (82)
+|                             |              +------CH60_STRPS
+|                             +--------------| (100)
+|                                            +------------CH60_LACLA
+|
+|  +---------------------------------------CH60_CHLTR
++--| (41)
+   |                        +------CH60_HAEI8
+   |                    +---| (91)
+   |                    |   |  +----CH60_YERPE
+   |                    |   +--| (83)
+   |                    |      |  +--CH60_KLEP3
+   |                    |      +--| (86)
+   |                    |         +--CH60_ECOLI
+   |               +----| (92)
+   |               |    +-------------------------CH601_VIBC3
+   +---------------| (100)
+                   +------------CH60_PSEAE
+
+
+Consensus tree in newick format: 
+
+(CH60_HELPY:0.3900429813,(CH602_MYCTU:0.3913628883,(((CH60_BACCR:0.0803449626,CH60_BACSU:0.0493723422)68:0.0280140029,CH60_LISMC:0.0756906607)58:0.0341163749,(CH60_STAAC:0.2126878772,(CH60_STRPS:0.0734430703,CH60_LACLA:0.1350221404)100:0.1554341766)82:0.0348420396)100:0.1682942628)99:0.1208632629,(CH60_CHLTR:0.4158742269,(((CH60_HAEI8:0.0773304222,(CH60_YERPE:0.0525875244,(CH60_KLEP3:0.0269855533,CH60_ECOLI:0.0083337849)86:0.0344200356)83:0.0362120560)91:0.0440012661,CH601_VIBC3:0.2704394219)92:0.0537962760,CH60_PSEAE:0.1393833227)100:0.1666421487)41:0.0224015782);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t 03.12.25/seqs.aln.trimmed.fasta.treefile -m "LG+G4{0.755158}" --length 528
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s 03.12.25/seqs.aln.trimmed.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s 03.12.25/seqs.aln.trimmed.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Dec  3 11:09:13 2025
+Total CPU time used: 56.419625 seconds (0h:0m:56s)
+Total wall-clock time used: 63.62741709 seconds (0h:1m:3s)</code></pre>
+</div>
+</div>
+<p>Появились bootstrepы</p>
+<p><code>conda deactivate</code></p>
+</section><section id="визуализация-на-сайте-itools" class="level2" data-number="7.9"><h2 data-number="7.9" class="anchored" data-anchor-id="визуализация-на-сайте-itools">
+<span class="header-section-number">7.9</span> Визуализация на сайте Itools</h2>
+<p>Можем добавить метаданные - нужно создать новый датасет и вручную вставить данные из файла с метаданными, например</p>
+<p>0 - не патоген, 1 - патоген.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> Структуры_данных/03.12.25/path.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CH60_ECOLI  0
+CH60_PSEAE  1
+CH601_VIBC  1
+CH60_YERPE  1
+CH60_KLEP3  1
+CH60_HAEI8  1
+CH60_CHLTR  1
+CH60_BACSU  0
+CH60_BACCR  1
+CH60_LISMC  1</code></pre>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/Itools.png" class="img-fluid figure-img" width="369"></p>
+<figcaption>Dataset in Itools</figcaption></figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="Структуры_данных/03.12.25/Itool-tree.png" class="img-fluid figure-img" width="246"></p>
+<figcaption>Result</figcaption></figure>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./Базы_данных.html" class="pagination-link" aria-label="Базы данных">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Базы данных</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Базы_данных_аннотация_геномов.html" class="pagination-link" aria-label="Аннотация геномов">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Аннотация геномов</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Конспекты занятий 1-го семестра магистратруры МФТИ ФБМФ “Алгоритмическая биология”</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>
