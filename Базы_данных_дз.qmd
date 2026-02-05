@@ -1,0 +1,56 @@
+---
+engine: knitr
+---
+
+
+# Выполнение домашнего задания по аннотации генома
+
+## Подготовка
+
+Создаем директории для данных и результатов:
+
+```{bash}
+mkdir -p Структуры_данных/10.12.25/genome_annot_hw/data
+```
+
+Скачаем данные с диска и посмотрим
+```{bash}
+head -c 50 Структуры_данных/10.12.25/genome_annot_hw/data/2.fna
+```
+
+## Аннотация генома с помощью Bakta
+
+```{bash}
+#| eval: false
+# Очистка предыдущих результатов (если необходимо)
+rm -rf Структуры_данных/10.12.25/genome_annot_hw/results
+
+# Определение переменных
+GENOME=Структуры_данных/10.12.25/genome_annot_hw/data/2.fna
+BAKTA_DB=Структуры_данных/10.12.25/genome_annot_prac/db/bakta/db-light/db-light
+OUTPUT_DIR=Структуры_данных/10.12.25/genome_annot_hw/results
+
+# Запуск аннотации
+bakta --db $BAKTA_DB \
+      --output $OUTPUT_DIR \
+      --prefix test_genome \
+      $GENOME
+```
+
+**Общая статистика:**
+```{bash}
+cat Структуры_данных/10.12.25/genome_annot_hw/results/test_genome.txt
+```
+
+**Полная аннотация:**
+```{bash}
+head -10 Структуры_данных/10.12.25/genome_annot_hw/results/test_genome.tsv |\
+column -s $'\t' -t
+```
+
+**Визуализация:**
+![Карта генома: CDS, tRNA, rRNA, ncRNA, CRISPR, GC-состав и ориджин репликации](Структуры_данных/10.12.25/genome_annot_hw/results/test_genome.png)
+
+---
+
+**Выполнила:** Флоренская Лидия

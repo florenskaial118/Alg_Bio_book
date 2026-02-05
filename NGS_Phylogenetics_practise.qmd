@@ -1,0 +1,232 @@
+---
+engine: knitr
+author: "Анна (https://github.com/rybinaanya)"
+---
+
+
+# Филогенетика (практика) 
+
+**Практика по [ноутбуку](https://colab.research.google.com/drive/1fCyWiYC0akfLvKFSbuQPq9_Tv50NpNlU?usp=sharing)**
+
+
+## Введение 
+
+Ген, кодирующий **Цитохромоксидазу подкомплекс I (COI)**, широко используется как стандартный ген для **ДНК-баркодирования** у рыб: он, с одной стороны, сравнительно консервативен и, с другой, содержит достаточно вариаций между видами, что позволяет в большинстве случаев успешно идентифицировать таксоны.
+
+COI применяется для обнаружения подмены рыб и признан удобным для мониторинга видов в пищевой промышленности.
+
+![Применения гена COI](fish_detective/Fig_applications_of_COI.png){fig-align="center" width="384"}
+
+Однако, COI не всегда хорошо разделяет некоторые виды рыб, например, такое может произойти с тунцом (например, виды *T. albacares* - yellowfin tuna, *T. thynnus* - bluefin tuna и *Thunnus obesus* - bigeye tuna) [@viñas2009]
+
+Одна из возможных причин: гибридизация и последующая митохондриальная интрогрессия (ситуация, когда мтДНК одного вида переходит в другой вид через гибридизацию, и затем закрепляется в его популяции).
+
+В рамках ноутбука можно научиться следующему:
+
+1.  определять возможное происхождение последовательности на основе топологии филогенетиечского дерева
+
+2.  строить базовое множественное выравнивание (MAFFT) и филогегетическое дерево (FastTree), используя командную строку
+
+3.  выгружать нуклеотидные последовательности из NCBI, подавая на вход список из GenBank айди
+
+4.  генерировать аннотационные файлы для визуализации дерева в ITOL
+
+5.  осущеставлять базовые манипуляции с деревом в ITOL
+
+## Install dependencies
+
+Biopython, Scikit-bio, pandas, mafft, FastTree
+
+```{bash}
+#| eval: false
+conda activate py3_study
+pip install biopython==1.83 scikit-bio==0.6.1 pandas==2.2.2
+conda install bioconda::mafft
+mafft --version 
+conda install bioconda::fasttree
+FastTree -help | head -n 2
+```
+
+Gblocks (trimAI) - находит консервативные блоки в выравнивании
+
+```{bash}
+#| eval: false
+conda install bioconda::gblocks
+```
+
+```{python}
+import pandas as pd, io
+#from google.colab import files
+from Bio import AlignIO
+import numpy as np
+from Bio.Seq import Seq
+from Bio import Entrez, SeqIO
+from Bio.Align import MultipleSeqAlignment
+import shutil
+from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
+from Bio import Phylo
+import subprocess, re
+```
+
+## Load metadata
+
+```{bash}
+#| eval: false
+git clone https://github.com/rybinaanya/fish_detective.git
+```
+
+```{python}
+meta = pd.read_csv('fish_detective/metadata.tsv', sep='\t', index_col=0)
+meta.head()
+```
+
+Distribution of claimed names
+
+```{python}
+meta.claimed_name.value_counts()
+```
+
+Distribution of restaurants
+
+```{python}
+meta.restaurant.value_counts()
+```
+
+## Get sequences from NCBI
+
+```{bash}
+#| eval: false
+> fish_detective/sequences.fasta
+tail -n +2 fish_detective/metadata.tsv | \
+while IFS=$'\t' read -r line; do
+    # Разбиваем строку на массив
+    IFS=$'\t' read -ra cols <<< "$line"
+
+    accession=${cols[2]}
+    [ -z "$accession" ] && continue # если значение пустое - пропусти
+
+    echo "Скачиваю $accession ..."
+    
+    efetch -db nucleotide -id "$accession" -format fasta >> fish_detective/sequences.fasta
+
+    echo '' >> fish_detective/sequences.fasta
+done
+    
+```
+
+## Multiple sequqnce alignment MAFFT - итеративный алгоритм
+
+```{bash}
+#| eval: false
+mafft --auto --thread -1 fish_detective/sequences.fasta \
+> fish_detective/alignment.fasta 2> mafft.log
+```
+
+![Просмотр выравнивания в Ugene](fish_detective/UGENE_view.png)
+
+Видно, что в начале и в конце много пропусков. Мы хотим их обрезать.
+
+```{bash}
+BMGE -i fish_detective/alignment.fasta -t AA -m BLOSUM30  \
+-of fish_detective/alignment.trim.fasta
+```
+
+## FastTree (\~ML) and NJ-methods
+
+```{bash}
+FastTree -gtr -nt -gamma -boot 1000 fish_detective/alignment.trim.fasta \
+> fish_detective/tree_fasttree.nwk
+echo "FastTree → tree_fasttree.nwk"
+```
+
+Сначала мы получаем NJ-**like** tree (distnace matrix - is based on susbtitution model JC). А потом перебираем не все топологии, а либо отрубаем кусочек дерева и снова пристыковаваем и смотрим на правдоподбие / пошафлить перетасовать узлы в пределах клады и также чекнуть правдоподбие
+
+-gtr - использование модели эволюции GTR (General Time Reversible) для нуклеотидных последовательностей
+
+-gamma - учет различной скорости эволюции разных позиций с помощью гамма-распределения
+
+```{python}
+from Bio.Phylo.TreeConstruction import DistanceCalculator,DistanceTreeConstructor
+from Bio import Phylo
+```
+
+NJ (p-distance = 1-identity)
+
+```{python}
+aln = AlignIO.read("fish_detective/alignment.trim.fasta","fasta")
+
+# compute p-distance = 1-identity
+calc = DistanceCalculator('identity')
+# create NJ tree nased on pairwise distance matrix
+constructor = DistanceTreeConstructor(calc, 'nj')
+tree_nj = constructor.build_tree(aln)
+
+# write output to a file
+_ = Phylo.write(tree_nj, "fish_detective/tree_nj.nwk", "newick")
+
+```
+
+## ITOL files
+
+Теперь визуализируем дерево в [ITOL](https://itol.embl.de/)
+
+Чтение Newick дерева и получение названий листьев
+
+```{python}
+tree_fasttree = Phylo.read('fish_detective/tree_fasttree.nwk', 'newick')
+
+tips_fasttree = [t.name for t in tree_fasttree.get_terminals()] 
+
+print(tips_fasttree[:5])
+```
+
+Создание словаря для преобразования ID в читаемые метки и создание файлов меток и цветов для iTOL в нужном [формате](https://itol.embl.de/help/labels_template.txt)
+
+```{python}
+tips2label=dict(zip(meta.accession, meta.display_name))
+
+with open('fish_detective/labels.txt', 'w') as f:
+  _ = f.write('\n'.join(['LABELS', 'SEPARATOR COMMA', 'DATA'])+'\n')
+  for tip in tips_fasttree:
+    clean_tip = tip.split('.')[0]
+    _ = f.write(f"{tip},{tips2label[clean_tip]}\n")
+
+acc2color = dict(zip(meta['accession'], meta['restaurant_color']))
+
+with open('fish_detective/color_labels.txt', 'w') as f:
+    _ = f.write('TREE_COLORS\nSEPARATOR COMMA\nDATA\n')
+    
+    for tip in tips_fasttree:
+        clean_tip = tip.split('.')[0]
+        color = acc2color.get(clean_tip, '#CCCCCC')
+        _ = f.write(f'{tip},label_background,{color}\n')
+```
+
+Annotation file to color [labels](https://itol.embl.de/help/colors_styles_template.txt)
+
+```{python}
+mapLoc2color = dict(zip(meta.restaurant, meta.restaurant_color))
+tips2color=dict(zip(meta.accession, meta.restaurant_color))
+
+with open('fish_detective/colorstrip_groups.txt', 'w') as f:
+    _ = f.write('DATASET_COLORSTRIP\n')
+    _ = f.write('SEPARATOR COMMA\n')
+    _ = f.write('DATASET_LABEL,Sample groups\n')
+    _ = f.write('COLOR,#000000\n')  # рамка dataset-а (опц.)
+    _ = f.write('LEGEND_TITLE,Sample origin\n')
+    _ = f.write('LEGEND_SHAPES,1,1,1,1\n')  # форма значков (1=квадрат)
+    _ = f.write('LEGEND_COLORS,' + ','.join(mapLoc2color.values()) + '\n')
+    _ = f.write('LEGEND_LABELS,' + ','.join(mapLoc2color.keys()) + '\n')
+    _ = f.write('DATA\n')
+    for tip in tips_fasttree:
+        clean_tip = tip.split('.')[0]
+        _ = f.write(f'{tip},{tips2color[clean_tip]}\n')
+```
+
+To upload annotation files, go to Datasets, push Upload button
+
+To make ITOL display bootstrap values, go to Advanced -\> Branch metadata display \> Bootstraps/metadata -\> select Display -\> select Text
+
+Чтобы укоренитрь дерево - наведите мышкой на нужную ветку -\> клик -\> Tree structure -\> Re-root tree here
+
+![Результат](fish_detective/ITOOL_result.png)

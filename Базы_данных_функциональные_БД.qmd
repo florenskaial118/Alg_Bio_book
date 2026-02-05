@@ -1,0 +1,79 @@
+---
+engine: knitr
+author: "Анна Сергеевна Попенко, к.б.н."
+---
+
+# Фукнциональные БД
+
+Фукнциональные БД
+
+-   Вход
+-   Поиск признаков
+-   Гомология
+-   Функциональная классификация
+-   Структурная аннотация
+-   Результат
+
+## Поиск ОРФ - GENEMARK
+
+## BLAST для аннотации
+
+e-value \< $10^{-5}$
+
+pident \>= 70%
+
+Рекомендация - проверять выравнивание
+
+## MMMER для аннотации
+
+## Базы данных генов и их продуктов
+
+-   COG - группы ортологичных генов
+-   EggNOG - функциональная аннотация через эволюционные группы
+-   OrthoDB - ортологические группы и функциональные аннотациии
+-   GO
+-   DeepGO - ИИ аннотация
+-   KEGG
+-   Reactome
+
+# Семинар по фукнциональным БД
+
+## [EggNOG v5.0](http://eggnog5.embl.de/#/app/home)
+
+![The eggNOG workflow at a glance](Структуры_данных/26.11.25/Figure1_eggnog.png){fig-align="center" width="262"}
+
+Заходим в sequence search сбоку и сделаем поиск одной белковой последовательности из [файла](Структуры_данных/26.11.25/protein.fasta)
+
+Зайдем в один из результатов ![EggNOG](Структуры_данных/26.11.25/Screenshot%202025-11-26%20at%2009.19.19.png) и видим 15 белков из 14 видов.
+
+Чтобы запустить из командной строки надо
+
+1)  `conda activate py3_study`
+2)  `conda install -c conda-forge -c bioconda eggnog-mapper`
+3)  `mkdir eggnog_data`
+4)  `download_eggnog_data.py --data_dir ./eggnog_data`- не работает?? (можно скачать [базу данных](http://eggnog5.embl.de/download/emapperdb-5.0.2/))
+5)  `emapper.py -i 26.11.25/protein.fasta -o emapper --cpu 1 --data_dir ./eggnog_data`
+
+## [KEGG](https://www.genome.jp/kegg/)
+
+Откроем какой-нибудь метаболический путь
+
+В вершинах - компаунды (низкомолекулярные в-ва, которые синтезируются)
+
+![Пример пути](Структуры_данных/26.11.25/kegg_example_pathway.png){fig-align="center" width="418"}
+
+Есть R пакет, который обращается к KEGG, либо использовать онлайн - сервис
+
+## [GeneOntology](https://geneontology.org/)
+
+## [DeepGO](https://deepgo.cbrc.kaust.edu.sa/deepgo/)
+
+Поиск GO-идентификаторов, котоыре описывают заданную последовательность с использованием нейро-сеток
+
+Онлайн сервис
+
+## String - база белок-белковых взаимодействий
+
+Search -\> Protein by name -\> lacZ -\> continue
+
+![String example](Структуры_данных/26.11.25/STRING.png){fig-align="center" width="288"}

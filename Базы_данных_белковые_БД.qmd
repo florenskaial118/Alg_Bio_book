@@ -1,0 +1,91 @@
+---
+engine: knitr
+author: "Анна Сергеевна Попенко, к.б.н."
+---
+
+# Белковые базы данных
+
+[Uniprot](https://www.uniprot.org/) Q9Y5N5 Q5TIJ2 - тест UniprotKB
+
+[hhmer](https://www.ebi.ac.uk/Tools/hmmer/home)
+
+## Построение HMM модели
+
+<div>
+
+1.  Чтобы обучить модель, нужно сначала построить множественнное выравнивание test на train с помощью muscle
+
+```{bash}
+TRAIN='Структуры_данных/29.10.25/sem4/train.fasta'
+muscle -align "$TRAIN" -output Структуры_данных/29.10.25/demo_aln.fasta
+```
+
+```{bash}
+echo "Output:"
+cat Структуры_данных/29.10.25/demo_aln.fasta
+```
+
+2.  Строим модель
+
+```{bash}
+hmmbuild -n DEMO_PROFILE Структуры_данных/29.10.25/demo_profile.hmm Структуры_данных/29.10.25/demo_aln.fasta 
+```
+
+```{bash}
+echo "Model:"
+head -20 Структуры_данных/29.10.25/demo_profile.hmm
+```
+
+</div>
+
+## Скан модели против последовательности
+
+```{bash}
+DB='Структуры_данных/29.10.25/sem4/test.fasta'
+
+hmmsearch --cpu 1 --tblout Структуры_данных/29.10.25/hmmsearch_tblout.tsv \
+--domtblout Структуры_данных/29.10.25/hmmsearch_domtblout.tsv \
+Структуры_данных/29.10.25/demo_profile.hmm "$DB" \
+> Структуры_данных/29.10.25/hmmsearch_output.txt
+```
+
+```{bash}
+echo 'hmmsearch_tblout.tsv'
+cat Структуры_данных/29.10.25/hmmsearch_tblout.tsv
+```
+
+```{bash}
+echo 'hmmsearch_domtblout.tsv'
+cat Структуры_данных/29.10.25/hmmsearch_domtblout.tsv
+```
+
+```{bash}
+echo 'hmmsearch_output.txt'
+cat Структуры_данных/29.10.25/hmmsearch_output.txt
+```
+
+## Поиск последовательности против БД моделей
+
+<div>
+
+1.  Скачать модели Pfam
+
+```{bash}
+#| eval: false
+wget -P 29.10.25 ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+gunzip Структуры_данных/29.10.25/Pfam-A.hmm.gz
+hmmpress Структуры_данных/29.10.25/Pfam-A.hmm 
+```
+
+[Слишком много весит...]{.mark}
+
+2.  По идее аннотируем последовательность
+
+```{bash}
+#| eval: false
+hmmscan --cpu 1 --domtblout pfam.domtbl \
+Структуры_данных/29.10.25/Pfam-A.hmm protein.fasta \
+> Структуры_данных/29.10.25/pfam_scan.txt
+```
+
+</div>

@@ -1,0 +1,20 @@
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+@article{mukherjee2010,
+	title = {Ecology Driving Genetic Variation: A Comparative Phylogeography of Jungle Cat (Felis chaus) and Leopard Cat (Prionailurus bengalensis) in India},
+	author = {Mukherjee, Shomita and Krishnan, Anand and Tamma, Krishnapriya and Home, Chandrima and R, Navya and Joseph, Sonia and Das, Arundhati and Ramakrishnan, Uma},
+	editor = {Murphy, William J.},
+	year = {2010},
+	month = {10},
+	date = {2010-10-29},
+	journal = {PLoS ONE},
+	pages = {e13724},
+	volume = {5},
+	number = {10},
+	doi = {10.1371/journal.pone.0013724},
+	url = {http://dx.doi.org/10.1371/journal.pone.0013724},
+	langid = {en}
+}

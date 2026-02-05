@@ -1,0 +1,48 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "1_sem_algbio_book"
+  reader-mode: true
+
+  page-footer:
+    right: |
+      Конспекты занятий 1-го семестра магистратруры МФТИ ФБМФ "Алгоритмическая биология"
+
+  cover-image: cover.png
+  favicon: cover.png
+  repo-url: https://github.com/florenskaial118/Alg_Bio_1_sem.git
+  chapters:
+    - index.qmd
+
+    - part: NGS.qmd
+      chapters:
+        - NGS_Phylogenetics_theory.qmd
+        - NGS_Phylogenetics_practise.qmd
+        - NGS_Phylogenetics_hw.qmd
+        - NGS_GWAS.qmd
+    - part: Базы_данных.qmd
+      chapters:
+        - Базы_данных_филогенетика.qmd
+        - Базы_данных_аннотация_геномов.qmd
+    - Алгоритмы_HW.ipynb
+    - Интерпретация.qmd
+        
+
+bibliography: references.bib
+
+highlight-style: pygments
+format:
+  html:
+    theme:
+      light: [cosmo, r4ds.scss]
+      dark: [darkly, r4ds.scss]
+      
+    code-link: true
+
+    author-meta: "Флоренская Лидия"
+    callout-appearance: simple
+
+page-navigation: true
+search: true
