@@ -12,7 +12,7 @@ book:
 
   cover-image: cover.png
   favicon: cover.png
-  repo-url: https://github.com/florenskaial118/Alg_Bio_1_sem.git
+  repo-url: https://github.com/florenskaial118/Alg_Bio_book.git
 
   chapters:
   - index.qmd
