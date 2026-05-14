@@ -37,8 +37,8 @@
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/florenskaial118/Alg_Bio_1_sem.git
-cd Alg_Bio_1_sem
+git clone https://github.com/florenskaial118/Alg_Bio_book.git
+cd Alg_Bio_1
 
 # Сборка HTML-версии
 quarto render
