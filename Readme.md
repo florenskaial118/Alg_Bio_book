@@ -26,7 +26,7 @@
 ## Просмотр книги
 
 Книга доступна онлайн по ссылке:
-[algbio_book](https://florenskaial118.github.io/Alg_Bio_1_sem/)
+[algbio_book](https://florenskaial118.github.io/Alg_Bio_book/)
 
 ## Локальный запуск
 
