@@ -1,5 +1,6 @@
 ---
 author: "По материалам лекций Чмыхало В.К"
+title: "Медицинская генетика"
 format: html
 toc: true
 embed-resources: true

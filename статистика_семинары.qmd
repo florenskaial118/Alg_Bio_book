@@ -1,5 +1,6 @@
 ---
 author: Алексей Харитонов
+title: "Биостатистика"
 format: html
 toc: true
 lang: ru
