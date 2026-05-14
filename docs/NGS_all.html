@@ -662,7 +662,7 @@ FastTree -help | head -n 2</code></pre>
 <p>Gblocks (trimAI) - находит консервативные блоки в выравнивании</p>
 <pre class="{bash}"><code>#| eval: false
 conda install bioconda::gblocks</code></pre>
-<div id="557e9666" class="cell" data-execution_count="1">
+<div id="bdf7317e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd, io</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#from google.colab import files</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> AlignIO</span>
@@ -680,7 +680,7 @@ conda install bioconda::gblocks</code></pre>
 <h2 data-number="5.3" class="anchored" data-anchor-id="load-metadata"><span class="header-section-number">5.3</span> Load metadata</h2>
 <pre class="{bash}"><code>#| eval: false
 git clone https://github.com/rybinaanya/fish_detective.git</code></pre>
-<div id="bb503526" class="cell" data-execution_count="2">
+<div id="034c395e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>meta <span class="op">=</span> pd.read_csv(<span class="st">'fish_detective/metadata.tsv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>meta.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -770,7 +770,7 @@ git clone https://github.com/rybinaanya/fish_detective.git</code></pre>
 </div>
 </div>
 <p>Distribution of claimed names</p>
-<div id="8bd17594" class="cell" data-execution_count="3">
+<div id="08c9b85e" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>meta.claimed_name.value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>claimed_name
@@ -804,7 +804,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Distribution of restaurants</p>
-<div id="8909719e" class="cell" data-execution_count="4">
+<div id="8a338a63" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>meta.restaurant.value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>restaurant
@@ -859,12 +859,12 @@ echo "FastTree → tree_fasttree.nwk"</code></pre>
 <p>Сначала мы получаем NJ-<strong>like</strong> tree (distnace matrix - is based on susbtitution model JC). А потом перебираем не все топологии, а либо отрубаем кусочек дерева и снова пристыковаваем и смотрим на правдоподбие / пошафлить перетасовать узлы в пределах клады и также чекнуть правдоподбие</p>
 <p>-gtr - использование модели эволюции GTR (General Time Reversible) для нуклеотидных последовательностей</p>
 <p>-gamma - учет различной скорости эволюции разных позиций с помощью гамма-распределения</p>
-<div id="14c98f18" class="cell" data-execution_count="5">
+<div id="83c86bb2" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Phylo.TreeConstruction <span class="im">import</span> DistanceCalculator,DistanceTreeConstructor</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Phylo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>NJ (p-distance = 1-identity)</p>
-<div id="325f8499" class="cell" data-execution_count="6">
+<div id="7fd6117a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>aln <span class="op">=</span> AlignIO.read(<span class="st">"fish_detective/alignment.trim.fasta"</span>,<span class="st">"fasta"</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># compute p-distance = 1-identity</span></span>
@@ -881,7 +881,7 @@ echo "FastTree → tree_fasttree.nwk"</code></pre>
 <h2 data-number="5.7" class="anchored" data-anchor-id="itol-files"><span class="header-section-number">5.7</span> ITOL files</h2>
 <p>Теперь визуализируем дерево в <a href="https://itol.embl.de/">ITOL</a></p>
 <p>Чтение Newick дерева и получение названий листьев</p>
-<div id="8b22db6f" class="cell" data-execution_count="7">
+<div id="e640f924" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tree_fasttree <span class="op">=</span> Phylo.read(<span class="st">'fish_detective/tree_fasttree.nwk'</span>, <span class="st">'newick'</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>tips_fasttree <span class="op">=</span> [t.name <span class="cf">for</span> t <span class="kw">in</span> tree_fasttree.get_terminals()] </span>
@@ -892,7 +892,7 @@ echo "FastTree → tree_fasttree.nwk"</code></pre>
 </div>
 </div>
 <p>Создание словаря для преобразования ID в читаемые метки и создание файлов меток и цветов для iTOL в нужном <a href="https://itol.embl.de/help/labels_template.txt">формате</a></p>
-<div id="fc2c3e46" class="cell" data-execution_count="8">
+<div id="c0251fc3" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tips2label<span class="op">=</span><span class="bu">dict</span>(<span class="bu">zip</span>(meta.accession, meta.display_name))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fish_detective/labels.txt'</span>, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
@@ -912,7 +912,7 @@ echo "FastTree → tree_fasttree.nwk"</code></pre>
 <span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>        _ <span class="op">=</span> f.write(<span class="ss">f'</span><span class="sc">{</span>tip<span class="sc">}</span><span class="ss">,label_background,</span><span class="sc">{</span>color<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Annotation file to color <a href="https://itol.embl.de/help/colors_styles_template.txt">labels</a></p>
-<div id="a93988f4" class="cell" data-execution_count="9">
+<div id="bf2776c5" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mapLoc2color <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(meta.restaurant, meta.restaurant_color))</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>tips2color<span class="op">=</span><span class="bu">dict</span>(<span class="bu">zip</span>(meta.accession, meta.restaurant_color))</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1003,7 +1003,7 @@ xtract -pattern DocumentSummary \
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="структура-метаданных"><span class="header-section-number">6.2.2</span> Структура метаданных</h3>
 <pre class="{bash}"><code># Просмотр структуры файла метаданных
 head Phylogenetics_hw/metadata.tsv | column -t -s $'\t' </code></pre>
-<div id="c29df83f" class="cell" data-execution_count="10">
+<div id="3b664985" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Анализ состава выборки по видам</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>meta <span class="op">=</span> pd.read_csv(<span class="st">'Phylogenetics_hw/metadata.tsv'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
@@ -1018,7 +1018,7 @@ Fishing cat      1
 Name: count, dtype: int64</code></pre>
 </div>
 </div>
-<div id="f555a8a1" class="cell" data-execution_count="11">
+<div id="24d2400f" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Географическое распределение образцов</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Распределение по биогеографическим зонам:"</span>)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meta.Biogeographic_zone.value_counts())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1134,7 +1134,7 @@ cd -</code></pre>
 <section id="визуализация-и-аннотация-дерева" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="визуализация-и-аннотация-дерева"><span class="header-section-number">6.7</span> Визуализация и аннотация дерева</h2>
 <p>Для визуализации дерева в iTOL были подготовлены файлы аннотаций.</p>
-<div id="e57ace9f" class="cell" data-execution_count="12">
+<div id="538ce7f2" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.colors <span class="im">as</span> mcolors</span>
